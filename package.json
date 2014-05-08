@@ -1,0 +1,24 @@
+{
+  "name": "impex",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "~4.1.0",
+    "express-session": "~1.0.2",
+    "body-parser": "~1.0.1",
+    "cookie-parser": "~1.0.1",
+    "compression": "~1.0.1",
+    "method-override": "~1.0.0",
+    "morgan": "~1.0.0",
+    "mongoose": "~3.8.8",
+    "helmet": "~0.2.1",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "connect-mongostore": "^0.1.0",
+    "requirejs": "^2.1.11",
+    "errorhandler": "^1.0.1",
+    "connect-mongo": "^0.4.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

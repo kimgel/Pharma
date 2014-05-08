@@ -1,0 +1,111 @@
+<div ng-include="'modules/common/header/view'"></div>
+<div ng-include="'modules/common/sidenav/view-main'"></div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Propose Event</h2>
+                </div>
+                <div class="box-content">
+                    <form role="form">
+                        <div class="form-group">
+                            <label class="control-label">Proposal Number</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Proposal Date</label>
+                            <div class="controls">
+                                <div class="input-group date">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                    <input type="text" name="po_date" class="form-control" ng-model="proposal.date" placeholder="Proposal Date" bs-datepicker>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="control-label">Event Proposer</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Type</label>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>EVENT TYPE 1</option>
+                                    <option>EVENT TYPE 2</option>
+                                    <option>EVENT TYPE 3</option>
+                                    <option>EVENT TYPE 4</option>
+                                    <option>EVENT TYPE 5</option>
+                                    <option>EVENT TYPE 6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Purpose</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Date</label>
+                            <div class="controls">
+                                <div class="input-group date">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                    <input type="text" name="po_date" class="form-control" ng-model="event.date" placeholder="Event Date" bs-datepicker>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label">Event Time</label>
+                            <div class="controls">
+                                <div class="input-group date">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-clock-o"></i>
+                                    </span>
+                                    <input type="text" class="form-control" ng-model="event.time" name="time" placeholder="Event Time" bs-timepicker>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Event Location</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Resources Required</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Remarks/ Instructions</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                      
+                        <div class="form-actions highlight">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+           
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <label class="control-label">Select Doctors</label>
+      </div>
+      <div class="modal-body" >
+      
+
+        <div class="row">
+         
+          <div class="col-md-3">
+            <div class="avatar">
+              <img src="assets/images/avatar.jpg" alt="Avatar">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="control-label">Dr. Juan Dela Cruz</label>
+            <span class="label label-danger">Not available</span>
+             <fieldset disabled>
+             <div class="checkbox">
+                <label>
+                  <input type="checkbox" >
+                </label>
+              </div></fieldset>
+          </div>
+         
+          
+          <div class="col-md-3">
+            <div class="avatar">
+              <img src="assets/images/avatar.jpg" alt="Avatar">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="control-label">Dra. Juana Dela Cruz
+            </label>
+            <span class="label label-primary">Available</span>
+             <div class="checkbox">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </div>
+          </div>
+          
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="$hide()">Add</button>
+        <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

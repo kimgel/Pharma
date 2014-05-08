@@ -1,0 +1,103 @@
+<div ng-include="'modules/common/header/view'"></div>
+<div ng-include="'modules/common/sidenav/view-main'"></div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-check-square-o"></i>Prepare Event</h2>
+                </div>
+                <div class="box-content">
+                    <form role="form">
+                        <div class="form-group">
+                            <label class="control-label">Event Number</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Approver</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Supervisor</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="box-icon">
+                                 <class="btn" data-animation="am-fade-and-scale" data-placement="center" bs-modal="modal" data-template="/modules/prepare_event/tpls/supervisor.tpl.html"><i class="fa fa-plus"></i> Select
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Doctors</label>
+                            <div class="box-content">
+                    <div class="dataTables_wrapper form-inline" role="grid">
+                         <table class="table bootstrap-datatable datatable table-hover" >
+                            <thead>
+                                <tr role="row">
+                                    <th>No</th>
+                                    <th>Doctor's Name</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Dra. Juana Dela Cruz</td>
+                                    <td><a><i class="fa fa-trash-o"></i></a></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                            <div class="box-icon">
+                                 <class="btn" data-animation="am-fade-and-scale" data-placement="center" bs-modal="modal" data-template="/modules/prepare_event/tpls/doctor.tpl.html"><i class="fa fa-plus"></i> Add
+                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Equipment</label>
+                            <div class="box-content">
+                        <div class="dataTables_wrapper form-inline" role="grid">
+                             <table class="table bootstrap-datatable datatable table-hover" >
+                                <thead>
+                                    <tr role="row">
+                                        <th>Equipment</th>
+                                        <th>Count</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Wheelchair</td>
+                                        <td>3</td>
+                                        <td><a><i class="fa fa-trash-o"></i></a></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                            <div class="box-icon">
+                                 <class="btn" data-animation="am-fade-and-scale" data-placement="center" bs-modal="modal" data-template="/modules/prepare_event/tpls/equipment.tpl.html"><i class="fa fa-plus"></i> Add
+                             </div>
+                        </div>
+                       
+                       <hr>
+
+
+                        <div class="form-actions highlight">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+           
+        </div>
+    </div>
+</div>
