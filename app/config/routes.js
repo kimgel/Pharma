@@ -37,12 +37,17 @@ define([], function() {
                 templateUrl: '/modules/approve_event/list.html'
                 ,authenticate: true            
             }
+          
 
             /************************
             *     Prepare Event     *
             *************************/
             ,'/prepare-event': {
                 templateUrl: '/modules/prepare_event/list.html'
+                ,authenticate: true            
+            }
+            ,'/prepare-event/prepare': {
+                templateUrl: '/modules/prepare_event/prepare.html'
                 ,authenticate: true            
             }
             /************************

@@ -51,14 +51,31 @@
                                 <input type="text" class="form-control">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">Event Date</label>
-                            <div class="controls">
-                                <div class="input-group date">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-calendar"></i>
-                                    </span>
-                                    <input type="text" name="po_date" class="form-control" ng-model="event.date" placeholder="Event Date" bs-datepicker>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">Event Date</label>
+                                    <div class="controls">
+                                        <div class="input-group date">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                            <input type="text" name="eta" class="form-control" ng-model="planner.eta" data-max-date="{{planner.etd}}" placeholder="From" bs-datepicker>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">To</label>
+                                    <div class="controls">
+                                        <div class="input-group date">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                            <input type="text" name="etd" class="form-control" ng-model="planner.etd" data-min-date="{{planner.eta}}" placeholder="To" bs-datepicker>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -83,18 +100,34 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Resources Required</label>
-                            <div class="controls">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label">Remarks/ Instructions</label>
                             <div class="controls">
                                 <input type="text" class="form-control">
                             </div>
                         </div>
-
+                        <div class="box-icon">
+                                 <class="btn" data-animation="am-fade-and-slide-top" data-placement="right" bs-modal="modal" data-template="/modules/propose_event/tpls/resources.tpl.html"><i class="fa fa-plus"></i> Add Human Resources
+                        </div>
+                        <div class="dataTables_wrapper form-inline" role="grid">
+                         <table class="table bootstrap-datatable datatable table-hover" >
+                            <thead>
+                                <tr role="row">
+                                    <th>Position</th>
+                                    <th>Pax</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Doctor</td>
+                                    <td>3</td>
+                                    <td><a><i class="fa fa-trash-o"></i></a></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                        
                       
                         <div class="form-actions highlight">
                             <button type="button" class="btn btn-primary">Submit</button>
