@@ -28,6 +28,10 @@ define([], function() {
                 templateUrl: '/modules/propose_event/add.html'
                 ,authenticate: true            
             }
+            ,'/propose-event/view': {
+                templateUrl: '/modules/propose_event/view.html'
+                ,authenticate: true            
+            }
 
             /************************
             *     Approve Event     *
@@ -35,6 +39,10 @@ define([], function() {
 
              ,'/approve-event': {
                 templateUrl: '/modules/approve_event/list.html'
+                ,authenticate: true            
+            }
+            ,'/approve-event/approve': {
+                templateUrl: '/modules/approve_event/approve.html'
                 ,authenticate: true            
             }
           
@@ -68,11 +76,23 @@ define([], function() {
                 templateUrl: '/modules/implement_event/list.html'
                 ,authenticate: true            
             }
+            ,'/implement-event/encode': {
+                templateUrl: '/modules/implement_event/encode.html'
+                ,dependencies: [
+
+                    'modules/implement_event/encode'
+                ]
+                ,authenticate: true            
+            }
             /************************
             *     Close Event     *
             *************************/
             ,'/close-event': {
                 templateUrl: '/modules/close_event/list.html'
+                ,authenticate: true            
+            }
+            ,'/close-event/close': {
+                templateUrl: '/modules/close_event/close.html'
                 ,authenticate: true            
             }
             /************************

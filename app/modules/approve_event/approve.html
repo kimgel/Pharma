@@ -1,0 +1,153 @@
+<div ng-include="'modules/common/header/view'"></div>
+<div ng-include="'modules/common/sidenav/view-main'"></div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Approve Event</h2>
+                </div>
+                <div class="box-content">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Proposal Number</label>
+                            </div>
+                            <div class="col-md-3">PH-0001
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Proposal Date</label>
+                            </div>
+                            <div class="col-md-3">
+                                99/99/99
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Event Proposer</label>
+                            </div>
+                            <div class="col-md-3">
+                                Juan Dela Cruz
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Event Type</label>
+                            </div>
+                            <div class="col-md-4">
+                                Event Type A
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Event Description</label>
+                            </div>
+                            <div class="col-md-4">
+                                Event Description asdf
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Event Purpose</label>
+                            </div>
+                            <div class="col-md-4">
+                                Event Purpose dsaasd
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Event Date</label>
+                            </div>
+                            <div class="col-md-3">
+                                99/99/99
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Event Location</label>
+                            </div>
+                            <div class="col-md-3">
+                                Manila asfaef
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="control-label">Event Remarks</label>
+                            </div>
+                            <div class="col-md-5">
+                                sample remarks airbfawib
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+        <div class="col-xs-5">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Approve Event</h2>
+                </div>
+                <div class="box-content">
+                    <label class="control-label">Approval Status</label>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option>Approve</option>
+                            <option>Disapprove</option>
+                            <option>Pending</option>
+                          </select>
+                    </div>
+
+                    <label class="control-label">Approver Remarks</label>
+                    <input type="text" class="form-control">
+
+                    <label class="control-label">Approval Date</label>
+                    <div class="controls">
+                        <div class="input-group date">
+                          <span class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                          </span>
+                            <input type="text" name="adate" class="form-control" ng-model="approval.date" data-max-date="{{planner.etd}}" placeholder="Date" bs-datepicker>
+
+                        </div>
+                      </div>
+
+                    <label class="control-label">Approval Time</label>
+                    <div class="controls">
+                              <div class="input-group date">
+                                <span class="input-group-addon">
+                                <i class="fa fa-clock-o"></i>
+                                </span>
+                                <input type="text" class="form-control" ng-model="approval.time" name="time" placeholder="Approval Time" bs-timepicker>
+                              </div>
+                            </div>
+
+
+                </div>
+                <div class="form-actions highlight">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn">Clear</button>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
