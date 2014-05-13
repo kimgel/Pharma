@@ -1,0 +1,94 @@
+<div ng-include="'modules/common/header/view'"></div> 
+<div ng-include="'modules/common/sidenav/view-main'"></div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-check-square-o"></i>Hr Assignment File</h2>
+                    
+                </div>
+                <div class="box-content">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Skill Type">
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Location">
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Code.">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dataTables_wrapper form-inline" role="grid">
+                        <table class="table bootstrap-datatable datatable table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>Code</th>
+                                    <th>Picture</th>
+                                    <th>Name</th>
+                                    <th>Skill Type</th>
+                                    <th>Profile</th>
+                                    <th>Select</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HR-0001</td>
+                                    <td><div class="avatar">
+                                          <img src="assets/images/avatar.jpg" alt="Avatar">
+                                        </div>
+                                    </td>
+                                    <td>JUAN DELA CRUZ</td>
+                                    <td>Doctor</td>
+                                    <td>View
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                        <label>
+                                          <input type="checkbox">
+                                        </label>
+                                      </div>
+                                    </td>
+                                 </tr>
+                                <tr>
+                                    <td>HR-0002</td>
+                                    <td><div class="avatar">
+                                          <img src="assets/images/avatar.jpg" alt="Avatar">
+                                        </div>
+                                    </td>
+                                    <td>JUANA DELA CRUZ</td>
+                                    <td>Nurse</td>
+                                    <td>View
+                                    </td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                              <input type="checkbox">
+                                            </label>
+                                          </div>
+                                    </td>
+                                 </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" ng-click="$hide()">Submit</button>
+                <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

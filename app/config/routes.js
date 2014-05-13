@@ -35,11 +35,17 @@ define([], function() {
                 ,authenticate: true            
             }
             ,'/initiateevent/propose-event/add': {
-                templateUrl: '/modules/initiateevent/propose_event/add.html'
+                templateUrl: '/modules/initiateevent/propose_event/add.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/initiateevent/propose-event/view': {
-                templateUrl: '/modules/initiateevent/propose_event/view.html'
+                templateUrl: '/modules/initiateevent/propose_event/view.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
 
@@ -48,11 +54,17 @@ define([], function() {
             *************************/
 
              ,'/initiateevent/approve-event': {
-                templateUrl: '/modules/initiateevent/approve_event/list.html'
+                templateUrl: '/modules/initiateevent/approve_event/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/initiateevent/approve-event/approve': {
-                templateUrl: '/modules/initiateevent/approve_event/approve.html'
+                templateUrl: '/modules/initiateevent/approve_event/approve.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
           
@@ -60,14 +72,49 @@ define([], function() {
             /************************
             *     Prepare Event     *
             *************************/
-            ,'/initiateevent/prepare-event': {
-                templateUrl: '/modules/initiateevent/prepare_event/list.html'
+            ,'/prepareevent/prepare-event': {
+                templateUrl: '/modules/prepareevent/prepare_event/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
-            ,'/initiateevent/prepare-event/prepare': {
-                templateUrl: '/modules/initiateevent/prepare_event/prepare.html'
+            
+            ,'/prepareevent/prepare-event/reserve': {
+                templateUrl: '/modules/prepareevent/prepare_event/reserve.html'
+                ,dependencies: [
+                     'modules/prepareevent/prepare_event/reserve',
+                     'modules/common/sidenav/view-main'
+                ]
                 ,authenticate: true            
             }
+            ,'/prepareevent/prepare-event/addhumanresources': {
+                templateUrl: '/modules/prepareevent/prepare_event/addhumanresources.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
+                ,authenticate: true            
+            }
+            ,'/prepareevent/prepare-event/confirm': {
+                templateUrl: '/modules/prepareevent/prepare_event/confirm.html'
+                ,dependencies: [
+                    'modules/prepareevent/prepare_event/confirm',
+                     'modules/common/sidenav/view-main'
+
+                ]
+                ,authenticate: true            
+            }
+            ,'/prepareevent/prepare-event/confirmresources': {
+                templateUrl: '/modules/prepareevent/prepare_event/confirmresources.html'
+                ,dependencies: [
+                     'modules/common/sidenav/view-main'
+
+                ]
+                ,authenticate: true            
+            }
+            
+            
+
             /************************
             *     User    *
             *************************/

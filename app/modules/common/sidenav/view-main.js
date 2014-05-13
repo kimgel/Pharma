@@ -12,10 +12,16 @@ define(['app'], function (app) {
                 {
                     "text": "Approve",
                      "href": '/initiateevent/approve-event'
+                }
+            ],
+            $scope.prepareeventDd = [
+                {
+                    "text": "Reserve",
+                    "href": '/prepareevent/prepare-event'
                 },
                 {
-                    "text": "Prepare",
-                     "href": '/initiateevent/prepare-event'
+                    "text": "Confirm",
+                     "href": '/prepareevent/prepare-event/confirmresources'
                 }
             ];
         }
