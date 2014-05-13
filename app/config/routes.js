@@ -102,6 +102,10 @@ define([], function() {
                 templateUrl: '/modules/event_financials/list.html'
                 ,authenticate: true            
             }
+            ,'/event-financials/enter': {
+                templateUrl: '/modules/event_financials/enter.html'
+                ,authenticate: true            
+            }
             /************************
             *    iNVENTORY    *
             *************************/
@@ -111,6 +115,17 @@ define([], function() {
             }
             ,'/inventory/add': {
                 templateUrl: '/modules/inventory/add.html'
+                ,authenticate: true            
+            }
+            /************************
+            *    Payment Details    *
+            *************************/
+            ,'/payment-details': {
+                templateUrl: '/modules/payment_details/list.html'
+                ,authenticate: true            
+            }
+            ,'/payment-details/pay': {
+                templateUrl: '/modules/payment_details/pay.html'
                 ,authenticate: true            
             }
         }

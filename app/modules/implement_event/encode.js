@@ -6,7 +6,7 @@ define(['app'], function(app) {
         function($scope) {
 
             $scope.tabs = [
-                      {
+                      { 
                         "title": "View",
                         "template": "/modules/implement_event/tpls/view.tpl.html",
                       },
