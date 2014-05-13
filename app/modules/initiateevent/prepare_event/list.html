@@ -1,14 +1,12 @@
-<div ng-include="'modules/common/header/view'"></div>
+<div ng-include="'modules/common/header/view'"></div> 
 <div ng-include="'modules/common/sidenav/view-main'"></div>
 <div id="content">
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header" data-original-title="">
-                    <h2><i class="fa fa-pencil"></i>Proposed Events List</h2>
-                    <div class="box-icon">
-                        <a href="/propose-event/add" class="btn"><i class="fa fa-plus"></i> Add</a>
-                    </div>
+                    <h2><i class="fa fa-check-square-o"></i>Prepare Event</h2>
+                    
                 </div>
                 <div class="box-content">
                     <div class="dataTables_wrapper form-inline" role="grid">
@@ -19,13 +17,9 @@
                                     <th>PROPOSAL DATE</th>
                                     <th>EVENT PROPOSER</th>
                                     <th>EVENT TYPE</th>
-                                    <th>EVENT DESCRIPTION</th>
-                                    <th>EVENT PURPOSE</th>
                                     <th>EVENT DATE</th>
-                                    <th>EVENT TIME</th>
                                     <th>EVENT LOCATION</th>
-                                    <th>STATUS</th> 
-                                    <th>VIEW</th>                                   
+                                    <th>PREPARE</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,30 +28,21 @@
                                     <td>99/99/99</td>
                                     <td>JUAN DELA CRUZ</td>
                                     <td>TYPE2</td>
-                                    <td>sample description</td>
-                                    <td>sample purpose</td>
                                     <td>99/99/99</td>
-                                    <td>09:00 </td>
                                     <td>MANILA</td>
-                                    <td>A</td>
                                     <td>
-                                        <a href="/propose-event/view" class="btn btn-success">View</a>
+                                        <a href="/initiateevent/prepare-event/prepare" class="btn btn-success">Prepare</a>
+
                                     </td>
-                                </tr>
+                                 </tr>
                                 <tr>
                                     <td>PH-0002</td>
                                     <td>99/99/99</td>
-                                    <td>JUAN DELA CRUZ</td>
+                                    <td>JUANA DELA CRUZ</td>
                                     <td>TYPE2</td>
-                                    <td>sample description</td>
-                                    <td>sample purpose</td>
                                     <td>99/99/99</td>
-                                    <td>09:00 </td>
                                     <td>MANILA</td>
-                                    <td>P</td>
-                                    <td>
-                                        <a href="/propose-event/view" class="btn btn-success">View</a>
-                                    </td>
+                                    <td><a href="/initiateevent/prepare-event/prepare" class="btn btn-success">Prepare</a></td>
                                 </tr>
                             </tbody>
                         </table>

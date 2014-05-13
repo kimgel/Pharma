@@ -11,25 +11,35 @@ define([], function() {
                 ]                
             }
             ,'/statusboard': {
-                templateUrl: '/modules/statusboard/index.html'
+                templateUrl: '/modules/statusboard/index.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
 
 
             /************************
+            *     Initiate Event     *
+            *************************/
+
+            /************************
             *     Propose Event     *
             *************************/
 
-            ,'/propose-event': {
-                templateUrl: '/modules/propose_event/list.html'
+            ,'/initiateevent/propose-event': {
+                templateUrl: '/modules/initiateevent/propose_event/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
-            ,'/propose-event/add': {
-                templateUrl: '/modules/propose_event/add.html'
+            ,'/initiateevent/propose-event/add': {
+                templateUrl: '/modules/initiateevent/propose_event/add.html'
                 ,authenticate: true            
             }
-            ,'/propose-event/view': {
-                templateUrl: '/modules/propose_event/view.html'
+            ,'/initiateevent/propose-event/view': {
+                templateUrl: '/modules/initiateevent/propose_event/view.html'
                 ,authenticate: true            
             }
 
@@ -37,12 +47,12 @@ define([], function() {
             *     Approve Event     *
             *************************/
 
-             ,'/approve-event': {
-                templateUrl: '/modules/approve_event/list.html'
+             ,'/initiateevent/approve-event': {
+                templateUrl: '/modules/initiateevent/approve_event/list.html'
                 ,authenticate: true            
             }
-            ,'/approve-event/approve': {
-                templateUrl: '/modules/approve_event/approve.html'
+            ,'/initiateevent/approve-event/approve': {
+                templateUrl: '/modules/initiateevent/approve_event/approve.html'
                 ,authenticate: true            
             }
           
@@ -50,30 +60,39 @@ define([], function() {
             /************************
             *     Prepare Event     *
             *************************/
-            ,'/prepare-event': {
-                templateUrl: '/modules/prepare_event/list.html'
+            ,'/initiateevent/prepare-event': {
+                templateUrl: '/modules/initiateevent/prepare_event/list.html'
                 ,authenticate: true            
             }
-            ,'/prepare-event/prepare': {
-                templateUrl: '/modules/prepare_event/prepare.html'
+            ,'/initiateevent/prepare-event/prepare': {
+                templateUrl: '/modules/initiateevent/prepare_event/prepare.html'
                 ,authenticate: true            
             }
             /************************
             *     User    *
             *************************/
             ,'/user': {
-                templateUrl: '/modules/user/list.html'
+                templateUrl: '/modules/user/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/user/add': {
-                templateUrl: '/modules/user/add.html'
+                templateUrl: '/modules/user/add.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             /************************
             *     Implement Event     *
             *************************/
             ,'/implement-event': {
-                templateUrl: '/modules/implement_event/list.html'
+                templateUrl: '/modules/implement_event/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/implement-event/encode': {
@@ -88,44 +107,68 @@ define([], function() {
             *     Close Event     *
             *************************/
             ,'/close-event': {
-                templateUrl: '/modules/close_event/list.html'
+                templateUrl: '/modules/close_event/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/close-event/close': {
-                templateUrl: '/modules/close_event/close.html'
+                templateUrl: '/modules/close_event/close.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             /************************
             *    Event Financials    *
             *************************/
             ,'/event-financials': {
-                templateUrl: '/modules/event_financials/list.html'
+                templateUrl: '/modules/event_financials/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/event-financials/enter': {
-                templateUrl: '/modules/event_financials/enter.html'
+                templateUrl: '/modules/event_financials/enter.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             /************************
             *    iNVENTORY    *
             *************************/
             ,'/inventory': {
-                templateUrl: '/modules/inventory/list.html'
+                templateUrl: '/modules/inventory/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/inventory/add': {
-                templateUrl: '/modules/inventory/add.html'
+                templateUrl: '/modules/inventory/add.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             /************************
             *    Payment Details    *
             *************************/
             ,'/payment-details': {
-                templateUrl: '/modules/payment_details/list.html'
+                templateUrl: '/modules/payment_details/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
             ,'/payment-details/pay': {
-                templateUrl: '/modules/payment_details/pay.html'
+                templateUrl: '/modules/payment_details/pay.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
                 ,authenticate: true            
             }
         }

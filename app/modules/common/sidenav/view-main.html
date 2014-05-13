@@ -1,9 +1,5 @@
-<div id="sidebar-left">
-    <!--
-    <div class="search-box">
-        <input type="text" class="search" placeholder="Enter Impex/PO number..." />
-    </div>
-    -->
+<div id="sidebar-left" ng-controller="MainNavCtrl">
+    
     <div class="sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li>
@@ -13,34 +9,36 @@
                     </span>
                 </a>
             </li>
-            <li>
-                <a href="#" active-path>
+          
+
+            <li data-match-route="/initiateevent.*">
+                <a href="javascript:;" data-container="body" placement="right" bs-dropdown="initiateeventDd">
                     <i class="fa fa-calendar"></i>Initiate Event
-                    <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
-                    </span>
+                    <i class="fa fa-angle-right"></i>
                 </a>
-            </li>
+            </li> 
+<!--
             <li>
-                <a href="/propose-event" active-path>
+                <a href="/initiateevent/propose-event" active-path>
                     <i class="fa fa-pencil"></i>Propose Event
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
             </li>
             <li>
-                <a href="/approve-event" active-path>
+                <a href="/initiateevent/approve-event" active-path>
                     <i class="fa fa-book"></i>Approve Event
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
             </li>
             <li>
-                <a href="/prepare-event" active-path>
+                <a href="/initiateevent/prepare-event" active-path>
                     <i class="fa fa-check-square-o"></i>Prepare Event
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
-            </li>
+            </li>-->
             <li>
                 <a href="/implement-event" active-path>
                     <i class="fa fa-play"></i>Implement Event
