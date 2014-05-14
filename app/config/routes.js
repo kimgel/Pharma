@@ -253,6 +253,13 @@ define([], function() {
                 ]   
                 ,authenticate: true            
             }
+            ,'/hrmaster/add': {
+                templateUrl: '/modules/hrmaster/add.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
+                ,authenticate: true            
+            }
             
 
         }

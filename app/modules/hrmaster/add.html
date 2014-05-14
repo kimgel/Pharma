@@ -1,0 +1,81 @@
+<div ng-include="'modules/common/header/view'"></div>
+<div ng-include="'modules/common/sidenav/view-main'"></div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Add Human Resource</h2>
+                </div>
+                <div class="box-content">
+                    <form role="form">
+                        <div class="form-group">
+                            <label class="control-label">Code</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+             
+                         <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Skill Type</label>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>SKill TYPE 1</option>
+                                    <option>SKill TYPE 2</option>
+                                    <option>SKill TYPE 3</option>
+                                    <option>SKill TYPE 4</option>
+                                    <option>SKill TYPE 5</option>
+                                    <option>SKill TYPE 6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Address</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contact No.</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <label class="control-label">Location</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Details</label>
+                            <div class="controls">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                             <div class="fileUpload btn btn-default"><i class="fa fa-plus"></i> 
+                                <input type="file" ng-file-select="onFileSelect($files)" />
+                            Attach Picture</div>
+                        </div>                                     
+                      
+                        <div class="form-actions highlight">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+           
+        </div>
+    </div>
+</div>
