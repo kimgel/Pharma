@@ -231,10 +231,13 @@ define([], function() {
             ,'/payment-details/pay': {
                 templateUrl: '/modules/payment_details/pay.html',
                 dependencies: [
+                    'modules/payment_details/pay',
                     'modules/common/sidenav/view-main'
                 ]   
                 ,authenticate: true            
             }
+            
+
         }
     };
 });
