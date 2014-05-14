@@ -112,7 +112,23 @@ define([], function() {
                 ]
                 ,authenticate: true            
             }
-            
+
+            ,'/prepareevent/prepare-event/addequipment': {
+                templateUrl: '/modules/prepareevent/prepare_event/addequipment.html'
+                ,dependencies: [
+                     'modules/common/sidenav/view-main'
+
+                ]
+                ,authenticate: true            
+            }
+            ,'/prepareevent/prepare-event/addsupplies': {
+                templateUrl: '/modules/prepareevent/prepare_event/addsupplies.html'
+                ,dependencies: [
+                     'modules/common/sidenav/view-main'
+
+                ]
+                ,authenticate: true            
+            }
             
 
             /************************
