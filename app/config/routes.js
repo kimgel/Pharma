@@ -236,6 +236,23 @@ define([], function() {
                 ]   
                 ,authenticate: true            
             }
+            /************************
+            *    HR Master   *
+            *************************/
+            ,'/hrmaster': {
+                templateUrl: '/modules/hrmaster/list.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
+                ,authenticate: true            
+            }
+            ,'/hrmaster/viewprofile': {
+                templateUrl: '/modules/hrmaster/viewprofile.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
+                ,authenticate: true            
+            }
             
 
         }
