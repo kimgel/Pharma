@@ -3,12 +3,22 @@
 <div id="content">
     <div class="row">
 
-        <div class="col-xs-7">
+        <div class="col-xs-5">
             <div class="box">
                 <div class="box-header">
                     <h2><i class="fa fa-th-list"></i>Event Summary</h2>
                 </div>
                 <div class="box-content">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Event No</label>
+                                </div>
+                                <div class="col-md-3">
+                                    EV-0001
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-4">
@@ -92,6 +102,16 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-4">
+                                    <label class="control-label">Required Resources</label>
+                                </div>
+                                <div class="col-md-3">
+                                     argaergaw
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
                                     <label class="control-label">Event Remarks</label>
                                 </div>
                                 <div class="col-md-5">
@@ -154,7 +174,7 @@
             </div>
         </div>
 
-        <div class="col-xs-5">
+        <div class="col-xs-7">
             <div class="box">
                 <div class="box-header">
                     <h2><i class="fa fa-pencil"></i>Receive Equipment/Supplies</h2>
@@ -163,21 +183,21 @@
                     
 
                         <div class="box-icon">
-                                 <class="btn" data-animation="am-fade-and-slide-top" data-placement="right" bs-modal="modal" data-template="/modules/close_event/tpls/equipment.tpl.html"><i class="fa fa-plus"></i> Add Equipment
+                                 <class="btn" data-animation="am-fade-and-slide-top" data-placement="right" bs-modal="modal" data-template="/modules/closeevent/receive/tpls/equipment.tpl.html"><i class="fa fa-plus"></i> Add Equipment
                         </div>
                         <div class="dataTables_wrapper form-inline" role="grid">
                          <table class="table bootstrap-datatable datatable table-hover" >
                             <thead>
                                 <tr role="row">
-                                    <th>Equipment</th>
-                                    <th>Quantity</th>
+                                    <th>Serial No.</th>
+                                    <th>Equipment Name</th>
                                     <th>Remove</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>1231-1241</td>
                                     <td>Wheelchair</td>
-                                    <td>2</td>
                                     <td><a><i class="fa fa-trash-o"></i></a></td>
                                 </tr>
                                 
@@ -192,13 +212,13 @@
                     </div>
                     <hr>
                     <div class="box-icon">
-                        <class="btn" data-animation="am-fade-and-slide-top" data-placement="right" bs-modal="modal" data-template="/modules/close_event/tpls/supplies.tpl.html"><i class="fa fa-plus"></i> Add Supplies
+                        <class="btn" data-animation="am-fade-and-slide-top" data-placement="right" bs-modal="modal" data-template="/modules/closeevent/receive/tpls/supplies.tpl.html"><i class="fa fa-plus"></i> Add Supplies
                     </div>
                     <div class="dataTables_wrapper form-inline" role="grid">
                         <table class="table bootstrap-datatable datatable table-hover" >
                             <thead>
                                 <tr role="row">
-                                    <th>Supplies</th>
+                                    <th>Supplies Name</th>
                                     <th>Quantity</th>
                                     <th>Remove</th>
                                 </tr>
@@ -222,7 +242,7 @@
                     </div>
             
                         <div class="form-actions highlight">
-                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-primary">Receive</button>
                             <button type="reset" class="btn">Clear</button>
                         </div>
                     </div>

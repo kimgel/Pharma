@@ -52,20 +52,28 @@
                     </span>
                 </a>
             </li>
+            <!--
             <li>
                 <a href="/close-event" active-path>
                     <i class="fa fa-power-off"></i>Close Event
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
+            </li>-->
+            <li data-match-route="/closeevent.*">
+                <a href="javascript:;" data-container="body" placement="right" bs-dropdown="closeeventDd">
+                    <i class="fa fa-power-off"></i>Close Event
+                    <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+            <!--
             <li>
                 <a href="/event-financials" active-path>
                     <i class="fa fa-usd"></i>Event Financials
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
-            </li>
+            </li>-->
             <li>
                 <a href="/payment-details" active-path>
                     <i class="fa fa-usd"></i>Payment Details

@@ -3,12 +3,22 @@
 <div id="content">
     <div class="row">
 
-        <div class="col-xs-7">
+        <div class="col-xs-5">
             <div class="box">
                 <div class="box-header">
                     <h2><i class="fa fa-th-list"></i>Event Summary</h2>
                 </div>
                 <div class="box-content">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Event No.</label>
+                                </div>
+                                <div class="col-md-3">
+                                    EV-0001
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-4">
@@ -154,38 +164,44 @@
             </div>
         </div>
 
-        <div class="col-xs-5">
+        <div class="col-xs-7">
             <div class="box">
                 <div class="box-header">
-                    <h2><i class="fa fa-pencil"></i>Enter Billing Details</h2>
-                </div>
-                <div class="box-content">
-                    <div class="form-group">
-                        <label class="control-label">Total Amount</label>
-                        <div class="controls">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Remarks</label>
-                        <div class="controls">
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="fileUpload btn btn-default"><i class="fa fa-plus"></i> 
-                            <input type="file" ng-file-select="onFileSelect($files)" />
-                                Attach Receipt
-                        </div>
-                    </div>
+                    <h2>Enter Billing Details</h2>
+                    <div class="box-icon">
+                        <div class="btn" data-template="/modules/closeevent/reimbursements/tpls/add.tpl.html" data-placement="right" data-animation="am-slide-right" bs-aside="aside" data-container="body"><i class="fa fa-plus"></i> Add</div> 
+                    </div>   
+                </div>  
 
+            <div class="box-content">
+                <div class="dataTables_wrapper form-inline" role="grid">
+                        <table class="table bootstrap-datatable datatable table-hover" >
+                            <thead>
+                               <tr role="row">
+                                    <th>No.</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                    <th>Remarks</th>
+                                    <th>Receipt</th>
+                                    <th>Remove</th>
+                            </tr>
+                            </thead>
+                             <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>4000</td>
+                                    <td>99/99/99</td>
+                                    <td>sample remarks</td>
+                                    <td>receipt.jpg</td>
+                                    <td><a><i class="fa fa-trash-o"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
                 </div>
-            
-                        <div class="form-actions highlight">
-                            <button type="button" class="btn btn-primary">Submit</button>
-                            <button type="reset" class="btn">Clear</button>
-                        </div>
-                    </div>
+            </div>
+        </div>
+
+
                 </div>
             </div>
     </div>

@@ -23,6 +23,16 @@ define(['app'], function (app) {
                     "text": "Confirm",
                      "href": '/prepareevent/prepare-event/confirmresources'
                 }
+            ],
+            $scope.closeeventDd = [
+                {
+                    "text": "Receive",
+                    "href": '/closeevent/receive'
+                },
+                {
+                    "text": "Reimbursements",
+                     "href": '/closeevent/reimbursements'
+                }
             ];
         }
     ]);

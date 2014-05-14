@@ -1,0 +1,53 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <label class="control-label">Receive Equipment</label>
+      </div>
+      <div class="modal-body" >
+      <div class="box">
+               
+
+                <div class="box-content">
+                    <div class="dataTables_wrapper form-inline" role="grid">
+                        <table class="table bootstrap-datatable datatable table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>Serial No.</th>
+                                    <th>Equipment Name</th>
+                                    <th>Assigned Date</th> 
+                                    <th>Select</th>                                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1234-4312</td>
+                                    <td>BP Machine</td>
+                                    <td>99/99/99 to 99/99/99</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label>
+                                              <input type="checkbox">
+                                            </label>
+                                          </div>
+                                    </td>
+                                </tr>
+                                
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+       
+
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="$hide()">Submit</button>
+        <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

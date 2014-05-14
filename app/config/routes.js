@@ -162,39 +162,40 @@ define([], function() {
                 templateUrl: '/modules/implement_event/encode.html'
                 ,dependencies: [
 
-                    'modules/implement_event/encode'
+                    'modules/implement_event/encode',
+                    'modules/common/sidenav/view-main'
                 ]
                 ,authenticate: true            
             }
             /************************
             *     Close Event     *
             *************************/
-            ,'/close-event': {
-                templateUrl: '/modules/close_event/list.html',
+            ,'/closeevent/receive': {
+                templateUrl: '/modules/closeevent/receive/list.html',
                 dependencies: [
                     'modules/common/sidenav/view-main'
                 ]   
                 ,authenticate: true            
             }
-            ,'/close-event/close': {
-                templateUrl: '/modules/close_event/close.html',
+            ,'/closeevent/receive/close': {
+                templateUrl: '/modules/closeevent/receive/close.html',
                 dependencies: [
                     'modules/common/sidenav/view-main'
                 ]   
                 ,authenticate: true            
             }
             /************************
-            *    Event Financials    *
+            *    Close Event Reimbursements    *
             *************************/
-            ,'/event-financials': {
-                templateUrl: '/modules/event_financials/list.html',
+            ,'/closeevent/reimbursements': {
+                templateUrl: '/modules/closeevent/reimbursements/list.html',
                 dependencies: [
                     'modules/common/sidenav/view-main'
                 ]   
                 ,authenticate: true            
             }
-            ,'/event-financials/enter': {
-                templateUrl: '/modules/event_financials/enter.html',
+            ,'/closeevent/reimbursements/enter': {
+                templateUrl: '/modules/closeevent/reimbursements/enter.html',
                 dependencies: [
                     'modules/common/sidenav/view-main'
                 ]   
