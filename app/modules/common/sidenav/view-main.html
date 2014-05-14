@@ -91,11 +91,18 @@
                     </span>
                 </a>
             </li>
+            <!--
             <li>
                 <a href="/inventory" active-path>
                     <i class="fa fa-inbox"></i>Inventory
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
+                </a>
+            </li>-->
+            <li data-match-route="/inventory.*">
+                <a href="javascript:;" data-container="body" placement="right" bs-dropdown="inventoryDd">
+                    <i class="fa fa-inbox"></i>Inventory
+                    <i class="fa fa-angle-right"></i>
                 </a>
             </li>
             <li>

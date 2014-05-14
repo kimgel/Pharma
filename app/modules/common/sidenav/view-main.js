@@ -33,6 +33,16 @@ define(['app'], function (app) {
                     "text": "Reimbursements",
                      "href": '/closeevent/reimbursements'
                 }
+            ],
+            $scope.inventoryDd = [
+                {
+                    "text": "Equipment",
+                    "href": '/inventory/equipmentmaster'
+                },
+                {
+                    "text": "Supplies",
+                     "href": '/inventory/suppliesmaster'
+                }
             ];
         }
     ]);

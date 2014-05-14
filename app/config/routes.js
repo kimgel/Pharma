@@ -204,15 +204,15 @@ define([], function() {
             /************************
             *    iNVENTORY    *
             *************************/
-            ,'/inventory': {
-                templateUrl: '/modules/inventory/list.html',
+            ,'/inventory/equipmentmaster': {
+                templateUrl: '/modules/inventory/equipmentmaster/listequipment.html',
                 dependencies: [
                     'modules/common/sidenav/view-main'
                 ]   
                 ,authenticate: true            
             }
-            ,'/inventory/add': {
-                templateUrl: '/modules/inventory/add.html',
+            ,'/inventory/suppliesmaster': {
+                templateUrl: '/modules/inventory/suppliesmaster/listsupplies.html',
                 dependencies: [
                     'modules/common/sidenav/view-main'
                 ]   
