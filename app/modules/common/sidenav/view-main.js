@@ -16,17 +16,17 @@ define(['app'], function (app) {
             ],
             $scope.prepareeventDd = [
                 {
-                    "text": "Reserve",
+                    "text": "Reserve Resources",
                     "href": '/prepareevent/prepare-event'
                 },
                 {
-                    "text": "Confirm",
+                    "text": "Confirm Resources",
                      "href": '/prepareevent/prepare-event/confirmresources'
                 }
             ],
             $scope.closeeventDd = [
                 {
-                    "text": "Receive",
+                    "text": "Receive Equipment/Supplies",
                     "href": '/closeevent/receive'
                 },
                 {

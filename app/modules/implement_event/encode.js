@@ -11,11 +11,11 @@ define(['app'], function(app) {
                         "template": "/modules/implement_event/tpls/view.tpl.html",
                       },
                       {
-                        "title": "Encode",
+                        "title": "Event Form",
                         "template": "/modules/implement_event/tpls/record.tpl.html",
                       },
                       {
-                        "title": "Attach",
+                        "title": "Event Attachment",
                         "template": "/modules/implement_event/tpls/attach.tpl.html",
                       }
                     ];

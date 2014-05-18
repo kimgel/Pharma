@@ -11,8 +11,16 @@ define(['app'], function(app) {
                         "template": "/modules/prepareevent/prepare_event/tpls/view.tpl.html",
                       },
                       {
-                        "title": "Resources",
-                        "template": "/modules/prepareevent/prepare_event/tpls/resources.tpl.html",
+                        "title": "Human Resource",
+                        "template": "/modules/prepareevent/prepare_event/tpls/resourceshr.tpl.html",
+                      },
+                      {
+                        "title": "Equipment Resource",
+                        "template": "/modules/prepareevent/prepare_event/tpls/resourcesequipment.tpl.html",
+                      },
+                      {
+                        "title": "Supplies Resource",
+                        "template": "/modules/prepareevent/prepare_event/tpls/resourcessupplies.tpl.html",
                       }
                     ];
                     $scope.tabs.activeTab = 0;
