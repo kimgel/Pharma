@@ -11,11 +11,15 @@ define(['app'], function(app) {
                         "template": "/modules/payment_details/tpls/view.tpl.html",
                       },
                       {
-                        "title": "Payment",
+                        "title": "Prepare Billing",
+                        "template": "/modules/payment_details/tpls/preparebilling.tpl.html",
+                      },
+                      {
+                        "title": "Billing Payment",
                         "template": "/modules/payment_details/tpls/payevent.tpl.html",
                       },
                       {
-                        "title": "Human Resources",
+                        "title": "HR Payment",
                         "template": "/modules/payment_details/tpls/payhr.tpl.html",
                       }
                     ];

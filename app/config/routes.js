@@ -236,6 +236,27 @@ define([], function() {
                 ]   
                 ,authenticate: true            
             }
+            ,'/payment-details/add': {
+                templateUrl: '/modules/payment_details/add.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
+                ,authenticate: true            
+            }
+            ,'/payment-details/addhr': {
+                templateUrl: '/modules/payment_details/addhr.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
+                ,authenticate: true            
+            }
+            ,'/payment-details/viewhr': {
+                templateUrl: '/modules/payment_details/viewhr.html',
+                dependencies: [
+                    'modules/common/sidenav/view-main'
+                ]   
+                ,authenticate: true            
+            }
             /************************
             *    HR Master   *
             *************************/

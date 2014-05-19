@@ -1,11 +1,12 @@
-<div class="aside" tabindex="-1" role="dialog">
-    <div class="aside-dialog">
-        <div class="aside-content"> 
-            <div class="aside-header">
-                <button type="button" class="close" ng-click="$hide()">&times;</button>
-                <h4 class="aside-title">Human Resource Payment Summary</h4>
-            </div>
-            <div class="aside-body aside-350"> 
+<div ng-include="'modules/common/header/view'"></div>
+<div ng-include="'modules/common/sidenav/view-main'"></div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>HR Payment Summary</h2>
+                </div>
                 <div class="box-content">
                     <label class="control-label">MAGNUS CARLSEN</label><br/>
                     <label class="control-label">Doctor</label><br/>
@@ -45,10 +46,6 @@
                     
 
                 </div>
-           
+            </div>
         </div>
-    </div>
-</div>
-</div>
-
-				
+    </div></div>
