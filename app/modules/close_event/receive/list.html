@@ -1,0 +1,58 @@
+<div ng-include="'modules/common/header/view'"></div> 
+<div ng-include="'modules/common/sidenav/view-main'"></div>
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-power-off"></i>Receive Resources</h2>
+                    
+                </div>
+                <div class="box-content">
+                    <div class="dataTables_wrapper form-inline" role="grid">
+                        <table class="table bootstrap-datatable datatable table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>EVENT NO.</th>
+                                    <th>PROPOSAL NO.</th>
+                                    <th>PROPOSAL DATE</th>
+                                    <th>EVENT PROPOSER</th>
+                                    <th>EVENT TYPE</th>
+                                    <th>EVENT DATE</th>
+                                    <th>EVENT LOCATION</th>
+                                    <th>RECEIVE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EV-0001</td>
+                                    <td>PH-0001</td>
+                                    <td>99/99/99</td>
+                                    <td>JUAN DELA CRUZ</td>
+                                    <td>TYPE2</td>
+                                    <td>99/99/99</td>
+                                    <td>MANILA</td>
+                                    <td>
+                                       <a ui-sref="receive" class= "btn btn-success">Receive</a>
+                                    </td>
+                                 </tr>
+                                <tr>
+                                    <td>EV-0001</td>
+                                    <td>PH-0002</td>
+                                    <td>99/99/99</td>
+                                    <td>JUANA DELA CRUZ</td>
+                                    <td>TYPE2</td>
+                                    <td>99/99/99</td>
+                                    <td>MANILA</td>
+                                    <td>
+                                        <a ui-sref="receive" class= "btn btn-success">Receive</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -18,7 +18,7 @@ define(['app'], function(app) {
                         password: $scope.user.password
                     }).then(function() {
                         // Logged in, redirect to home
-                        $location.path('/');
+                        $location.path('/statusboard');
                     }).
                     catch (function(err) {
                         err = err.data;

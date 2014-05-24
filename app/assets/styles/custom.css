@@ -54,3 +54,14 @@
 .toUpper{
     text-transform: uppercase;
 }
+.section-title{
+    margin-bottom: 0;
+}
+.title-non-box{
+    font-size: 20px;
+    padding: 0 10px 10px 0;
+}
+
+.alert:focus{
+    outline: 0;
+}

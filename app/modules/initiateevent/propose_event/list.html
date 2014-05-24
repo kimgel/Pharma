@@ -1,5 +1,3 @@
-<div ng-include="'modules/common/header/view'"></div>
-<div ng-include="'modules/common/sidenav/view-main'"></div>
 <div id="content">
     <div class="row">
         <div class="col-xs-12">
@@ -7,7 +5,7 @@
                 <div class="box-header" data-original-title="">
                     <h2><i class="fa fa-pencil"></i>Proposed Events List</h2>
                     <div class="box-icon">
-                        <a href="/initiateevent/propose-event/add" class="btn"><i class="fa fa-plus"></i> Add</a>
+                        <a ui-sref="propose_event_add" class="btn"><i class="fa fa-plus"></i> Add</a>
                     </div>
                 </div>
                 <div class="box-content">
@@ -41,7 +39,7 @@
                                     <td>MANILA</td>
                                     <td><span class="label label-info">A</span></td>
                                     <td>
-                                        <a href="/initiateevent/propose-event/view" class="btn btn-success">View</a>
+                                        <a ui-sref="propose_event_view" class= "btn btn-success">View</a>
                                     </td>
                                 </tr>
                                 <tr>
