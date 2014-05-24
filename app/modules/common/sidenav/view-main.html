@@ -5,7 +5,7 @@
     <div class="sidebar-nav" bs-navbar> 
         <ul class="nav nav-tabs nav-stacked main-menu">
 
-            <li>
+            <li data-match-route="statusboard.*">
                 <a href="/statusboard" active-path>
                     <i class="fa fa-dashboard"></i>Status Board
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
@@ -42,19 +42,19 @@
                     </a>
                 </div>
                 <ul ng-show="prepare_event" ng-animate="'slide'">
-                    <li data-match-route="/prepare_event/reserve.*">
+                    <li data-match-route="reserve.*">
                         <a ui-sref="reserve">
                             <i class="fa fa-pencil-square-o"></i>Reserve
                         </a>
                     </li>
-                    <li data-match-route="/prepare_event/confirm.*">
+                    <li data-match-route="confirm.*">
                         <a ui-sref="confirm">
                             <i class="fa fa-chain"></i>Confirm
                         </a>
                     </li>                   
                 </ul>
             </li>       
-            <li>
+            <li data-match-route="implement_event.*">
                 <a ui-sref="implement_event" active-path>
                     <i class="fa fa-play"></i>Implement Event
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
@@ -82,7 +82,7 @@
                     </li>
                 </ul>
             </li> 
-            <li>
+            <li data-match-route="event_financials.*">
                 <a ui-sref="event_financials" active-path>
                     <i class="fa fa-usd"></i>Event Financials
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
@@ -92,14 +92,14 @@
         </ul>
         <hr />
         <ul class="nav nav-tabs nav-stacked main-menu">            
-            <li>
+            <li data-match-route="user.*">
                 <a href="/user" active-path>
                     <i class="fa fa-user"></i>User
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
             </li>             
-            <li>
+            <li data-match-route="hr_master.*">
                 <a href="/hr_master" active-path>
                     <i class="fa fa-inbox"></i>Hr Master
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>

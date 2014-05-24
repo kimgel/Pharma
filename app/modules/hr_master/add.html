@@ -22,16 +22,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Skill Type</label>
-                            <div class="form-group">
-                                <select class="form-control">
-                                    <option>SKill TYPE 1</option>
-                                    <option>SKill TYPE 2</option>
-                                    <option>SKill TYPE 3</option>
-                                    <option>SKill TYPE 4</option>
-                                    <option>SKill TYPE 5</option>
-                                    <option>SKill TYPE 6</option>
-                                </select>
+                            <label class="control-label">Skill type</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="skill" ng-model="humanresource.skill" required>
+                                <span class="label label-danger pull-right" ng-show="form.skill.$error.required">{{form.skill.message}}</span>
                             </div>
                         </div>
                         <div class="form-group">
