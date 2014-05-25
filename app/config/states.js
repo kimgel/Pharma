@@ -371,14 +371,32 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Encode'
+                    displayName: 'Records'
                 },
 
                 resolve: new Dependency([
                     'modules/implement_event/encode'
                 ]),
                 authenticate: true
-            },   
+            },  
+            encode_add: {
+                name: 'encode_add',
+                url: '/add',
+                parent: 'implement_event',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/implement_event/add.html'
+                    }
+                },
+                data: {
+                    displayName: 'Input Records'
+                },
+
+                resolve: new Dependency([
+                    'modules/implement_event/encode'
+                ]),
+                authenticate: true
+            }, 
             /* ======= Event Financials ======= */
             event_financials: {
                 name: 'event_financials',
