@@ -54,13 +54,34 @@
                     </li>                   
                 </ul>
             </li>       
+            <li>
+                <div class="nav-header">
+                    <span class="nav-title">Implement Event</span>
+                    <a href="javascript:;" class="nav-toggle" ng-click="implement_event = !implement_event">
+                        <i class="fa fa-plus-square-o" ng-show="!implement_event"></i>
+                        <i class="fa fa-minus-square-o" ng-show="implement_event"></i>
+                    </a>
+                </div>
+                <ul ng-show="implement_event" ng-animate="'slide'">
+                    <li data-match-route="implement_event.*">
+                        <a ui-sref="implement_event">
+                            <i class="fa fa-pencil-square-o"></i>Implement Event
+                        </a>
+                    </li>                  
+                </ul>
+            </li> 
+<!--
+
             <li data-match-route="implement_event.*">
                 <a ui-sref="implement_event" active-path>
                     <i class="fa fa-play"></i>Implement Event
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
-            </li>
+            </li>-->
+
+
+
             <li>
                 <div class="nav-header">
                     <span class="nav-title">Close Event</span>
@@ -82,13 +103,32 @@
                     </li>
                 </ul>
             </li> 
+            <li>
+                <div class="nav-header">
+                    <span class="nav-title">Event Financials</span>
+                    <a href="javascript:;" class="nav-toggle" ng-click="event_financials = !event_financials">
+                        <i class="fa fa-plus-square-o" ng-show="!event_financials"></i>
+                        <i class="fa fa-minus-square-o" ng-show="event_financials"></i>
+                    </a>
+                </div>
+                <ul ng-show="event_financials" ng-animate="'slide'">
+                    <li data-match-route="event_financials.*">
+                        <a ui-sref="event_financials">
+                            <i class="fa fa-pencil-square-o"></i>Event Financials
+                        </a>
+                    </li>                  
+                </ul>
+            </li> 
+            <!--
             <li data-match-route="event_financials.*">
                 <a ui-sref="event_financials" active-path>
                     <i class="fa fa-usd"></i>Event Financials
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
-            </li>
+            </li>-->
+
+
         </ul>
         <hr />
         <ul class="nav nav-tabs nav-stacked main-menu">            
@@ -110,8 +150,8 @@
                 <div class="nav-header">
                     <span class="nav-title">Inventory</span>
                     <a href="javascript:;" class="nav-toggle" ng-click="inventory = !inventory">
-                        <i class="fa fa-plus-square-o" ng-show="!close_event"></i>
-                        <i class="fa fa-minus-square-o" ng-show="close_event"></i>
+                        <i class="fa fa-plus-square-o" ng-show="!inventory"></i>
+                        <i class="fa fa-minus-square-o" ng-show="inventory"></i>
                     </a>
                 </div>
                 <ul ng-show="inventory" ng-animate="'slide'">
