@@ -131,20 +131,54 @@
 
         </ul>
         <hr />
-        <ul class="nav nav-tabs nav-stacked main-menu">            
+        <ul class="nav nav-tabs nav-stacked main-menu">    
+            <li>
+                <div class="nav-header">
+                    <span class="nav-title">User</span>
+                    <a href="javascript:;" class="nav-toggle" ng-click="user = !user">
+                        <i class="fa fa-plus-square-o" ng-show="!user"></i>
+                        <i class="fa fa-minus-square-o" ng-show="user"></i>
+                    </a>
+                </div>
+                <ul ng-show="user" ng-animate="'slide'">
+                    <li data-match-route="user.*">
+                        <a ui-sref="user">
+                            <i class="fa fa-pencil-square-o"></i>User
+                        </a>
+                    </li>                  
+                </ul>
+            </li>
+            <!--        
             <li data-match-route="user.*">
                 <a href="/user" active-path>
                     <i class="fa fa-user"></i>User
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
-            </li>             
+            </li>  
+
             <li data-match-route="hr_master.*">
                 <a href="/hr_master" active-path>
                     <i class="fa fa-inbox"></i>Hr Master
                     <span class="active-ptr"><i class="fa fa-sort-asc fa-rotate-90"></i>
                     </span>
                 </a>
+            </li>-->   
+            <li>
+                <div class="nav-header">
+                    <span class="nav-title">Hr Master</span>
+                    <a href="javascript:;" class="nav-toggle" ng-click="hr_master = !hr_master">
+                        <i class="fa fa-plus-square-o" ng-show="!hr_master"></i>
+                        <i class="fa fa-minus-square-o" ng-show="hr_master"></i>
+                    </a>
+                </div>
+                <ul ng-show="hr_master" ng-animate="'slide'">
+                    <li data-match-route="hr_master.*">
+                        <a ui-sref="hr_master">
+                            <i class="fa fa-pencil-square-o"></i>Hr Master
+                        </a>
+                    </li>                  
+                </ul>
             </li>
             <li>
                 <div class="nav-header">
