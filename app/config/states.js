@@ -434,6 +434,24 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             }, 
+            preparebilling_add: {
+                name: 'preparebilling_add',
+                url: '/add_preparebilling',
+                parent: 'event_financials',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/event_financials/add_preparebilling.html'
+                    }
+                },
+                data: {
+                    displayName: 'Add'
+                },
+
+                resolve: new Dependency([
+                    'modules/event_financials/pay'
+                ]),
+                authenticate: true
+            },
             add: {
                 name: 'add',
                 url: '/add',
@@ -588,7 +606,9 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Profile'
                 },
-
+                resolve: new Dependency([
+                    'modules/hr_master/view_profile'
+                ]),
                 authenticate: true
             }               
 
