@@ -544,6 +544,20 @@ define(['Dependency'], function(Dependency) {
                 },
                 authenticate: true
             },
+            equipment_add: {
+                name: 'equipment_add',
+                url: '/add',
+                parent: 'equipment_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/inventory/equipment_master/add'
+                    }
+                },
+                data: {
+                    displayName: 'Add Equipment'
+                },
+                authenticate: true
+            },
             supplies_master: {
                 name: 'supplies_master',
                 url: '/inventory/supplies_master',
@@ -555,6 +569,20 @@ define(['Dependency'], function(Dependency) {
                 },
                 data: {
                     displayName: 'Supplies Master'
+                },
+                authenticate: true
+            },
+            supplies_add: {
+                name: 'supplies_add',
+                url: '/add',
+                parent: 'supplies_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/inventory/supplies_master/add'
+                    }
+                },
+                data: {
+                    displayName: 'Add Supplies'
                 },
                 authenticate: true
             },
