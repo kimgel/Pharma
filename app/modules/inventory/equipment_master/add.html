@@ -6,13 +6,36 @@
                     <h2><i class="fa fa-pencil"></i>Add Equipment</h2>
                 </div>
                 <div class="box-content">
-                	<label class="control-label">Serial No.</label>
-                    <input type="text" class="form-control" placeholder="Serial No.">
-                    <label class="control-label">Name</label>
-                    <input type="text" class="form-control" placeholder="Type Name">
-                    <label class="control-label">Description</label>
-                    <input type="text" class="form-control" placeholder="Type Description">
-                  </div>
+                    <form role="form" name="form" novalidate>
+                        <div class="form-group">
+                            <label class="control-label">Serian No.</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="serial" ng-model="equipment.serial" required>
+                                <span class="label label-danger pull-right" ng-show="form.serial.$error.required">{{form.serial.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="name" ng-model="equipment.name" required>
+                                <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="description" ng-model="equipment.details" required>
+                                <span class="label label-danger pull-right" ng-show="form.description.$error.required">{{form.description.message}}</span>
+                            </div>
+                        </div>                                  
+                      
+                        <div class="form-actions highlight">
+                            <button type="button" class="btn btn-primary" ng-click="submit(form)">Submit</button>
+                            <button type="reset" class="btn">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
                 </div>
             </div>
         </div>

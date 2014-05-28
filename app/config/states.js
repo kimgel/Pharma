@@ -542,6 +542,9 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Equipment Master'
                 },
+                resolve: new Dependency([
+                    //'modules/inventory/equipment_master/list_equipment',
+                ]),
                 authenticate: true
             },
             equipment_add: {
@@ -556,6 +559,9 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Add Equipment'
                 },
+                resolve: new Dependency([
+                    //'modules/inventory/equipment_master/add',
+                ]),
                 authenticate: true
             },
             supplies_master: {
