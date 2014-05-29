@@ -589,13 +589,15 @@ define(['Dependency'], function(Dependency) {
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: '/modules/inventory/supplies_master/list_supplies'
+                        templateUrl: '/modules/inventory/supplies_master/list_supplies.html'
                     }
                 },
                 data: {
                     displayName: 'Supplies Master'
                 },
-               
+                 resolve: new Dependency([
+                    'modules/inventory/supplies_master/list_supplies',
+                ]),
                 authenticate: true
             },
             supplies_add: {
@@ -604,12 +606,33 @@ define(['Dependency'], function(Dependency) {
                 parent: 'supplies_master',
                 views: {
                     '@': {
-                        templateUrl: '/modules/inventory/supplies_master/add'
+                        templateUrl: '/modules/inventory/supplies_master/add.html'
                     }
                 },
                 data: {
                     displayName: 'Add Supplies'
                 },
+                resolve: new Dependency([
+                    'modules/inventory/supplies_master/add',
+                ]),
+                authenticate: true
+            },
+
+            view_supplies: {
+                name: 'view_supplies',
+                url: '/view_supplies/:suppliesResourceId',
+                parent: 'supplies_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/inventory/supplies_master/view_supplies.html'
+                    }
+                },
+                data: {
+                    displayName: 'Profile'
+                },
+                resolve: new Dependency([
+                    'modules/inventory/supplies_master/view_supplies'
+                ]),
                 authenticate: true
             },
 

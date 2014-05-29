@@ -1,0 +1,65 @@
+<div id="content" ng-controller="SuppliesResourceViewCtrl" ng-init="findOne()"> 
+    <div class="row">
+        <div class="col-xs-8">
+            <div class="box">  
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-book"></i>Profile</h2>
+                         
+                </div>
+                <div class="box-content">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Id</label>
+                                </div>
+                                <div class="col-md-3">
+                                    {{suppliesresources._id}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Name</label>
+                                </div>
+                                <div class="col-md-3">
+                                    {{suppliesresources.name}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Description</label>
+                                </div>
+                                <div class="col-md-3">
+                                   {{suppliesresources.description}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">QTY on hand</label>
+                                </div>
+                                <div class="col-md-3">
+                                   {{suppliesresources.qtyonhand}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">QTY Reserved</label>
+                                </div>
+                                <div class="col-md-3">
+                                   {{suppliesresources.qtyreserved}}
+                                </div>
+                            </div>
+                        </div>    
+               </div>
+            </div>
+        </div>
+
+    </div>
+</div>

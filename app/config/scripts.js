@@ -26,7 +26,8 @@ require.config({
         'Session': '/modules/session/service',
         'Users': '/modules/user/service',
         'HumanResources': '/modules/hr_master/service',
-        'EquipmentResources': '/modules/inventory/equipment_master/service'
+        'EquipmentResources': '/modules/inventory/equipment_master/service',
+        'SuppliesResources': '/modules/inventory/supplies_master/service'
         
         /* Directives
         =================================================================== 

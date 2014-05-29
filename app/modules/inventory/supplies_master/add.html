@@ -1,19 +1,43 @@
-<div id="content">
-    <div class="row">
+<div id="content" ng-controller="SuppliesResourceCtrl">
+    <div class="row"> 
         <div class="col-xs-8">
             <div class="box">
                 <div class="box-header">
                     <h2><i class="fa fa-pencil"></i>Add Supplies</h2>
                 </div>
                 <div class="box-content">
-                <label class="control-label">Name</label>
-                    <input type="text" class="form-control" placeholder="Name">
-                    <label class="control-label">Description</label>
-                    <input type="text" class="form-control" placeholder="Type Description">
-                    <label class="control-label">Quantity</label>
-                    <input type="text" class="form-control" placeholder="Type Quantity">
+                    <form role="form" name="form" novalidate>
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="name" ng-model="suppliesresource.name" required>
+                                <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="description" ng-model="suppliesresource.description" required>
+                                <span class="label label-danger pull-right" ng-show="form.description.$error.required">{{form.description.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Quantity</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="qtyonhand" ng-model="suppliesresource.qtyonhand" required>
+                                <span class="label label-danger pull-right" ng-show="form.qtyonhand.$error.required">{{form.qtyonhand.message}}</span>
+                            </div>
+                        </div>
+                                                       
+                      
+                        <div class="form-actions highlight">
+                            <button type="button" class="btn btn-primary" ng-click="submit(form)">Submit</button>
+                            <button type="reset" class="btn">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
                 </div>
             </div>
         </div>
     </div>
-</div>

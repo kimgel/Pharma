@@ -1,4 +1,4 @@
-<div id="content">
+ <div id="content" ng-controller="SuppliesResourceList" ng-init="all()"> >
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -6,30 +6,37 @@
                     <h2><i class="fa fa-inbox"></i>Supplies</h2>
                     <div class="box-icon">
                         <a ui-sref="supplies_add" class="btn"><i class="fa fa-plus"></i> Add</a>
-                    </div>  
+                    </div>   
                 </div>
                 <div class="box-content">
                     <div class="dataTables_wrapper form-inline" role="grid">
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
+                                    <!--<th>ID</th>-->
                                     <th>NAME</th>
-                                    <th>QUANTITY ON HAND</th>
-                                    <th>QUANTITY RESERVE</th>     
+                                    <th>DESCRIPTION</th>
+                                    <th>QTY ON HAND</th>
+                                    <th>QTY RESERVE</th>                          
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Syringe</td>
-                                    <td>1500</td>
-                                    <td>500</td>
-                                </tr>
-                                <tr>
-                                    <td>Cotton</td>
-                                    <td>5000</td>
-                                    <td>1500</td>     
-                                </tr>
-                            </tbody>
+                                <tbody>
+                                    <tr ng-hide="!suppliesresources || suppliesresources.length">
+                                        <td>No resources yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in suppliesresources">
+                                        <td>
+                                            <a ui-sref="view_supplies({suppliesResourceId: resource._id})">{{resource.name}}
+                                            </a>
+                                        </td>
+                                        <td>{{resource.description}}</td>
+                                        <td>{{resource.qtyonhand}}</td>
+                                        <td>{{resource.qtyreserved}}</td>
+                                        <!--<td>
+                                            <span class="label" ng-class="{'label-warning': resource.status == 'Available', 'label-important': resource.status != 'Not Available'}">{{resource.status}}</span>
+                                        </td>-->
+                                     </tr>                                    
+                                </tbody>
                         </table>
                     </div>
                 </div>
