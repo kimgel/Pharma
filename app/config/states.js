@@ -564,6 +564,25 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
+
+            view_equipment: {
+                name: 'view_equipment',
+                url: '/view_equipment/:equipmentResourceId',
+                parent: 'equipment_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/inventory/equipment_master/view_equipment.html'
+                    }
+                },
+                data: {
+                    displayName: 'Profile'
+                },
+                resolve: new Dependency([
+                    'modules/inventory/equipment_master/view_equipment'
+                ]),
+                authenticate: true
+            },
+
             supplies_master: {
                 name: 'supplies_master',
                 url: '/inventory/supplies_master',
