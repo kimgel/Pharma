@@ -536,14 +536,14 @@ define(['Dependency'], function(Dependency) {
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: '/modules/inventory/equipment_master/list_equipment'
+                        templateUrl: '/modules/inventory/equipment_master/list_equipment.html'
                     }
                 },
                 data: {
                     displayName: 'Equipment Master'
                 },
-                resolve: new Dependency([
-                    //'modules/inventory/equipment_master/list_equipment',
+                 resolve: new Dependency([
+                    'modules/inventory/equipment_master/list_equipment',
                 ]),
                 authenticate: true
             },
@@ -553,14 +553,14 @@ define(['Dependency'], function(Dependency) {
                 parent: 'equipment_master',
                 views: {
                     '@': {
-                        templateUrl: '/modules/inventory/equipment_master/add'
+                        templateUrl: '/modules/inventory/equipment_master/add.html'
                     }
                 },
                 data: {
                     displayName: 'Add Equipment'
                 },
                 resolve: new Dependency([
-                    //'modules/inventory/equipment_master/add',
+                    'modules/inventory/equipment_master/add',
                 ]),
                 authenticate: true
             },
@@ -576,6 +576,7 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Supplies Master'
                 },
+               
                 authenticate: true
             },
             supplies_add: {

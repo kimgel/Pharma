@@ -1,4 +1,4 @@
-<div id="content">
+<div id="content" >
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -17,7 +17,6 @@
                                     <th>PROPOSAL DATE</th>
                                     <th>EVENT PROPOSER</th>
                                     <th>EVENT TYPE</th>
-                                    <th>EVENT DESCRIPTION</th>
                                     <th>EVENT PURPOSE</th>
                                     <th>EVENT DATE</th>
                                     <th>EVENT TIME</th>
@@ -26,38 +25,29 @@
                                     <th>VIEW</th>                                   
                                 </tr>
                             </thead>
+
                             <tbody>
-                                <tr>
-                                    <td>PH-0001</td>
-                                    <td>5/23/2014</td>
-                                    <td>JUAN DELA CRUZ</td>
-                                    <td>Blood Sugar/BP Screening</td>
-                                    <td>sample description</td>
-                                    <td>sample purpose</td>
-                                    <td>6/19/2014 to 1/27 2014</td>
-                                    <td>09:00 </td>
-                                    <td>MANILA</td>
-                                    <td><span class="label label-info">A</span></td>
-                                    <td>
-                                        <a ui-sref="propose_event_view" class= "btn btn-success">View</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>PH-0001</td>
-                                    <td>5/25/2014</td>
-                                    <td>JUAN DELA CRUZ</td>
-                                    <td>Blood Sugar/BP Screening</td>
-                                    <td>sample description</td>
-                                    <td>sample purpose</td>
-                                    <td>7/23/2014 to 7/25/2014</td>
-                                    <td>09:00 </td>
-                                    <td>MANILA</td>
-                                    <td><span class="label label-warning">P</span></td>
-                                    <td>
-                                        <a href="/initiateevent/propose-event/view" class="btn btn-success">View</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                                    <tr ng-hide="!propose_event || propose_event.length">
+                                        <td>No proposed event yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in propose_event">
+                                        <td>{{resource.proposenum}}</td>
+                                        <td>{{resource.created}}</td>
+                                        <td>{{resource.creator}}</td>
+                                        <td>{{resource.eventtype}}</td>
+                                        <td>{{resource.eventpurpose}}</td>
+                                        <td>{{resource.eventdatefrom}}-{{resource.eventdateto}} </td>
+                                        <td>{{resource.eventtime}}</td>
+                                        <td>{{resource.eventlocation}}</td>
+                                        <td><span class="label label-info">A</span></td>
+                                        <td>
+                                            <a ui-sref="propose_event_view({proposeEventId: resource._id})" class="btn btn-success">View
+                                            </a>
+
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
+
                         </table>
                     </div>
                 </div>

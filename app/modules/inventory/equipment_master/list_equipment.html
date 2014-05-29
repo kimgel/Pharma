@@ -1,4 +1,4 @@
-<div id="content">
+ <div id="content" ng-controller="EquipmentResourceList" ng-init="all()"> >
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -23,25 +23,18 @@
                                                                         
                                 </tr>
                             </thead>
-                            <tbody>
-                                    <tr>
+                                <tbody>
+                                    <tr ng-hide="!equipmentresources || equipmentresources.length">
                                         <td>No resources yet.</td>
                                     </tr>
-                                    <tr >
-                                        <td>asd</td>
-                                        <td><div class="avatar">
-                                          <img src="assets/images/avatar.jpg" alt="Avatar">
-                                            </div>
-                                        </td>
-                                        <td>asd</td>
-                                        <td>asd</td>
-                                        <td>asd}</td>
-                                        <td>asd</td>
-                                        <td>asd</td>
-                                        <td>
-                                           status
-
-                                        </td>
+                                    <tr ng-repeat="resource in equipmentresources">
+                                        <td>{{resource._id}}</td>
+                                        <td>{{resource.name}}</td>
+                                        <td>{{resource.serial}}</td>
+                                        <td>{{resource.description}}</td>
+                                        <td>{{resource.reservedatefrom}} - {{resource.reservedateto}}</td>
+                                        <td>{{resource.assigndatefrom}} - {{resource.assigndateto}}</td>
+                                        <td>{{resource.status}}</td>
                                      </tr>                                    
                                 </tbody>
                         </table>
