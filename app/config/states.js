@@ -384,7 +384,7 @@ define(['Dependency'], function(Dependency) {
             encode_add: {
                 name: 'encode_add',
                 url: '/add',
-                parent: 'implement_event',
+                parent: 'encode',
                 views: {
                     '@': {
                         templateUrl: '/modules/implement_event/add.html'

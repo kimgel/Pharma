@@ -1,4 +1,4 @@
-<div id="content">
+<div id="content" ng-controller="ProposeEventCtrl"> 
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -32,6 +32,13 @@
                                     <span class="label label-danger pull-right" ng-show="form.eventlocation.$error.required">{{form.eventlocation.message}}</span>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="control-label">Event Description</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="eventdescription" ng-model="proposal.eventdescription" required>
+                                    <span class="label label-danger pull-right" ng-show="form.eventdescription.$error.required">{{form.eventdescription.message}}</span>
+                                </div>
+                            </div> 
                             <div class="form-group">
                                 <label class="control-label">Event Purpose</label>
                                 <div class="controls">
