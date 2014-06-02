@@ -18,6 +18,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 resolve: new Dependency([
+                    'modules/common/header/view',
                     'modules/common/sidenav/view-main'
                 ])
             },
@@ -34,6 +35,8 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 resolve: new Dependency([
+                    'modules/common/header/view',
+                    'modules/common/sidenav/view-settings'
                 ])
             },
             /* ======= Login ======= */
@@ -508,11 +511,32 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
+           
+             /* ======= Master Files ======= */
+            settings_home: {
+                name: 'settings_home',
+                url: '/settings/home',
+                parent: 'settings',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/settings/index.html'
+                    }
+                },
+                data: {
+                    displayName: 'Settings'
+                },
+                resolve: new Dependency([
+                    'modules/settings/index'
+                ]),
+                authenticate: true
+            },
+
+
              /* ======= User ======= */
-            user: {
-                name: 'user',
+            settings_user: {
+                name: 'settings_user',
                 url: '/user',
-                parent: 'root',
+                parent: 'settings_home',
                 views: {
                     '@': {
                         templateUrl: '/modules/user/list.html'
@@ -535,7 +559,7 @@ define(['Dependency'], function(Dependency) {
             equipment_master: {
                 name: 'equipment_master',
                 url: '/inventory/equipment_master',
-                parent: 'root',
+                parent: 'settings_home',
                 views: {
                     '@': {
                         templateUrl: '/modules/inventory/equipment_master/list_equipment.html'
@@ -588,7 +612,7 @@ define(['Dependency'], function(Dependency) {
             supplies_master: {
                 name: 'supplies_master',
                 url: '/inventory/supplies_master',
-                parent: 'root',
+                parent: 'settings_home',
                 views: {
                     '@': {
                         templateUrl: '/modules/inventory/supplies_master/list_supplies.html'
@@ -642,7 +666,7 @@ define(['Dependency'], function(Dependency) {
             hr_master: {
                 name: 'hr_master',
                 url: '/hr_master',
-                parent: 'root',
+                parent: 'settings_home',
                 views: {
                     '@': {
                         templateUrl: '/modules/hr_master/list.html'

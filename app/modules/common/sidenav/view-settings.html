@@ -1,41 +1,46 @@
-<div id="sidebar-left">
-    <div class="sidebar-nav">
+<div id="sidebar-left" ng-controller="MainSettingsCtrl">
+    <div class="sidebar-nav" bs-navbar>
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li>
-                <a href="/statusboard" active-path>
-                    <i class="fa fa-dashboard"></i>Status Board
+                <a ui-sref="statusboard">
+                    <i class="fa fa-home"></i>Return to Home
+                </a>
+            </li>
+            <li data-match-route="home">
+                <a ui-sref="settings_home">
+                    <i class="fa fa-cogs"></i>Settings
+                </a>
+            </li> 
+            <li>
+                <div class="nav-header">
+                    <span class="nav-title">Master Files</span>
+                </div>
+            </li>
+            <li data-match-route="hr_master">
+                <a ui-sref="hr_master">
+                    <i class="fa fa-calendar-o"></i>HR Master
+                </a>
+            </li>
+            <li data-match-route="supplies_master">
+                <a ui-sref="supplies_master">
+                    <i class="fa fa-suitcase"></i>Supplies
+                </a>
+            </li>
+            <li data-match-route="equipment_master">
+                <a ui-sref="equipment_master">
+                    <i class="fa fa-suitcase"></i>Equipment
                 </a>
             </li>
             <li>
-                <a href="/settings/item" active-path>
-                    <i class="fa fa-calendar-o"></i>
-                    <span class="hidden-sm">Item</span>
-                </a>
+                <div class="nav-header">
+                    <span class="nav-title">Admin</span>
+                </div>
             </li>
-            <li>
-                <a href="/settings/supplier" active-path>
-                    <i class="fa fa-suitcase"></i>
-                    <span class="hidden-sm">Supplier</span>
+            <li data-match-route="user">
+                <a ui-sref="settings_user">
+                    <i class="fa fa-user"></i>Users
                 </a>
-            </li>
-            <li>
-                <a href="/settings/broker" active-path>
-                    <i class="fa fa-chain"></i>
-                    <span class="hidden-sm">Broker</span>
-                </a>
-            </li>
-            <li>
-                <a href="/settings/forwarder" active-path>
-                    <i class="fa fa-truck"></i>
-                    <span class="hidden-sm">Forwarder</span>
-                </a>
-            </li>
-            <li>
-                <a href="/settings/user" active-path>
-                    <i class="fa  fa-user"></i>
-                    <span class="hidden-sm">User</span>
-                </a>
-            </li>
+            </li> 
         </ul>
     </div>
 </div>
