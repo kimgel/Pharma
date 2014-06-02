@@ -1,60 +1,10 @@
-<div id="content">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box">
-                <div class="box-header" data-original-title="">
-                    <h2><i class="fa fa-check-square-o"></i>Supplies Reservation</h2>
-                    
-                </div>
-                <div class="box-content">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name">
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
 
-                    <div class="dataTables_wrapper form-inline" role="grid">
-                        <table class="table bootstrap-datatable datatable table-hover">
-                            <thead>
-                                <tr role="row">
-                                    <th>Name</th>
-                                    <th>Qty On hand</th>
-                                    <th>Qty Reserved</th>
-                                    <th>Qty to Reserve</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cotton</td>
-                                    <td>1000</td>  
-                                    <td>400</td>                                   
-                                    <td>
-                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Type">
-                                        </div>
-                                    </td>
-                                 </tr>
-                                <tr>
-                                    <td>Syringe</td>
-                                    <td>2000</td>  
-                                    <td>500</td>
-                                    <td>
-                                          <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Type">
-                                        </div>
-                                    </td>
-                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary" ng-click="$hide()">Submit</button>
-                <button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
-            </div>
+<div id="content" ng-controller="ReserveSuppliesctrl">
+
+    <!-- Nav tabs -->
+       <div ng-model="tabs.activeTab" bs-tabs="tabs">
+
         </div>
-    </div>
-</div>
+
+</div> 
+

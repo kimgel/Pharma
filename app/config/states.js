@@ -244,10 +244,12 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/prepare_event/reserve/reserve'
+                    'modules/prepare_event/reserve/reserve',
+                    'modules/prepare_event/reserve/addsupplies'
                 ]),
                 authenticate: true
             },
+
             /* ======= Confirm Resources ======= */
             confirm: {
                 name: 'confirm',
