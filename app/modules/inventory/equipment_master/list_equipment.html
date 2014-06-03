@@ -14,13 +14,13 @@
                             <thead>
                                 <tr role="row">
                                     <!--<th>ID</th>-->
-                                    <th>NAME</th>
-                                    <th>SERIAL NO.</th>
-                                    <th>DESCRIPTION</th>
-                                    <th>RESERVE DATE</th>
-                                    <th>ASSIGN DATE</th>
-                                    <th>STATUS</th>
-                                                                        
+                                    <th>Status</th>
+                                    <th>Name</th>
+                                    <th>Serial No.</th>
+                                    <th>Description</th>
+                                    <th>Reserve date</th>
+                                    <th>Assign Date</th>
+                                    <th>Actions</th>               
                                 </tr>
                             </thead>
                                 <tbody>
@@ -28,8 +28,9 @@
                                         <td>No resources yet.</td>
                                     </tr>
                                     <tr ng-repeat="resource in equipmentresources">
-                                        <!--<td>{{resource._id}}</td>-->
-                                        <!--<td>{{resource.name}}</td>-->
+                                        <td>
+                                            <span class="label" ng-class="{'label-warning': resource.status == 'Available', 'label-important': resource.status != 'Not Available'}">{{resource.status}}</span>
+                                        </td>
                                         <td>
                                             <a ui-sref="view_equipment({equipmentResourceId: resource._id})">{{resource.name}}
                                             </a>
@@ -39,7 +40,8 @@
                                         <td>{{resource.reservedatefrom}} - {{resource.reservedateto}}</td>
                                         <td>{{resource.assigndatefrom}} - {{resource.assigndateto}}</td>
                                         <td>
-                                            <span class="label" ng-class="{'label-warning': resource.status == 'Available', 'label-important': resource.status != 'Not Available'}">{{resource.status}}</span>
+                                            <a class="btn btn-success btn-sm" ui-sref="view_equipment({equipmentResourceId: resource._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="edit_equipment({equipmentResourceId: resource._id})"> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>

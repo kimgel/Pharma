@@ -611,6 +611,23 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
+            edit_equipment: {
+                name: 'edit_equipment',
+                url: '/:equipmentResourceId/edit',
+                parent: 'equipment_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/inventory/equipment_master/edit.html'
+                    }
+                },
+                data: {
+                    displayName: 'Edit'
+                },
+                resolve: new Dependency([
+                    'modules/inventory/equipment_master/edit'
+                ]),
+                authenticate: true
+            },
              /* ======= supplies ======= */
             supplies_master: {
                 name: 'supplies_master',
