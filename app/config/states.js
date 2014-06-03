@@ -664,6 +664,23 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
+            edit_supplies: {
+                name: 'edit_supplies',
+                url: '/:suppliesResourceId/edit',
+                parent: 'supplies_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/inventory/supplies_master/edit.html'
+                    }
+                },
+                data: {
+                    displayName: 'Edit'
+                },
+                resolve: new Dependency([
+                    'modules/inventory/supplies_master/edit'
+                ]),
+                authenticate: true
+            },
 
             /* ======= HR Master ======= */
             hr_master: {

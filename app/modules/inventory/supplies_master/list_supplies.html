@@ -14,12 +14,11 @@
                             <thead>
                                 <tr role="row">
                                     <!--<th>ID</th>-->
-                                    <th>NAME</th>
-                                    <th>DESCRIPTION</th>
-                                    <th>QTY ON HAND</th>
-                                    <th>QTY RESERVE</th> 
-                                    <th>ADD QTY</th>  
-                                    <th>TOTAL</th>                       
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Qty on hand</th>
+                                    <th>Qty reserve</th> 
+                                    <th>Actions</th>              
                                 </tr>
                             </thead>
                                 <tbody>
@@ -35,10 +34,8 @@
                                         <td>{{resource.qtyonhand}}</td>
                                         <td>{{resource.qtyreserved}}</td>
                                         <td>
-                                            <input type="text" class="form-control" name="qty" ng-model="qty" required>
-                                        </td>
-                                        <td>
-  <input type="text" value="{{ parseInt(qty) + parseInt(resource.qtyonhand) }}" />
+                                            <a class="btn btn-success btn-sm" ui-sref="view_supplies({suppliesResourceId: resource._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="edit_supplies({suppliesResourceId: resource._id})"> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>

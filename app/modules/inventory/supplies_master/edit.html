@@ -1,0 +1,50 @@
+<div id="content" ng-controller="SuppliesResourceEditCtrl" ng-init="findOne()">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        <i class="fa fa-suitcase"></i>Edit</h2>
+                </div>
+                <div class="box-content">
+                    <form role="form" name="form" novalidate>
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="name" ng-model="suppliesresource.name" required>
+                                <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <div class="controls">
+                                <textarea class="form-control" name="description" ng-model="suppliesresource.description" required></textarea>
+                                <span class="label label-danger pull-right" ng-show="form.description.$error.required">{{form.description.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Qty on hand</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="qtyonhand" ng-model="suppliesresource.qtyonhand" required>
+                                <span class="label label-danger pull-right" ng-show="form.qtyonhand.$error.required">{{form.qtyonhand.message}}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <span>
+                                <small>Added: {{suppliesresource.creator.name}}, {{suppliesresource.created | date: 'medium'}}</small>
+                            </span>
+                        </div>
+                        <div class="form-actions highlight">
+                            <button ng-click="update(form)" class="btn btn-primary">Update</button>
+                            <a ui-sref="supplies_master" class="btn btn-default">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+
+        </div>
+    </div>
+</div>
