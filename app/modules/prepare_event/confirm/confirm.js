@@ -11,15 +11,15 @@ define(['app'], function(app) {
                         "template": "/modules/prepare_event/confirm/tpls/view.tpl.html",
                       },
                       {
-                        "title": "HR Resources",
+                        "title": "Human Resource",
                         "template": "/modules/prepare_event/confirm/tpls/hr.tpl.html",
                       },
                       {
-                        "title": "Equipment",
+                        "title": "Equipment Resource",
                         "template": "/modules/prepare_event/confirm/tpls/equipment.tpl.html",
                       },
                       {
-                        "title": "Supplies",
+                        "title": "Supplies Resource",
                         "template": "/modules/prepare_event/confirm/tpls/supplies.tpl.html",
                       }
                     ];

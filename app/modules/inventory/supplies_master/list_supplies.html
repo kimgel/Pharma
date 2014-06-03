@@ -1,4 +1,4 @@
- <div id="content" ng-controller="SuppliesResourceList" ng-init="all()"> >
+ <div id="content" ng-controller="SuppliesResourceList" ng-init="all()"> 
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -17,7 +17,9 @@
                                     <th>NAME</th>
                                     <th>DESCRIPTION</th>
                                     <th>QTY ON HAND</th>
-                                    <th>QTY RESERVE</th>                          
+                                    <th>QTY RESERVE</th> 
+                                    <th>ADD QTY</th>  
+                                    <th>TOTAL</th>                       
                                 </tr>
                             </thead>
                                 <tbody>
@@ -32,9 +34,12 @@
                                         <td>{{resource.description}}</td>
                                         <td>{{resource.qtyonhand}}</td>
                                         <td>{{resource.qtyreserved}}</td>
-                                        <!--<td>
-                                            <span class="label" ng-class="{'label-warning': resource.status == 'Available', 'label-important': resource.status != 'Not Available'}">{{resource.status}}</span>
-                                        </td>-->
+                                        <td>
+                                            <input type="text" class="form-control" name="qty" ng-model="qty" required>
+                                        </td>
+                                        <td>
+  <input type="text" value="{{ parseInt(qty) + parseInt(resource.qtyonhand) }}" />
+                                        </td>
                                      </tr>                                    
                                 </tbody>
                         </table>

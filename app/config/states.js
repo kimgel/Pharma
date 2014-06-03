@@ -80,7 +80,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Propose Event'
+                    displayName: 'Propose'
                 },
                 authenticate: true
             },
@@ -123,21 +123,21 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Approve Event'
+                    displayName: 'Approve'
                 },
                 authenticate: true
             },
             approve_event_approve: {
                 name: 'approve_event_approve',
-                url: '/approve',
+                url: '/view',
                 parent: 'approve_event',
                 views: {
                     '@': {
-                        templateUrl: '/modules/initiateevent/approve_event/approve.html'
+                        templateUrl: '/modules/initiateevent/approve_event/view.html'
                     }
                 },
                 data: {
-                    displayName: 'Approve'
+                    displayName: 'View'
                 },
                 authenticate: true
             },
@@ -163,7 +163,7 @@ define(['Dependency'], function(Dependency) {
 
             reserve: {
                 name: 'reserve',
-                url: '/prepare_event/reserve',
+                url: '/prepare/reserve',
                 parent: 'root',
                 views: {
                     '@': {
@@ -181,7 +181,7 @@ define(['Dependency'], function(Dependency) {
             },
             reserve_resources: {
                 name: 'reserve_resources',
-                url: '/reserve',
+                url: '/resources',
                 parent: 'reserve',
                 views: {
                     '@': {
@@ -189,7 +189,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Reserve Resources'
+                    displayName: 'Resources'
                 },
 
                 resolve: new Dependency([
@@ -199,7 +199,7 @@ define(['Dependency'], function(Dependency) {
             },
             reserve_hr: {
                 name: 'reserve_hr',
-                url: '/addhumanresources',
+                url: '/hr',
                 parent: 'reserve_resources',
                 views: {
                     '@': {
@@ -207,7 +207,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Reserve HR'
+                    displayName: 'HR'
                 },
 
                 resolve: new Dependency([
@@ -217,7 +217,7 @@ define(['Dependency'], function(Dependency) {
             },
             reserve_equipment: {
                 name: 'reserve_equipment',
-                url: '/addequipment',
+                url: '/equipment',
                 parent: 'reserve_resources',
                 views: {
                     '@': {
@@ -225,7 +225,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Reserve Equipment'
+                    displayName: 'Equipment'
                 },
 
                 resolve: new Dependency([
@@ -235,7 +235,7 @@ define(['Dependency'], function(Dependency) {
             },
             reserve_supplies: {
                 name: 'reserve_supplies',
-                url: '/addsupplies',
+                url: '/supplies',
                 parent: 'reserve_resources',
                 views: {
                     '@': {
@@ -243,7 +243,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Reserve Supplies'
+                    displayName: 'Supplies'
                 },
 
                 resolve: new Dependency([
@@ -256,7 +256,7 @@ define(['Dependency'], function(Dependency) {
             /* ======= Confirm Resources ======= */
             confirm: {
                 name: 'confirm',
-                url: '/prepare_event/confirm',
+                url: '/prepare/confirm',
                 parent: 'root',
                 views: {
                     '@': {
@@ -274,7 +274,7 @@ define(['Dependency'], function(Dependency) {
             },
             confirm_resources: {
                 name: 'confirm_resources',
-                url: '/confirm',
+                url: '/resources',
                 parent: 'confirm',
                 views: {
                     '@': {
@@ -282,7 +282,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Confirm Resources'
+                    displayName: 'Resources'
                 },
 
                 resolve: new Dependency([
@@ -293,7 +293,7 @@ define(['Dependency'], function(Dependency) {
             /* ======= Close Event ======= */
             close_event_receive: {
                 name: 'close_event_receive',
-                url: '/close_event/receive',
+                url: '/receiveequipment&supplies',
                 parent: 'root',
                 views: {
                     '@': {
@@ -301,13 +301,13 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Close Event-Receive'
+                    displayName: 'Receive Equipment & Supplies'
                 },
                 authenticate: true
             },  
             receive: {
                 name: 'receive',
-                url: '/close',
+                url: '/view',
                 parent: 'close_event_receive',
                 views: {
                     '@': {
@@ -315,13 +315,13 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Receive Equipment/Supplies'
+                    displayName: 'View'
                 },
                 authenticate: true
             },
             close_event_reimbursements: {
                 name: 'close_event_reimbursements',
-                url: '/close_event/reimbursements',
+                url: '/reimbursements',
                 parent: 'root',
                 views: {
                     '@': {
@@ -329,13 +329,13 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Close Event-Reimbursements'
+                    displayName: 'Reimbursements'
                 },
                 authenticate: true
             },
             reimbursements: {
                 name: 'reimbursements',
-                url: '/enter',
+                url: '/view',
                 parent: 'close_event_reimbursements',
                 views: {
                     '@': {
@@ -343,14 +343,14 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Reimburse'
+                    displayName: 'View'
                 },
                 authenticate: true
             }, 
             /* ======= Implement Event ======= */
             implement_event: {
                 name: 'implement_event',
-                url: '/implement_event',
+                url: '/implement',
                 parent: 'root',
                 views: {
                     '@': {
@@ -358,7 +358,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Implement Event'
+                    displayName: 'Implement'
                 },
 
                 resolve: new Dependency([
@@ -368,7 +368,7 @@ define(['Dependency'], function(Dependency) {
             }, 
             encode: {
                 name: 'encode',
-                url: '/encode',
+                url: '/records',
                 parent: 'implement_event',
                 views: {
                     '@': {
@@ -394,7 +394,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Input Records'
+                    displayName: 'Add'
                 },
 
                 resolve: new Dependency([
@@ -405,7 +405,7 @@ define(['Dependency'], function(Dependency) {
             /* ======= Event Financials ======= */
             event_financials: {
                 name: 'event_financials',
-                url: '/event_financials',
+                url: '/eventfinancials',
                 parent: 'root',
                 views: {
                     '@': {
@@ -423,7 +423,7 @@ define(['Dependency'], function(Dependency) {
             },
             pay: {
                 name: 'pay',
-                url: '/pay',
+                url: '/processbilling',
                 parent: 'event_financials',
                 views: {
                     '@': {
@@ -431,7 +431,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Payment'
+                    displayName: 'Process Billing'
                 },
 
                 resolve: new Dependency([
@@ -441,8 +441,8 @@ define(['Dependency'], function(Dependency) {
             }, 
             preparebilling_add: {
                 name: 'preparebilling_add',
-                url: '/add_preparebilling',
-                parent: 'event_financials',
+                url: '/add',
+                parent: 'pay',
                 views: {
                     '@': {
                         templateUrl: '/modules/event_financials/add_preparebilling.html'
@@ -460,7 +460,7 @@ define(['Dependency'], function(Dependency) {
             add: {
                 name: 'add',
                 url: '/add',
-                parent: 'event_financials',
+                parent: 'pay',
                 views: {
                     '@': {
                         templateUrl: '/modules/event_financials/add.html'
@@ -477,8 +477,8 @@ define(['Dependency'], function(Dependency) {
             }, 
             add_hr: {
                 name: 'add_hr',
-                url: '/add_hr',
-                parent: 'event_financials',
+                url: '/add',
+                parent: 'pay',
                 views: {
                     '@': {
                         templateUrl: '/modules/event_financials/add_hr.html'
@@ -512,7 +512,12 @@ define(['Dependency'], function(Dependency) {
                 authenticate: true
             },
            
-             /* ======= Master Files ======= */
+
+
+
+
+
+            /* ======= Master Files ======= */
             settings_home: {
                 name: 'settings_home',
                 url: '/settings/home',
@@ -530,20 +535,18 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
-
-
              /* ======= User ======= */
             settings_user: {
                 name: 'settings_user',
                 url: '/user',
-                parent: 'settings_home',
+                parent: 'settings',
                 views: {
                     '@': {
                         templateUrl: '/modules/user/list.html'
                     }
                 },
                 data: {
-                    displayName: 'Users'
+                    displayName: 'User'
                 },
                 resolve: new Dependency([
                     'modules/user/add',
@@ -555,18 +558,18 @@ define(['Dependency'], function(Dependency) {
             },
                
               
-             /* ======= Inventory ======= */
+             /* ======= equipment ======= */
             equipment_master: {
                 name: 'equipment_master',
-                url: '/inventory/equipment_master',
-                parent: 'settings_home',
+                url: '/equipment',
+                parent: 'settings',
                 views: {
                     '@': {
                         templateUrl: '/modules/inventory/equipment_master/list_equipment.html'
                     }
                 },
                 data: {
-                    displayName: 'Equipment Master'
+                    displayName: 'Equipment'
                 },
                  resolve: new Dependency([
                     'modules/inventory/equipment_master/list_equipment',
@@ -583,7 +586,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Add Equipment'
+                    displayName: 'Add'
                 },
                 resolve: new Dependency([
                     'modules/inventory/equipment_master/add',
@@ -593,7 +596,7 @@ define(['Dependency'], function(Dependency) {
 
             view_equipment: {
                 name: 'view_equipment',
-                url: '/view_equipment/:equipmentResourceId',
+                url: '/:equipmentResourceId',
                 parent: 'equipment_master',
                 views: {
                     '@': {
@@ -601,25 +604,25 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Profile'
+                    displayName: 'View'
                 },
                 resolve: new Dependency([
                     'modules/inventory/equipment_master/view_equipment'
                 ]),
                 authenticate: true
             },
-
+             /* ======= supplies ======= */
             supplies_master: {
                 name: 'supplies_master',
-                url: '/inventory/supplies_master',
-                parent: 'settings_home',
+                url: '/supplies',
+                parent: 'settings',
                 views: {
                     '@': {
                         templateUrl: '/modules/inventory/supplies_master/list_supplies.html'
                     }
                 },
                 data: {
-                    displayName: 'Supplies Master'
+                    displayName: 'Supplies'
                 },
                  resolve: new Dependency([
                     'modules/inventory/supplies_master/list_supplies',
@@ -636,7 +639,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Add Supplies'
+                    displayName: 'Add'
                 },
                 resolve: new Dependency([
                     'modules/inventory/supplies_master/add',
@@ -646,7 +649,7 @@ define(['Dependency'], function(Dependency) {
 
             view_supplies: {
                 name: 'view_supplies',
-                url: '/view_supplies/:suppliesResourceId',
+                url: '/:suppliesResourceId',
                 parent: 'supplies_master',
                 views: {
                     '@': {
@@ -654,7 +657,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Profile'
+                    displayName: 'View'
                 },
                 resolve: new Dependency([
                     'modules/inventory/supplies_master/view_supplies'
@@ -665,15 +668,15 @@ define(['Dependency'], function(Dependency) {
             /* ======= HR Master ======= */
             hr_master: {
                 name: 'hr_master',
-                url: '/hr_master',
-                parent: 'settings_home',
+                url: '/hr',
+                parent: 'settings',
                 views: {
                     '@': {
                         templateUrl: '/modules/hr_master/list.html'
                     }
                 },
                 data: {
-                    displayName: 'HR Master'
+                    displayName: 'HR'
                 },
                 resolve: new Dependency([
                     'modules/hr_master/list'
@@ -690,7 +693,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Add Human Resource'
+                    displayName: 'Add'
                 },
                 resolve: new Dependency([
                     'modules/hr_master/add'
@@ -699,7 +702,7 @@ define(['Dependency'], function(Dependency) {
             },       
             view_profile: {
                 name: 'view_profile',
-                url: '/view_profile/:humanResourceId',
+                url: '/:humanResourceId',
                 parent: 'hr_master',
                 views: {
                     '@': {
@@ -707,7 +710,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Profile'
+                    displayName: 'View'
                 },
                 resolve: new Dependency([
                     'modules/hr_master/view_profile'

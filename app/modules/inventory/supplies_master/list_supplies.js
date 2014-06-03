@@ -2,7 +2,7 @@
 
 define(['app', 'SuppliesResources'], function(app, SuppliesResources) {
     app.controller('SuppliesResourceList', [
-        '$scope',
+        '$scope', 
         '$location',
         'SuppliesResourceFactory', 
         function($scope, $location, SuppliesResourceFactory) {
@@ -11,6 +11,7 @@ define(['app', 'SuppliesResources'], function(app, SuppliesResources) {
                     $scope.suppliesresources = suppliesresources;
                 });
             };
+            $scope.parseInt = parseInt;
         }
     ]);
 });
