@@ -733,7 +733,24 @@ define(['Dependency'], function(Dependency) {
                     'modules/hr_master/add'
                 ]),
                 authenticate: true
-            },       
+            },    
+            hr_master_edit: {
+                name: 'hr_master_edit',
+                url: '/:humanResourceId/edit',
+                parent: 'hr_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/hr_master/edit.html'
+                    }
+                },
+                data: {
+                    displayName: 'Edit'
+                },
+                resolve: new Dependency([
+                    'modules/hr_master/edit'
+                ]),
+                authenticate: true
+            },   
             view_profile: {
                 name: 'view_profile',
                 url: '/:humanResourceId',

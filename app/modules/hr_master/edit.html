@@ -1,0 +1,75 @@
+<div id="content" ng-controller="HumanResourceEditCtrl" ng-init="findOne()">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        <i class="fa fa-suitcase"></i>Edit</h2>
+                </div>
+                <div class="box-content">
+                    <form role="form" name="form" novalidate>
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="name" ng-model="humanresource.name" required>
+                                <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Skill</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="skill" ng-model="humanresource.skill" required>
+                                <span class="label label-danger pull-right" ng-show="form.skill.$error.required">{{form.skill.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Address</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="address" ng-model="humanresource.address" required>
+                                <span class="label label-danger pull-right" ng-show="form.address.$error.required">{{form.address.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contact No.</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="contact" ng-model="humanresource.contact" required>
+                                <span class="label label-danger pull-right" ng-show="form.contact.$error.required">{{form.contact.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Location</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="location" ng-model="humanresource.location" required>
+                                <span class="label label-danger pull-right" ng-show="form.location.$error.required">{{form.location.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Details</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="details" ng-model="humanresource.details" required>
+                                <span class="label label-danger pull-right" ng-show="form.details.$error.required">{{form.details.message}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                             <div class="fileUpload btn btn-default"><i class="fa fa-plus"></i> 
+                                <input type="file" ng-file-select="onFileSelect($files)" />
+                            Attach Picture</div>
+                        </div> 
+                        <div class="form-group">
+                            <span>
+                                <small>Added: {{humanresource.creator.name}}, {{humanresource.created | date: 'medium'}}</small>
+                            </span>
+                        </div>
+                        <div class="form-actions highlight">
+                            <button ng-click="update(form)" class="btn btn-primary">Update</button>
+                            <a ui-sref="hr_master" class="btn btn-default">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+
+        </div>
+    </div>
+</div>

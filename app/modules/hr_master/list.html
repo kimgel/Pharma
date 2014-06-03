@@ -10,11 +10,7 @@
                 </div>
                 <div class="box-content">
                     <div class="row">
-                        <div class="col-xs-3">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Code">
-                            </div>
-                        </div>
+                        
                         <div class="col-xs-3">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Name">
@@ -38,11 +34,10 @@
                                     <tr role="row">
                                         
                                         <th>Picture</th>
-                                        <th>Code</th>
                                         <th>Name</th>
                                         <th>Skill Type</th>
                                         <th>Location</th>
-                                        <th>Profile</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -55,14 +50,13 @@
                                           <img src="assets/images/avatar.jpg" alt="Avatar">
                                             </div>
                                         </td>
-                                        <td>{{resource._id}}</td>
+                                       
                                         <td>{{resource.name}}</td>
                                         <td>{{resource.skill}}</td>
                                         <td>{{resource.location}}</td>
                                         <td>
-                                            <a ui-sref="view_profile({humanResourceId: resource._id})" class="btn btn-success">View
-                                            </a>
-
+                                            <a class="btn btn-success btn-sm" ui-sref="view_profile({humanResourceId: resource._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="hr_master_edit({humanResourceId: resource._id})"> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>
