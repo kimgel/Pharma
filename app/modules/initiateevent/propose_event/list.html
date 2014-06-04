@@ -1,4 +1,4 @@
-<div id="content" ng-controller="EventtList" ng-init="all()" >
+<div id="content" ng-controller="EventMainList" ng-init="all()" >
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -27,21 +27,21 @@
                             </thead>
 
                             <tbody>
-                                    <tr ng-hide="!eventts || eventts.length">
+                                    <tr ng-hide="!eventmains || eventmains.length">
                                         <td>No proposed event yet.</td>
                                     </tr>
-                                    <tr ng-repeat="resource in eventts">
+                                    <tr ng-repeat="resource in eventmains">
                                         <td>{{resource.eventnum}}</td>
                                         <td>{{resource.created | date:'MM/dd/yyyy @ h:mma'}}</td>
                                         <td>{{resource.creator}}</td>
-                                        <td>{{resource.eventtype}}</td>
+                                        <td>{{resource.eventtypes}}</td>
                                         <td>{{resource.eventpurpose}}</td>
                                         <td>{{resource.eventdatefrom | date:'MM/dd/yyyy'}}-{{resource.eventdateto | date:'MM/dd/yyyy'}} </td>
                                         <td>{{resource.eventtime | date: 'h:mma'}}</td>
                                         <td>{{resource.eventlocation}}</td>
                                         <td><span class="label label-info">A</span></td>
                                         <td>
-                                            <a ui-sref="propose_event_view({eventtId: resource._id})" class="btn btn-success">View
+                                            <a ui-sref="propose_event_view({eventMainId: resource._id})" class="btn btn-success">View
                                             </a>
 
                                         </td>

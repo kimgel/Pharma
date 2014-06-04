@@ -1,14 +1,14 @@
 'use strict'; 
 
-define(['app', 'Eventts'], function(app, Eventts) {
-    app.controller('EventtList', [
+define(['app', 'Eventmains'], function(app, Eventmains) {
+    app.controller('EventMainList', [
         '$scope',
         '$location',
-        'EventtFactory', 
-        function($scope, $location, EventtFactory) {
+        'EventMainFactory', 
+        function($scope, $location, EventMainFactory) {
             $scope.all = function() {
-                EventtFactory.query(function(eventts) {
-                    $scope.eventts = eventts;
+                EventMainFactory.query(function(eventmains) {
+                    $scope.eventmains = eventmains;
                 });
             };
         }

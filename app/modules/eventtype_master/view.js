@@ -1,18 +1,18 @@
 'use strict';
 
-define(['app', 'HumanResources'], function(app, HumanResources) {
-    app.controller('HumanResourceViewCtrl', [
+define(['app', 'Eventtypes'], function(app, Eventtypes) {
+    app.controller('EventTypeViewCtrl', [
         '$scope',
         '$location', 
         '$stateParams',
-        'HumanResourceFactory',
-        function($scope, $location, $stateParams, HumanResourceFactory) {
+        'EventtypeFactory',
+        function($scope, $location, $stateParams, EventtypeFactory) {
             $scope.findOne = function() {
-                HumanResourceFactory.get({
-                    humanResourceId: $stateParams.humanResourceId      
+                EventtypeFactory.get({
+                    eventtypeId: $stateParams.eventtypeId      
                                
-                }, function(humanresources) {
-                    $scope.humanresources = humanresources;              
+                }, function(eventtypes) {
+                    $scope.eventtypes = eventtypes;              
                 });
             };
         }

@@ -1,4 +1,4 @@
-<div id="content" ng-controller="HumanResourceViewCtrl" ng-init="findOne()"> 
+<div id="content" ng-controller="EventTypeViewCtrl" ng-init="findOne()"> 
     <div class="row">
         <div class="col-xs-8">
             <div class="box">  
@@ -11,63 +11,24 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-4">
+                                    <label class="control-label">No</label>
+                                </div>
+                                <div class="col-md-3">
+                                    {{eventtypes.no}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
                                     <label class="control-label">Name</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{humanresources.name}}
+                                   {{eventtypes.name}}
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Skill Type</label>
-                                </div>
-                                <div class="col-md-3">
-                                   {{humanresources.skill}}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Address</label>
-                                </div>
-                                <div class="col-md-3">
-                                    {{humanresources.address}}
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Contact No.</label>
-                                </div>
-                                <div class="col-md-3">
-                                    {{humanresources.contact}}
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Location</label>
-                                </div>
-                                <div class="col-md-3">
-                                   {{humanresources.location}}
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Details</label>
-                                </div>
-                                <div class="col-md-3">
-                                    {{humanresources.details}}
-                                </div>
-                            </div>
-                        </div>                  
+                                   
                         
                         
                </div>

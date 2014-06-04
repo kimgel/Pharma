@@ -386,8 +386,7 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/implement_event/encode',
-                    'modules/implement_event/tpls/record'
+                    'modules/implement_event/encode'
                 ]),
                 authenticate: true
             },  
@@ -404,9 +403,6 @@ define(['Dependency'], function(Dependency) {
                     displayName: 'Add'
                 },
 
-                resolve: new Dependency([
-                    'modules/implement_event/encode'
-                ]),
                 authenticate: true
             }, 
             /* ======= Event Financials ======= */
@@ -807,6 +803,40 @@ define(['Dependency'], function(Dependency) {
                 },
                 resolve: new Dependency([
                     'modules/eventtype_master/add'
+                ]),
+                authenticate: true
+            },
+            eventtype_view: {
+                name: 'eventtype_view',
+                url: '/:eventtypeId',
+                parent: 'eventtype_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/eventtype_master/view.html'
+                    }
+                },
+                data: {
+                    displayName: 'View'
+                },
+                resolve: new Dependency([
+                    'modules/eventtype_master/view'
+                ]),
+                authenticate: true
+            },
+            eventtype_edit: {
+                name: 'eventtype_edit',
+                url: '/:eventtypeId/edit',
+                parent: 'eventtype_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/eventtype_master/edit.html'
+                    }
+                },
+                data: {
+                    displayName: 'Edit'
+                },
+                resolve: new Dependency([
+                    'modules/eventtype_master/edit'
                 ]),
                 authenticate: true
             }

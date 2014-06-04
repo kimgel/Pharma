@@ -5,7 +5,7 @@ define(['app'], function(app) {
         '$resource',
         function($resource) {
             return $resource('/api/eventtypes/:eventtypeId', {
-                eventtId: '@_id'          
+                eventtypeId: '@_id'          
             }, {
                 update: {
                     method: 'PUT'

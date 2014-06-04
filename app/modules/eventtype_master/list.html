@@ -28,9 +28,8 @@
                                         <td>{{resource.name}}</td>
                                         
                                         <td>
-                                            <a ui-sref="eventtype_view({eventtypeId: resource._id})" class="btn btn-success">View
-                                            </a>
-
+                                            <a class="btn btn-success btn-sm" ui-sref="eventtype_view({eventtypeId: resource._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="eventtype_edit({eventtypeId: resource._id})"> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>

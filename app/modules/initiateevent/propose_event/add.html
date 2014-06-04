@@ -70,7 +70,9 @@
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </span>
-                                                <input type="text" name="eventdatefrom" class="form-control" ng-model="eventmain.eventdatefrom" data-max-date="{{eventmain.eventdatefrom}}" placeholder="From" bs-datepicker>
+                                                <input type="text" name="eventdatefrom" class="form-control" ng-model="eventmain.eventdatefrom" data-max-date="{{eventmain.eventdateto}}" placeholder="From" bs-datepicker>
+
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -83,7 +85,7 @@
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </span>
-                                                <input type="text" name="eventdateto" class="form-control" ng-model="eventmain.eventdateto" data-min-date="{{eventmain.eventdateto}}" placeholder="To" bs-datepicker>
+                                                <input type="text" name="eventdateto" class="form-control" ng-model="eventmain.eventdateto" data-min-date="{{eventmain.eventdatefrom}}" placeholder="To" bs-datepicker>
                                             </div>
                                         </div>
                                     </div>
