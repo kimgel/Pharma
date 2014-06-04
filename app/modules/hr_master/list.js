@@ -9,6 +9,7 @@ define(['app', 'HumanResources'], function(app, HumanResources) {
             $scope.all = function() {
                 HumanResourceFactory.query(function(humanresources) {
                     $scope.humanresources = humanresources;
+                    console.log(humanresources);
                 });
             };
         }

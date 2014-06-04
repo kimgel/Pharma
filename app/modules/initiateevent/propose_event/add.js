@@ -1,16 +1,31 @@
 'use strict';
 
-define(['app', 'Eventts'], function(app, Eventts) {
-    app.controller('EventtCtrl', [
+define([
+    'app',
+    'Eventmains',
+    'Eventtypes',
+], function(app, Eventmains, Eventtypes) {
+    app.controller('EventMainCtrl', [
         '$scope',
         '$state',
-        'EventtFactory',
-        function($scope, $state, EventtFactory) {
+        'EventMainFactory',
+        'EventtypeFactory',
+        function(
+            $scope,
+            $state,
+            EventMainFactory,
+            EventtypeFactory
+        ) {
 
-            $scope.eventt = {};
+            $scope.eventmain = {};
+            $scope.schedule = {};
+            $scope.view = false;
             $scope.submit = function(form) {
-                EventtFactory.save($scope.eventt, function(err) {
-                    if (err.errors) {
+                $scope.eventmain.schedule = $scope.schedule;
+                //console.log($scope.eventt);
+                
+                EventMainFactory.save($scope.eventmain, function(err) {
+                     if (err.errors) {
                         for (var key in err.errors) {
                             form[key].message = err.errors[key].message;
                         }
@@ -18,10 +33,22 @@ define(['app', 'Eventts'], function(app, Eventts) {
                         $state.go('propose_event');
                     }
                 });
+
             };
             $scope.clear = function() {
-                $scope.eventt = angular.copy({});
+                $scope.eventmain = angular.copy({});
             };
+
+            $scope.all = function() {
+                
+                EventtypeFactory.query(function(eventtypes) {
+                    $scope.eventtypes = eventtypes;
+                    $scope.eventmain.eventtypes = $scope.eventtypes[0]._id;
+                    console.log($scope.eventtypes);
+                });
+            };
+
+          
         }
     ]);
 
