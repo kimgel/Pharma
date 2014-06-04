@@ -82,6 +82,9 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Propose'
                 },
+                resolve: new Dependency([
+                    'modules/initiateevent/propose_event/list'
+                ]),
                 authenticate: true
             },
             propose_event_add: {
@@ -96,6 +99,9 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Add'
                 },
+                resolve: new Dependency([
+                    'modules/initiateevent/propose_event/add'
+                ]),
                 authenticate: true
             },
             propose_event_view: {
@@ -380,12 +386,13 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/implement_event/encode'
+                    'modules/implement_event/encode',
+                    'modules/implement_event/tpls/record'
                 ]),
                 authenticate: true
             },  
-            encode_add: {
-                name: 'encode_add',
+            add_templateA: {
+                name: 'add_templateA',
                 url: '/add',
                 parent: 'encode',
                 views: {

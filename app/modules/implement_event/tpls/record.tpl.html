@@ -1,36 +1,9 @@
-    <div class="col-xs-12">
-        <div class="box"> 
-            <div class="box-header">
-                <h2>Input Records</h2>
-                <div class="box-icon">
-                        <a ui-sref="encode_add" class="btn"><i class="fa fa-plus"></i> Add</a>
-                    </div>  
-            </div>  
+<div id="content" ng-controller="Recordctrl">
 
-            <div class="box-content">
-                <div class="dataTables_wrapper form-inline" role="grid">
-                        <table class="table bootstrap-datatable datatable table-hover" >
-                            <thead>
-                               <tr role="row">
-                                    <th>Patient Name</th>
-                                    <th>BP Diastolic</th>
-                                    <th>BP Systolic</th>
-                                    <th>Remove</th>
-                        
-                  
-            
-                                </tr>
-                            </thead>
-                             <tbody>
-                                <tr>
-                                    <td>Zar Dantes</td>
-                                    <td>120</td>
-                                    <td>80</td>
-                                    <td><a><i class="fa fa-trash-o"></i></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                </div>
-            </div>
+    <!-- Nav tabs -->
+       <div ng-model="tabs.activeTab" bs-tabs="tabs">
+
         </div>
-    </div>
+
+</div>
+
