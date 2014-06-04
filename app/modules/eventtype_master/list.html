@@ -1,0 +1,44 @@
+<div id="content" ng-controller="EventtypeList" ng-init="all()" >
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-pencil"></i>Event types</h2>
+                    <div class="box-icon">
+                        <a ui-sref="eventtype_add" class="btn"><i class="fa fa-plus"></i> Add</a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <div class="dataTables_wrapper form-inline" role="grid">
+                        <table class="table bootstrap-datatable datatable table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Actions</th>                                   
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                    <tr ng-hide="!eventtypes || eventtypes.length">
+                                        <td>No eventtypes yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in eventtypes">
+                                        <td>{{resource.no}}</td>
+                                        <td>{{resource.name}}</td>
+                                        
+                                        <td>
+                                            <a ui-sref="eventtype_view({eventtypeId: resource._id})" class="btn btn-success">View
+                                            </a>
+
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

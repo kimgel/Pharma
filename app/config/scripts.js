@@ -28,7 +28,8 @@ require.config({
         'HumanResources': '/modules/hr_master/service',
         'EquipmentResources': '/modules/inventory/equipment_master/service',
         'SuppliesResources': '/modules/inventory/supplies_master/service',
-        'Eventts': '/modules/initiateevent/propose_event/service'
+        'Eventts': '/modules/initiateevent/propose_event/service',
+        'Eventtypes': '/modules/eventtype_master/service'
         
         /* Directives
         =================================================================== 

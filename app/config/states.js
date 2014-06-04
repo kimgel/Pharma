@@ -774,7 +774,42 @@ define(['Dependency'], function(Dependency) {
                     'modules/hr_master/view_profile'
                 ]),
                 authenticate: true
-            }               
+            },
+            /* ======= Event Type Master ======= */
+            eventtype_master: {
+                name: 'eventtype_master',
+                url: '/eventtype',
+                parent: 'settings',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/eventtype_master/list.html'
+                    }
+                },
+                data: {
+                    displayName: 'Event Types'
+                },
+                resolve: new Dependency([
+                    'modules/eventtype_master/list'
+                ]),
+                authenticate: true
+            }, 
+            eventtype_add: {
+                name: 'eventtype_add',
+                url: '/add',
+                parent: 'eventtype_master',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/eventtype_master/add.html'
+                    }
+                },
+                data: {
+                    displayName: 'Add'
+                },
+                resolve: new Dependency([
+                    'modules/eventtype_master/add'
+                ]),
+                authenticate: true
+            }
 
         }
     };

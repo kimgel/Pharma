@@ -1,0 +1,51 @@
+<div id="content" ng-controller="EventtypeCtrl"> 
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Add</h2>
+                </div>
+
+
+                <div class="box-content">
+                    <form role="form" name="form" novalidate>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label">No.</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="no" ng-model="eventtype.no" required>
+                                    <span class="label label-danger pull-right" ng-show="form.no.$error.required">{{form.no.message}}</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Name</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="name" ng-model="eventtype.name" required>
+                                    <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
+                                </div>
+                            </div>
+                          
+                            <div class="form-actions highlight">
+                            <button type="button" class="btn btn-primary" ng-click="submit(form)">Submit</button>
+                            <button type="reset" class="btn">Clear</button>
+                        </div>
+                        </div>
+                </div>
+            </form>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+     
+    </div>
+</div>
+</div>
