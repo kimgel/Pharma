@@ -104,9 +104,10 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
+            /*
             propose_event_view: {
                 name: 'propose_event_view',
-                url: '/view',
+                url: '/:eventMainId',
                 parent: 'propose_event',
                 views: {
                     '@': {
@@ -116,6 +117,9 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'View'
                 },
+                resolve: new Dependency([
+                    'modules/initiateevent/propose_event/view'
+                ]),
                 authenticate: true
             },
             /* ======= Initiate Event/Approve ======= */

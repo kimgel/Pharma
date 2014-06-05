@@ -36,16 +36,15 @@
                                         </td>
                                         <td>{{eventmain.eventnum}}</td>
                                         <td>{{eventmain.created | date:'MM/dd/yyyy @ h:mma'}}</td>
-                                        <td>{{eventmain.creator.name}}</td>
+                                        <td>{{eventmain.creator}}</td>
                                         <td>{{eventmain.eventtypes}}</td>
                                         <td>{{eventmain.eventpurpose}}</td>
                                         <td>{{eventmain.eventdatefrom | date:'MM/dd/yyyy'}}-{{eventmain.eventdateto | date:'MM/dd/yyyy'}} </td>
                                         <td>{{eventmain.eventtime | date: 'h:mma'}}</td>
                                         <td>{{eventmain.eventlocation}}</td>
                                         <td>
-                                            <a ui-sref="propose_event_view({eventMainId: eventmain._id})" class="btn btn-success">View
-                                            </a>
-
+                                            <a class="btn btn-success btn-sm" ui-sref="propose_event_view({eventMainId: eventmain._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="propose_event_view({eventMainId: eventmain._id})"> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>
