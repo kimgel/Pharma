@@ -34,45 +34,7 @@ var pharma = function() {
     self.cache_get = function(key) {
         return self.zcache[key];
     };
-
-    /**
-     *  terminator === the termination handler
-     *  Terminate server on receipt of the specified signal.
-     *  @param {string} sig  Signal to terminate on.
-     */
-    self.terminator = function(sig) {
-        if (typeof sig === "string") {
-            console.log('%s: Received %s - terminating app ...',
-                Date(Date.now()), sig);
-            process.exit(1);
-        }
-
-        mongoose.connection.close(function() {
-            console.log('Mongoose default connection disconnected');
-            process.exit(0);
-        });
-        console.log('%s: Node server stopped.', Date(Date.now()));
-    };
-
-
-    /**
-     *  Setup termination handlers (for exit and a list of signals).
-     */
-    self.setupTerminationHandlers = function() {
-        //  Process on exit and signals.
-        process.on('exit', function() {
-            self.terminator();
-        });
-
-        // Removed 'SIGPIPE' from the list - bugz 852598.
-        ['SIGHUP', 'SIGINT', 'SIGQUIT', 'SIGILL', 'SIGTRAP', 'SIGABRT',
-            'SIGBUS', 'SIGFPE', 'SIGUSR1', 'SIGSEGV', 'SIGUSR2', 'SIGTERM'
-        ].forEach(function(element, index, array) {
-            process.on(element, function() {
-                self.terminator(element);
-            });
-        });
-    };
+   
     self.initializeServer = function() {
         // Application Config
         var config = require('./lib/config/config');
@@ -97,7 +59,6 @@ var pharma = function() {
     self.initialize = function() {
        //self.setupVariables();
         self.populateCache();
-        self.setupTerminationHandlers();
 
         // Create the express server and routes.
         self.initializeServer();
