@@ -104,7 +104,7 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
-            /*
+            
             propose_event_view: {
                 name: 'propose_event_view',
                 url: '/:eventMainId',
