@@ -4,7 +4,7 @@ define(['app'], function(app) {
     app.factory('EventMainFactory', [
         '$resource',
         function($resource) {
-            return $resource('/api/eventmains/:eventMainId:eventMainCode', {
+            return $resource('/api/eventmain/:eventMainId:eventMainCode', {
                 eventMainId: '@_id',
                 eventMainCode: '@code'            
             }, {
