@@ -122,6 +122,23 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
+            propose_event_edit: {
+                name: 'propose_event_edit',
+                url: '/:eventMainId/edit',
+                parent: 'propose_event',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/initiateevent/propose_event/edit.html'
+                    }
+                },
+                data: {
+                    displayName: 'Edit'
+                },
+                resolve: new Dependency([
+                    'modules/initiateevent/propose_event/edit'
+                ]),
+                authenticate: true
+            },
             /* ======= Initiate Event/Approve ======= */
             approve_event: {
                 name: 'approve_event',

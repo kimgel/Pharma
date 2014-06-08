@@ -13,10 +13,11 @@
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
-                                    <th>Status</th>
+                                    <th>Event Status</th>
+                                    <th>Proposal Status</th>
                                     <th>No.</th>
                                     <th>Date proposed</th>
-                                    <th>Proposer</th>
+                                    <!--<th>Proposer</th>-->
                                     <th>Name</th>
                                     <th>Type</th>
                                     <th>Purpose</th>
@@ -35,9 +36,12 @@
                                         <td>
                                             <span class="label" ng-class="{'label-important': eventmain.expired == true, 'label-success': eventmain.expired == false}">{{eventmain.status}}</span>
                                         </td>
+                                        <td>
+                                            <span class="label" ng-class="{'label-info': eventmain.proposalStatus == 'waiting', 'label-danger': eventmain.proposalStatus == 'disapproved'}">{{eventmain.proposalStatus}}</span>
+                                        </td>
                                         <td>{{eventmain.eventnum}}</td>
                                         <td>{{eventmain.created | date:'MM/dd/yyyy @ h:mma'}}</td>
-                                        <td>{{eventmain.creator}}</td>
+                                        <!--<td>{{eventmain.creator}}</td>-->
                                         <td>{{eventmain.name}}</td>
                                         <td>{{eventmain.eventtype.name}}</td>
                                         <td>{{eventmain.eventpurpose}}</td>
@@ -46,7 +50,7 @@
                                         <td>{{eventmain.eventlocation}}</td>
                                         <td>
                                             <a class="btn btn-success btn-sm" ui-sref="propose_event_view({eventMainId: eventmain._id})"> <i class="fa fa-search-plus"></i></a>
-                                            <a class="btn btn-primary btn-sm" ui-sref="propose_event_view({eventMainId: eventmain._id})"> <i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="propose_event_edit({eventMainId: eventmain._id})"> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>

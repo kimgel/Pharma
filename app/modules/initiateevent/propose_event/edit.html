@@ -1,0 +1,37 @@
+<div id="content" ng-controller="EventMainEditCtrl" ng-init="findOne()">
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        <i class="fa fa-suitcase"></i>Edit</h2>
+                </div>
+                <div class="box-content">
+                    <form role="form" name="form" novalidate>
+                        
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" name="name" ng-model="eventmain.name" required>
+                                <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <span>
+                                <small>Added: {{eventmain.creator.name}}, {{eventmain.created | date: 'medium'}}</small>
+                            </span>
+                        </div>
+                        <div class="form-actions highlight">
+                            <button ng-click="update(form)" class="btn btn-primary">Update</button>
+                            <a ui-sref="propose_event" class="btn btn-default">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+
+        </div>
+    </div>
+</div>
