@@ -4,9 +4,7 @@
             <div class="box">
                 <div class="box-header" data-original-title="">
                     <h2><i class="fa fa-pencil"></i>Approve</h2>
-                    <div class="box-icon">
-                        <a ui-sref="propose_event_add" class="btn"><i class="fa fa-plus"></i> Add</a>
-                    </div>
+                    
                 </div>
                 <div class="box-content">
                     <div class="dataTables_wrapper form-inline" role="grid">
@@ -36,7 +34,7 @@
                                             <span class="label" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
                                         </td>
                                         <td>
-                                            <span class="label" ng-class="{'label-info': initiateevent.proposalStatus == 'waiting', 'label-warning': initiateevent.proposalStatus == 'pending'}">{{initiateevent.proposalStatus}}</span>
+                                            <span class="label" ng-class="{'label-info': initiateevent.approvalStatus == 'Waiting', 'label-warning': initiateevent.approvalStatus == 'Pending', 'label-success': initiateevent.approvalStatus == 'Approve', 'label-danger': initiateevent.approvalStatus == 'Disapprove'}">{{initiateevent.approvalStatus}}</span>
                                         </td>
                                         <td>{{initiateevent.eventnum}}</td>
                                         <td>{{initiateevent.created | date:'MM/dd/yyyy @ h:mma'}}</td>

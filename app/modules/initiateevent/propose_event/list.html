@@ -37,7 +37,7 @@
                                             <span class="label" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
                                         </td>
                                         <td>
-                                            <span class="label" ng-class="{'label-info': initiateevent.proposalStatus == 'waiting', 'label-warning': initiateevent.proposalStatus == 'pending'}">{{initiateevent.proposalStatus}}</span>
+                                            <span class="label" ng-class="{'label-info': initiateevent.approvalStatus == 'Waiting', 'label-warning': initiateevent.approvalStatus == 'Pending', 'label-success': initiateevent.approvalStatus == 'Approve', 'label-danger': initiateevent.approvalStatus == 'Disapprove'}">{{initiateevent.approvalStatus}}</span>
                                         </td>
                                         <td>{{initiateevent.eventnum}}</td>
                                         <td>{{initiateevent.created | date:'MM/dd/yyyy @ h:mma'}}</td>
