@@ -37,7 +37,7 @@
                                             <span class="label" ng-class="{'label-important': eventmain.expired == true, 'label-success': eventmain.expired == false}">{{eventmain.status}}</span>
                                         </td>
                                         <td>
-                                            <span class="label" ng-class="{'label-info': eventmain.proposalStatus == 'waiting', 'label-danger': eventmain.proposalStatus == 'disapproved'}">{{eventmain.proposalStatus}}</span>
+                                            <span class="label" ng-class="{'label-info': eventmain.proposalStatus == 'waiting', 'label-warning': eventmain.proposalStatus == 'pending'}">{{eventmain.proposalStatus}}</span>
                                         </td>
                                         <td>{{eventmain.eventnum}}</td>
                                         <td>{{eventmain.created | date:'MM/dd/yyyy @ h:mma'}}</td>
