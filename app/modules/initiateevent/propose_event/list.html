@@ -1,4 +1,4 @@
-<div id="content" ng-controller="EventMainList" ng-init="all()" >
+<div id="content" ng-controller="InitiateEventList" ng-init="all()" >
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -29,28 +29,28 @@
                             </thead>
 
                             <tbody>
-                                    <tr ng-hide="!eventmains || eventmains.length">
+                                    <tr ng-hide="!initiateevents || initiateevents.length">
                                         <td>No proposed event yet.</td>
                                     </tr>
-                                    <tr ng-repeat="eventmain in eventmains">
+                                    <tr ng-repeat="initiateevent in initiateevents">
                                         <td>
-                                            <span class="label" ng-class="{'label-important': eventmain.expired == true, 'label-success': eventmain.expired == false}">{{eventmain.status}}</span>
+                                            <span class="label" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
                                         </td>
                                         <td>
-                                            <span class="label" ng-class="{'label-info': eventmain.proposalStatus == 'waiting', 'label-warning': eventmain.proposalStatus == 'pending'}">{{eventmain.proposalStatus}}</span>
+                                            <span class="label" ng-class="{'label-info': initiateevent.proposalStatus == 'waiting', 'label-warning': initiateevent.proposalStatus == 'pending'}">{{initiateevent.proposalStatus}}</span>
                                         </td>
-                                        <td>{{eventmain.eventnum}}</td>
-                                        <td>{{eventmain.created | date:'MM/dd/yyyy @ h:mma'}}</td>
-                                        <!--<td>{{eventmain.creator}}</td>-->
-                                        <td>{{eventmain.name}}</td>
-                                        <td>{{eventmain.eventtype.name}}</td>
-                                        <td>{{eventmain.eventpurpose}}</td>
-                                        <td>{{eventmain.eventdatefrom | date:'MM/dd/yyyy'}}-{{eventmain.eventdateto | date:'MM/dd/yyyy'}} </td>
-                                        <td>{{eventmain.eventtime | date: 'h:mma'}}</td>
-                                        <td>{{eventmain.eventlocation}}</td>
+                                        <td>{{initiateevent.eventnum}}</td>
+                                        <td>{{initiateevent.created | date:'MM/dd/yyyy @ h:mma'}}</td>
+                                        <!--<td>{{initiateevent.creator}}</td>-->
+                                        <td>{{initiateevent.name}}</td>
+                                        <td>{{initiateevent.eventtype.name}}</td>
+                                        <td>{{initiateevent.eventpurpose}}</td>
+                                        <td>{{initiateevent.eventdatefrom | date:'MM/dd/yyyy'}}-{{initiateevent.eventdateto | date:'MM/dd/yyyy'}} </td>
+                                        <td>{{initiateevent.eventtime | date: 'h:mma'}}</td>
+                                        <td>{{initiateevent.eventlocation}}</td>
                                         <td>
-                                            <a class="btn btn-success btn-sm" ui-sref="propose_event_view({eventMainId: eventmain._id})"> <i class="fa fa-search-plus"></i></a>
-                                            <a class="btn btn-primary btn-sm" ui-sref="propose_event_edit({eventMainId: eventmain._id})"> <i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-success btn-sm" ui-sref="propose_event_view({initiateEventId: initiateevent._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="propose_event_edit({initiateEventId: initiateevent._id})"> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>

@@ -1,16 +1,16 @@
 'use strict'; 
 
-define(['app', 'Eventmains'], function(app, Eventmains) {
+define(['app', 'Initiateevents'], function(app, Initiateevents) {
     app.controller('ApproveList', [
         '$scope',
         '$location',
-        'EventMainFactory', 
-        function($scope, $location, EventMainFactory) {
+        'InitiateEventFactory', 
+        function($scope, $location, InitiateEventFactory) {
             $scope.all = function() {
-                EventMainFactory.query({
+                InitiateEventFactory.query({
                     kim: 'name'
-                },function(eventmains) {
-                    $scope.eventmains = eventmains;
+                },function(initiateevents) {
+                    $scope.initiateevents = initiateevents;
                 });
             };
         }

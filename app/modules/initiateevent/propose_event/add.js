@@ -2,29 +2,29 @@
 
 define([
     'app',
-    'Eventmains',
+    'Initiateevents',
     'Eventtypes',
-], function(app, Eventmains, Eventtypes) {
-    app.controller('EventMainCtrl', [
+], function(app, Initiateevents, Eventtypes) {
+    app.controller('InitiateEventCtrl', [
         '$scope',
         '$state',
-        'EventMainFactory',
+        'InitiateEventFactory',
         'EventtypeFactory',
         function(
             $scope,
             $state,
-            EventMainFactory,
+            InitiateEventFactory,
             EventtypeFactory
         ) {
 
-            $scope.eventmain = {};
+            $scope.initiateevent = {};
             $scope.schedule = {};
             $scope.view = false;
             $scope.submit = function(form) {
-                $scope.eventmain.schedule = $scope.schedule;
+                $scope.initiateevent.schedule = $scope.schedule;
                 //console.log($scope.eventt);
                 
-                EventMainFactory.save($scope.eventmain, function(err) {
+                InitiateEventFactory.save($scope.initiateevent, function(err) {
                      if (err.errors) {
                         for (var key in err.errors) {
                             form[key].message = err.errors[key].message;
@@ -36,14 +36,14 @@ define([
 
             };
             $scope.clear = function() {
-                $scope.eventmain = angular.copy({});
+                $scope.initiateevent = angular.copy({});
             };
 
             $scope.all = function() {
                 
                 EventtypeFactory.query(function(eventtypes) {
                     $scope.eventtypes = eventtypes;
-                    $scope.eventmain.eventtypes = $scope.eventtypes[0]._id;
+                    $scope.initiateevent.eventtypes = $scope.eventtypes[0]._id;
                     console.log($scope.eventtypes);
                 });
             };

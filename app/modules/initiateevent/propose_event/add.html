@@ -1,4 +1,4 @@
-<div id="content" ng-controller="EventMainCtrl" ng-init="all()"> 
+<div id="content" ng-controller="InitiateEventCtrl" ng-init="all()"> 
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -14,14 +14,14 @@
                             <div class="form-group">
                                 <label class="control-label">Event No.</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="eventnum" ng-model="eventmain.eventnum" required>
+                                    <input type="text" class="form-control" name="eventnum" ng-model="initiateevent.eventnum" required>
                                     <span class="label label-danger pull-right" ng-show="form.eventnum.$error.required">{{form.eventnum.message}}</span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Event Name</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="name" ng-model="eventmain.name" required>
+                                    <input type="text" class="form-control" name="name" ng-model="initiateevent.name" required>
                                     <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
                                 </div>
                             </div><!--
@@ -34,28 +34,28 @@
                             </div>-->
                             <div class="form-group">
                                 <label class="control-label">Event type</label>
-                                <select class="form-control" ng-model="eventmain.eventtype" ng-options="eventtype._id as eventtype.name for eventtype in eventtypes" required>
+                                <select class="form-control" ng-model="initiateevent.eventtype" ng-options="eventtype._id as eventtype.name for eventtype in eventtypes" required>
                                 </select>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Event Location</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="eventlocation" ng-model="eventmain.eventlocation" required>
+                                    <input type="text" class="form-control" name="eventlocation" ng-model="initiateevent.eventlocation" required>
                                     <span class="label label-danger pull-right" ng-show="form.eventlocation.$error.required">{{form.eventlocation.message}}</span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Event Description</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="eventdescription" ng-model="eventmain.eventdescription" required>
+                                    <input type="text" class="form-control" name="eventdescription" ng-model="initiateevent.eventdescription" required>
                                     <span class="label label-danger pull-right" ng-show="form.eventdescription.$error.required">{{form.eventdescription.message}}</span>
                                 </div>
                             </div> 
                             <div class="form-group">
                                 <label class="control-label">Event Purpose</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="eventpurpose" ng-model="eventmain.eventpurpose" required>
+                                    <input type="text" class="form-control" name="eventpurpose" ng-model="initiateevent.eventpurpose" required>
                                     <span class="label label-danger pull-right" ng-show="form.eventpurpose.$error.required">{{form.eventpurpose.message}}</span>
                                 </div>
                             </div>                        
@@ -70,7 +70,7 @@
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </span>
-                                                <input type="text" name="eventdatefrom" class="form-control" ng-model="eventmain.eventdatefrom" data-max-date="{{eventmain.eventdateto}}" placeholder="From" bs-datepicker>
+                                                <input type="text" name="eventdatefrom" class="form-control" ng-model="initiateevent.eventdatefrom" data-max-date="{{initiateevent.eventdateto}}" placeholder="From" bs-datepicker>
 
                                                 
                                             </div>
@@ -85,7 +85,7 @@
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </span>
-                                                <input type="text" name="eventdateto" class="form-control" ng-model="eventmain.eventdateto" data-min-date="{{eventmain.eventdatefrom}}" placeholder="To" bs-datepicker>
+                                                <input type="text" name="eventdateto" class="form-control" ng-model="initiateevent.eventdateto" data-min-date="{{initiateevent.eventdatefrom}}" placeholder="To" bs-datepicker>
                                             </div>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-clock-o"></i>
                                         </span>
-                                        <input type="text" class="form-control" ng-model="eventmain.eventtime" name="eventtime" placeholder="Event Time" bs-timepicker>
+                                        <input type="text" class="form-control" ng-model="initiateevent.eventtime" name="eventtime" placeholder="Event Time" bs-timepicker>
                                     </div>
                                 </div>
                             </div>
@@ -109,28 +109,28 @@
                             <div class="form-group">
                                 <label class="control-label">Human Resource</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="hresource" ng-model="eventmain.hresource" required>
+                                    <input type="text" class="form-control" name="hresource" ng-model="initiateevent.hresource" required>
                                     <span class="label label-danger pull-right" ng-show="form.hresource.$error.required">{{form.hresource.message}}</span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Equipment Resource</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="eresource" ng-model="eventmain.eresource" required>
+                                    <input type="text" class="form-control" name="eresource" ng-model="initiateevent.eresource" required>
                                     <span class="label label-danger pull-right" ng-show="form.eresource.$error.required">{{form.eresource.message}}</span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Supplies Resource</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="sresource" ng-model="eventmain.sresource" required>
+                                    <input type="text" class="form-control" name="sresource" ng-model="initiateevent.sresource" required>
                                     <span class="label label-danger pull-right" ng-show="form.sresource.$error.required">{{form.sresource.message}}</span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Remarks</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="eventremarks" ng-model="eventmain.eventremarks" required>
+                                    <input type="text" class="form-control" name="eventremarks" ng-model="initiateevent.eventremarks" required>
                                     <span class="label label-danger pull-right" ng-show="form.eventremarks.$error.required">{{form.eventremarks.message}}</span>
                                 </div>
                             </div>

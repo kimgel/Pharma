@@ -107,7 +107,7 @@ define(['Dependency'], function(Dependency) {
             
             propose_event_view: {
                 name: 'propose_event_view',
-                url: '/:eventMainId',
+                url: '/:initiateEventId',
                 parent: 'propose_event',
                 views: {
                     '@': {
@@ -124,7 +124,7 @@ define(['Dependency'], function(Dependency) {
             },
             propose_event_edit: {
                 name: 'propose_event_edit',
-                url: '/:eventMainId/edit',
+                url: '/:initiateEventId/edit',
                 parent: 'propose_event',
                 views: {
                     '@': {
@@ -158,8 +158,8 @@ define(['Dependency'], function(Dependency) {
                 authenticate: true
             },
             approve_event_view: {
-                name: 'approve_event_approve',
-                url: '/:eventMainId',
+                name: 'approve_event_view',
+                url: '/:initiateEventId',
                 parent: 'approve_event',
                 views: {
                     '@': {
@@ -169,6 +169,9 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'View'
                 },
+                resolve: new Dependency([
+                    'modules/initiateevent/approve_event/view'
+                ]),
                 authenticate: true
             },
             /* ======= Prepare Event ======= */

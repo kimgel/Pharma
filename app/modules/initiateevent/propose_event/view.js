@@ -1,18 +1,18 @@
 'use strict';
 
-define(['app', 'Eventmains'], function(app, Eventmains) {
-    app.controller('EventMainViewCtrl', [
+define(['app', 'Initiateevents'], function(app, Initiateevents) {
+    app.controller('InitiateEventViewCtrl', [
         '$scope',
         '$location', 
         '$stateParams',
-        'EventMainFactory',
-        function($scope, $location, $stateParams, EventMainFactory) {
+        'InitiateEventFactory',
+        function($scope, $location, $stateParams, InitiateEventFactory) {
             $scope.findOne = function() {
-                EventMainFactory.get({
-                    eventMainId: $stateParams.eventMainId      
+                InitiateEventFactory.get({
+                    initiateEventId: $stateParams.initiateEventId      
                                
-                }, function(eventmain) {
-                    $scope.eventmain = eventmain;              
+                }, function(initiateevent) {
+                    $scope.initiateevent = initiateevent;              
                 });
             };
         }

@@ -1,12 +1,12 @@
 'use strict';
 
 define(['app'], function(app) {
-    app.factory('EventMainFactory', [
+    app.factory('InitiateEventFactory', [
         '$resource',
         function($resource) {
-            return $resource('/api/eventmain/:eventMainId:eventMainCode', {
-                eventMainId: '@_id',
-                eventMainCode: '@code'            
+            return $resource('/api/initiateevent/:initiateEventId:initiateEventCode', {
+                initiateEventId: '@_id',
+                initiateEventCode: '@code'            
             }, {
                 update: {
                     method: 'PUT'

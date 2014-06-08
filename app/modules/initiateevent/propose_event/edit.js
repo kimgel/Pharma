@@ -1,15 +1,15 @@
 'use strict';
 
-define(['app', 'Eventmains'], function(app, Eventmains) {
-    app.controller('EventMainEditCtrl', [
+define(['app', 'Initiateevents'], function(app, Initiateevents) {
+    app.controller('InitiateEventEditCtrl', [
         '$scope',
         '$state',
         '$stateParams',
-        'EventMainFactory',
-        function($scope, $state, $stateParams, EventMainFactory) {            
+        'InitiateEventFactory',
+        function($scope, $state, $stateParams, InitiateEventFactory) {            
             $scope.update = function(form) {            
-                var updateEventmain = $scope.eventmains;
-                EventMainFactory.update($scope.eventmain, function(err) {
+                var updateInitiateEvent = $scope.initiateevents;
+                InitiateEventFactory.update($scope.initiateevent, function(err) {
                     if (err.errors) {
                         for (var key in err.errors) {
                             form[key].message = err.errors[key].message;
@@ -21,10 +21,10 @@ define(['app', 'Eventmains'], function(app, Eventmains) {
             };
 
             $scope.findOne = function() {
-                EventMainFactory.get({
-                    eventMainId: $stateParams.eventMainId
-                }, function(eventmain) {
-                    $scope.eventmain = eventmain;
+                InitiateEventFactory.get({
+                    initiateEventId: $stateParams.initiateEventId
+                }, function(initiateevent) {
+                    $scope.initiateevent = initiateevent;
                 });
             };
         }
