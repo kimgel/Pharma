@@ -152,11 +152,14 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Approve'
                 },
+                resolve: new Dependency([
+                    'modules/initiateevent/approve_event/list'
+                ]),
                 authenticate: true
             },
-            approve_event_approve: {
+            approve_event_view: {
                 name: 'approve_event_approve',
-                url: '/view',
+                url: '/:eventMainId',
                 parent: 'approve_event',
                 views: {
                     '@': {

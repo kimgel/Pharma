@@ -1,14 +1,16 @@
-'use strict';
+'use strict'; 
 
-define(['app', 'Planners'], function(app, Planners) {
-    app.controller('PlannerList', [
+define(['app', 'Eventmains'], function(app, Eventmains) {
+    app.controller('ApproveList', [
         '$scope',
         '$location',
-        'PlannerFactory',
-        function($scope, $location, PlannerFactory) {
+        'EventMainFactory', 
+        function($scope, $location, EventMainFactory) {
             $scope.all = function() {
-                PlannerFactory.query(function(planners) {
-                    $scope.planners = planners;
+                EventMainFactory.query({
+                    kim: 'name'
+                },function(eventmains) {
+                    $scope.eventmains = eventmains;
                 });
             };
         }
