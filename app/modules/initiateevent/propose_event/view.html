@@ -8,6 +8,11 @@
                 </div>
                 <div class="box-content">
                         <div class="form-group">
+                            <div>
+                                <span class="label pull-right" ng-class="{'label-important': eventmain.expired == true, 'label-success': eventmain.expired == false}">{{eventmain.status}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <div class="row">
                                 <div class="col-md-4">
                                     <label class="control-label">No</label>
@@ -33,7 +38,7 @@
                                     <label class="control-label">Event Type</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmain.eventtypes}}
+                                    {{eventmain.eventtype.name}}
                                 </div>
                             </div>
                         </div>

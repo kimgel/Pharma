@@ -6,6 +6,7 @@ require.config({
         =================================================================== */
         'States': '/config/states',
         'Dependency': '/config/dependency',
+       // 'Init': '/config/init',
         'Templates': '/config/templates',
 
         /* 3rd Party
