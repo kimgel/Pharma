@@ -11,8 +11,8 @@ define(['app', 'Eventmains'], function(app, Eventmains) {
                 EventMainFactory.get({
                     eventMainId: $stateParams.eventMainId      
                                
-                }, function(eventmains) {
-                    $scope.eventmains = eventmains;              
+                }, function(eventmain) {
+                    $scope.eventmain = eventmain;              
                 });
             };
         }

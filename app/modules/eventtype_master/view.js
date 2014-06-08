@@ -11,8 +11,8 @@ define(['app', 'Eventtypes'], function(app, Eventtypes) {
                 EventtypeFactory.get({
                     eventtypeId: $stateParams.eventtypeId      
                                
-                }, function(eventtypes) {
-                    $scope.eventtypes = eventtypes;              
+                }, function(eventtype) {
+                    $scope.eventtype = eventtype;              
                 });
             };
         }

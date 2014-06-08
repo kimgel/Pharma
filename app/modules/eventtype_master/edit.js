@@ -9,7 +9,7 @@ define(['app', 'Eventtypes'], function(app, Eventtypes) {
         function($scope, $state, $stateParams, EventtypeFactory) {            
             $scope.update = function(form) {            
                 var updateEventtype = $scope.eventtypes;
-                EventtypeFactory.update($scope.eventtypes, function(err) {
+                EventtypeFactory.update($scope.eventtype, function(err) {
                     if (err.errors) {
                         for (var key in err.errors) {
                             form[key].message = err.errors[key].message;
@@ -23,8 +23,8 @@ define(['app', 'Eventtypes'], function(app, Eventtypes) {
             $scope.findOne = function() {
                 EventtypeFactory.get({
                     eventtypeId: $stateParams.eventtypeId
-                }, function(eventtypes) {
-                    $scope.eventtypes = eventtypes;
+                }, function(eventtype) {
+                    $scope.eventtype = eventtype;
                 });
             };
         }

@@ -13,7 +13,7 @@
                                     <label class="control-label">No</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eventnum}}
+                                    {{eventmain.eventnum}}
                                 </div>
                             </div>
                         </div>
@@ -23,7 +23,17 @@
                                     <label class="control-label">Event Name</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.name}}
+                                    {{eventmain.name}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="control-label">Event Type</label>
+                                </div>
+                                <div class="col-md-3">
+                                    {{eventmain.eventtypes}}
                                 </div>
                             </div>
                         </div>
@@ -33,7 +43,7 @@
                                     <label class="control-label">Event Location</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eventlocation}}
+                                    {{eventmain.eventlocation}}
                                 </div>
                             </div>
                         </div>
@@ -43,7 +53,7 @@
                                     <label class="control-label">Description</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eventdescription}}
+                                    {{eventmain.eventdescription}}
                                 </div>
                             </div>
                         </div>
@@ -53,7 +63,7 @@
                                     <label class="control-label">Purpose</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eventpurpose}}
+                                    {{eventmain.eventpurpose}}
                                 </div>
                             </div>
                         </div>
@@ -63,7 +73,7 @@
                                     <label class="control-label">Event Date</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eventdatefrom}} - {{eventmains.eventdateto}}
+                                    {{eventmain.eventdatefrom}} - {{eventmain.eventdateto}}
                                 </div>
                             </div>
                         </div>
@@ -73,7 +83,7 @@
                                     <label class="control-label">Event Time</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eventtime}}
+                                    {{eventmain.eventtime}}
                                 </div>
                             </div>
                         </div>
@@ -83,7 +93,7 @@
                                     <label class="control-label">Human Resource</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.hresource}}
+                                    {{eventmain.hresource}}
                                 </div>
                             </div>
                         </div>
@@ -93,7 +103,7 @@
                                     <label class="control-label">Equipment Resource</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eresource}}
+                                    {{eventmain.eresource}}
                                 </div>
                             </div>
                         </div>
@@ -103,7 +113,7 @@
                                     <label class="control-label">Supplies Resource</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.sresource}}
+                                    {{eventmain.sresource}}
                                 </div>
                             </div>
                         </div>
@@ -113,7 +123,7 @@
                                     <label class="control-label">Remarks</label>
                                 </div>
                                 <div class="col-md-3">
-                                    {{eventmains.eventremarks}}
+                                    {{eventmain.eventremarks}}
                                 </div>
                             </div>
                         </div>
@@ -121,7 +131,7 @@
                             <div class="row">
                                 <div class="col-md-7">
                                     <span>
-                                        <small>Added: {{eventmains.creator.name}}, {{eventmains.created | date: 'medium'}}</small>
+                                        <small>Added: {{eventmain.creator.name}}, {{eventmain.created | date: 'medium'}}</small>
                                     </span>
                                 </div>
                             </div>

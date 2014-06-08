@@ -11,21 +11,21 @@
                         <div class="form-group">
                             <label class="control-label">No</label>
                             <div class="controls">
-                                <input type="text" class="form-control" name="no" ng-model="eventtypes.no" required>
+                                <input type="text" class="form-control" name="no" ng-model="eventtype.no" required>
                                 <span class="label label-danger pull-right" ng-show="form.no.$error.required">{{form.no.message}}</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label">Name</label>
                             <div class="controls">
-                                <input type="text" class="form-control" name="name" ng-model="eventtypes.name" required>
+                                <input type="text" class="form-control" name="name" ng-model="eventtype.name" required>
                                 <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <span>
-                                <small>Added: {{eventtypes.creator.name}}, {{eventtypes.created | date: 'medium'}}</small>
+                                <small>Added: {{eventtype.creator.name}}, {{eventtype.created | date: 'medium'}}</small>
                             </span>
                         </div>
                         <div class="form-actions highlight">
