@@ -238,7 +238,7 @@ define(['Dependency'], function(Dependency) {
                 parent: 'reserve_resources',
                 views: {
                     '@': {
-                        templateUrl: '/modules/prepare_event/reserve/addHr.html'
+                        templateUrl: '/modules/prepare_event/reserve/hr/add.html'
                     }
                 },
                 data: {
@@ -256,7 +256,7 @@ define(['Dependency'], function(Dependency) {
                 parent: 'reserve_resources',
                 views: {
                     '@': {
-                        templateUrl: '/modules/prepare_event/reserve/addEquipment.html'
+                        templateUrl: '/modules/prepare_event/reserve/equipment/add.html'
                     }
                 },
                 data: {
@@ -274,7 +274,7 @@ define(['Dependency'], function(Dependency) {
                 parent: 'reserve_resources',
                 views: {
                     '@': {
-                        templateUrl: '/modules/prepare_event/reserve/addSupplies.html'
+                        templateUrl: '/modules/prepare_event/reserve/supplies/add.html'
                     }
                 },
                 data: {
@@ -283,7 +283,7 @@ define(['Dependency'], function(Dependency) {
 
                 resolve: new Dependency([
                     'modules/prepare_event/reserve/reserve',
-                    'modules/prepare_event/reserve/addSupplies'
+                    'modules/prepare_event/reserve/supplies/add'
                 ]),
                 authenticate: true
             },

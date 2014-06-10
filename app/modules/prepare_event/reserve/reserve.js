@@ -8,19 +8,19 @@ define(['app'], function(app) {
             $scope.tabs = [
                       { 
                         "title": "View",
-                        "template": "/modules/prepare_event/reserve/tpls/view.tpl.html",
+                        "template": "/modules/prepare_event/reserve/view.html",
                       },
                       {
                         "title": "Human Resource",
-                        "template": "/modules/prepare_event/reserve/tpls/resourcesHr.tpl.html",
+                        "template": "/modules/prepare_event/reserve/hr/list.html",
                       },
                       {
                         "title": "Equipment Resource",
-                        "template": "/modules/prepare_event/reserve/tpls/resourcesEquipment.tpl.html",
+                        "template": "/modules/prepare_event/reserve/equipment/list.html",
                       },
                       {
                         "title": "Supplies Resource",
-                        "template": "/modules/prepare_event/reserve/tpls/resourcesSupplies.tpl.html",
+                        "template": "/modules/prepare_event/reserve/supplies/list.html",
                       }
                     ];
                     $scope.tabs.activeTab = 0;

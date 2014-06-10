@@ -8,11 +8,11 @@ define(['app'], function(app) {
             $scope.tabs = [
                       { 
                         "title": "Supplies for Reservation",
-                        "template": "/modules/prepare_event/reserve/reservesupplies.html",
+                        "template": "/modules/prepare_event/reserve/supplies/tpls/reserveSupplies.html",
                       },
                       {
                         "title": "Supplies for Purchase",
-                        "template": "/modules/prepare_event/reserve/purchasesupplies.html",
+                        "template": "/modules/prepare_event/reserve/supplies/tpls/purchaseSupplies.html",
                       }
                     ];
                     $scope.tabs.activeTab = 0;
