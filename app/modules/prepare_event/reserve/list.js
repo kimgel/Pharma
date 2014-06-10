@@ -1,16 +1,32 @@
 'use strict';
 
-define(['app', 'Planners'], function(app, Planners) {
-    app.controller('PlannerList', [
+define([
+    'app',
+    'Initiateevents',
+], function(app, Initiateevents) {
+    app.controller('PrepareEventList', [
         '$scope',
-        '$location',
-        'PlannerFactory',
-        function($scope, $location, PlannerFactory) {
+        '$state',
+        'InitiateEventFactory',
+        function(
+            $scope,
+            $state,
+            InitiateEventFactory
+        ) {
+
+           // $scope.view = false;
+            
             $scope.all = function() {
-                PlannerFactory.query(function(planners) {
-                    $scope.planners = planners;
+                
+                InitiateEventFactory.query(function(initiateevents) {
+                    $scope.initiateevents = initiateevents;
+                   // $scope.initiateevent.eventtypes = $scope.eventtypes[0]._id;
+                   // console.log($scope.initiateevents);
                 });
             };
+
+          
         }
     ]);
+
 });

@@ -208,13 +208,15 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/prepare_event/reserve/reserve'
+                    'modules/prepare_event/reserve/reserve',
+                    'modules/prepare_event/reserve/list'
                 ]),
                 authenticate: true
             },
             reserve_resources: {
                 name: 'reserve_resources',
-                url: '/resources',
+                //url: '/resources',
+                url: '/:initiateEventId',
                 parent: 'reserve',
                 views: {
                     '@': {
