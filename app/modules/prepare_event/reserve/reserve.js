@@ -7,7 +7,7 @@ define(['app'], function(app) {
 
             $scope.tabs = [
                       { 
-                        "title": "View",
+                        "title": "Summary",
                         "template": "/modules/prepare_event/reserve/view.html",
                       },
                       {
