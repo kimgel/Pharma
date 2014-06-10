@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <label class="control-label">Event Date</label>
                                 <div class="controls">
-                                    <div class="label-value">{{initiateevent.eventdatefrom}} to {{initiateevent.eventdateto}}</div>
+                                    <div class="label-value">{{initiateevent.eventdatefrom | date: 'medium'}} to {{initiateevent.eventdateto | date: 'medium'}}</div>
                                 </div>
                         </div>
                         <div class="form-group">
@@ -96,6 +96,12 @@
                                 
                                 <span class="label pull-right" ng-class="{'label-info': initiateevent.approvalStatus == 'Waiting', 'label-warning': initiateevent.approvalStatus == 'Pending', 'label-success': initiateevent.approvalStatus == 'Approve', 'label-danger': initiateevent.approvalStatus == 'Disapprove'}">{{initiateevent.approvalStatus}}</span>
                             </div>
+                    <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label">Approval Date</label>
+                                <div class="label-value">{{initiateevent.approvalDate | date: 'medium'}}</div>
+                            </div>
+                    </div>
                     <div class="form-group">
                             <div class="form-group">
                                 <label class="control-label">Approval Remarks</label>

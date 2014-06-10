@@ -44,7 +44,7 @@ define([
                 EventtypeFactory.query(function(eventtypes) {
                     $scope.eventtypes = eventtypes;
                     $scope.initiateevent.eventtypes = $scope.eventtypes[0]._id;
-                    console.log($scope.eventtypes);
+                    //console.log($scope.eventtypes);
                 });
             };
 

@@ -9,7 +9,7 @@ define(['app', 'Initiateevents'], function(app, Initiateevents) {
         function($scope, $state, $stateParams, InitiateEventFactory) {   
 
             $scope.update = function(form) {
-//$scope.initiateevent.approver = $scope.users;                
+//$scope.initiateevent.approver = $scope.userId;                
 $scope.initiateevent.approvalDate = Date.now();
                 var updateApprovalStatus = $scope.initiateevents;
                 InitiateEventFactory.update($scope.initiateevent, function(err) {
@@ -30,6 +30,7 @@ $scope.initiateevent.approvalDate = Date.now();
                     $scope.initiateevent = initiateevent;
                 });
             };
+
         }
     ]);
 });
