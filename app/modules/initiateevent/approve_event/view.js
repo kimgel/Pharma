@@ -6,8 +6,11 @@ define(['app', 'Initiateevents'], function(app, Initiateevents) {
         '$state',
         '$stateParams',
         'InitiateEventFactory',
-        function($scope, $state, $stateParams, InitiateEventFactory) {            
-            $scope.update = function(form) {            
+        function($scope, $state, $stateParams, InitiateEventFactory) {   
+
+            $scope.update = function(form) {
+//$scope.initiateevent.approver = $scope.users;                
+$scope.initiateevent.approvalDate = Date.now();
                 var updateApprovalStatus = $scope.initiateevents;
                 InitiateEventFactory.update($scope.initiateevent, function(err) {
                     if (err.errors) {
