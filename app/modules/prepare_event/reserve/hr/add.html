@@ -1,4 +1,4 @@
-<div id="content">
+<div id="content" ng-controller="ReserveHr" ng-init="all()">
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -36,57 +36,40 @@
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
-                                    <th>Code</th>
                                     <th>Picture</th>
                                     <th>Name</th>
                                     <th>Skill Type</th>
                                     <th>Status</th>
-                                    <th>Profile</th>
+                                    <th>Actions</th>
                                     <th>Select</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>HR-0001</td>
-                                    <td><div class="avatar">
+                                    <tr ng-hide="!humanresources || humanresources.length">
+                                        <td>No humanresource yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="humanresource in humanresources">
+                                        
+                                        <td><div class="avatar">
                                           <img src="assets/images/avatar.jpg" alt="Avatar">
-                                        </div>
-                                    </td>
-                                    <td>JUAN DELA CRUZ</td>
-                                    <td>Doctor</td>
-                                    <td>Available</td>
-                                     <td>
-                                        <a ui-sref="view_profile" class= "btn btn-success">View</a>
-                                     </td>
-                                    <td>
-                                        <div class="checkbox">
-                                        <label>
-                                          <input type="checkbox">
-                                        </label>
-                                      </div>
-                                    </td>
-                                 </tr>
-                                <tr> 
-                                    <td>HR-0002</td>
-                                    <td><div class="avatar">
-                                          <img src="assets/images/avatar.jpg" alt="Avatar">
-                                        </div>
-                                    </td>
-                                    <td>JUANA DELA CRUZ</td>
-                                    <td>Nurse</td>
-                                    <td>Available</td>
-                                     <td>
-                                        <a ui-sref="view_profile" class= "btn btn-success">View</a>
-                                     </td>
-                                    <td>
-                                        <div class="checkbox">
-                                            <label>
-                                              <input type="checkbox">
-                                            </label>
-                                          </div>
-                                    </td>
-                                 </tr>
-                            </tbody>
+                                            </div>
+                                        </td>
+                                       
+                                        <td>{{humanresource.name}}</td>
+                                        <td>{{humanresource.skill}}</td>
+                                        <td>Available</td>
+                                        <td>
+                                            <a class="btn btn-primary btn-sm"> <i class="fa fa-eye"></i></a>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox">
+                                                <label>
+                                                  <input type="checkbox">
+                                                </label>
+                                              </div>
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
                         </table>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ define([
     'app',
     'HumanResources',
 ], function(app, HumanResources) {
-    app.controller('SelectedHr', [
+    app.controller('ReserveHr', [
         '$scope',
         '$state',
         'HumanResourceFactory',

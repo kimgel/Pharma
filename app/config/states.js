@@ -230,7 +230,8 @@ define(['Dependency'], function(Dependency) {
                 resolve: new Dependency([
                     'modules/prepare_event/reserve/reserve',
                     'modules/prepare_event/reserve/view',
-                    'modules/prepare_event/reserve/hr/list'
+                    'modules/prepare_event/reserve/hr/list',
+                    'modules/prepare_event/reserve/hr/add'
                 ]),
                 authenticate: true
             },
