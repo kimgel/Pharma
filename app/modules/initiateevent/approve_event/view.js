@@ -2,14 +2,18 @@
 
 define(['app', 'Initiateevents'], function(app, Initiateevents) {
     app.controller('ApproveEvent', [
+        '$rootScope',
         '$scope',
         '$state',
         '$stateParams',
         'InitiateEventFactory',
-        function($scope, $state, $stateParams, InitiateEventFactory) {   
+        function($rootScope, $scope, $state, $stateParams, InitiateEventFactory) {   
 
             $scope.update = function(form) {
 //$scope.initiateevent.approver = $scope.userId;                
+var currentUser = $rootScope.currentUser;
+ $scope.initiateevent.approver = currentUser.userId;
+
 $scope.initiateevent.approvalDate = Date.now();
                 var updateApprovalStatus = $scope.initiateevents;
                 InitiateEventFactory.update($scope.initiateevent, function(err) {

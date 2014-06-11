@@ -2,12 +2,17 @@
 
 define(['app', 'SuppliesResources'], function(app, SuppliesResources) {
     app.controller('SuppliesResourceEditCtrl', [
+        '$rootScope',
         '$scope',
         '$state',
         '$stateParams',
         'SuppliesResourceFactory',
-        function($scope, $state, $stateParams, SuppliesResourceFactory) {            
-            $scope.update = function(form) {            
+        function($rootScope,$scope, $state, $stateParams, SuppliesResourceFactory) {            
+            $scope.update = function(form) {  
+                var currentUser = $rootScope.currentUser;
+                
+                $scope.suppliesresource.modified_by = currentUser.userId;
+
                 var updateSupplies = $scope.suppliesresource;
                 SuppliesResourceFactory.update($scope.suppliesresource, function(err) {
                     if (err.errors) {
@@ -20,7 +25,7 @@ define(['app', 'SuppliesResources'], function(app, SuppliesResources) {
                 });
             };
 
-            $scope.findOne = function() {
+            $scope.findOne = function() {                
                 SuppliesResourceFactory.get({
                     suppliesResourceId: $stateParams.suppliesResourceId
                 }, function(suppliesresource) {
