@@ -12,9 +12,10 @@ define(['app', 'Initiateevents'], function(app, Initiateevents) {
             $scope.update = function(form) {
 //$scope.initiateevent.approver = $scope.userId;                
 var currentUser = $rootScope.currentUser;
- $scope.initiateevent.approver = currentUser.userId;
+ $scope.initiateevent.approver = currentUser.userId; //updates approver
+ //$scope.initiateevent.modified_by = currentUser.userId; //updates modified_by
 
-$scope.initiateevent.approvalDate = Date.now();
+ $scope.initiateevent.approvalDate = Date.now(); //input present date
                 var updateApprovalStatus = $scope.initiateevents;
                 InitiateEventFactory.update($scope.initiateevent, function(err) {
                     if (err.errors) {

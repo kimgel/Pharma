@@ -40,7 +40,7 @@
                         <div class="form-group">
                             <label class="control-label">Event Date</label>
                                 <div class="controls">
-                                    <div class="label-value">{{initiateevent.eventdatefrom}} to {{initiateevent.eventdateto}}</div>
+                                    <div class="label-value">{{initiateevent.eventdatefrom | date: 'medium'}} to {{initiateevent.eventdateto | date: 'medium'}}</div>
                                 </div>
                         </div>
                         <div class="form-group">
@@ -77,6 +77,11 @@
                             <div class="form-group">
                                 <span>
                                     <small>Added: {{initiateevent.creator.name}}, {{initiateevent.created | date: 'medium'}}</small>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <span>
+                                    <small>Modified: {{initiateevent.modified_by.name}}</small>
                                 </span>
                             </div>
                             
