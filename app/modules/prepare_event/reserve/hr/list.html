@@ -1,4 +1,4 @@
-<div class="col-xs-12">
+<div class="col-xs-12" ng-controller="ReserveHr" ng-init="all()">
             <div class="box">  
                 <div class="box-header" data-original-title="">
                     <h2><i class="fa fa-pencil"></i>Human Resource</h2>
@@ -8,34 +8,56 @@
                         </div>
                 </div>
                 <div class="box-content">
+                    <div class="row">
+                        
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Skill type">
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Location">
+                            </div>
+                        </div>
+                    </div>
                         <div class="dataTables_wrapper form-inline" role="grid">
                             <table class="table bootstrap-datatable datatable table-hover">
                                 <thead>
                                     <tr role="row">
-                                        <th>Code</th>
+                                        
+                                        <th>Picture</th>
                                         <th>Name</th>
                                         <th>Skill Type</th>
                                         <th>Location</th>
-                                        <th>Remove</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>HR-0001</td>
-                                        <td>JUAN DELA CRUZ</td>
-                                        <td>Doctor</td>
-                                        <td>All</td>
-                                        <td>
-                                            <i class="fa fa-trash-o"></i> 
-                                        </td>
-                                     </tr>
-                                    <tr> 
-                                        <td>PH-0002</td>
-                                        <td>JUANA DELA CRUZ</td>
-                                        <td>Nurse</td>
-                                        <td>NCR</td>
-                                        <td><i class="fa fa-trash-o"></i> </td>
+                                    <tr ng-hide="!humanresources || humanresources.length">
+                                        <td>No humanresource yet.</td>
                                     </tr>
+                                    <tr ng-repeat="humanresource in humanresources">
+                                        
+                                        <td><div class="avatar">
+                                          <img src="assets/images/avatar.jpg" alt="Avatar">
+                                            </div>
+                                        </td>
+                                       
+                                        <td>{{humanresource.name}}</td>
+                                        <td>{{humanresource.skill}}</td>
+                                        <td>{{humanresource.location}}</td>
+                                        <td>
+                                            <a class="btn btn-success btn-sm"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-danger btn-sm"> <i class="fa fa-minus"></i></a>
+                                        </td>
+                                     </tr>                                    
                                 </tbody>
                             </table>
                         </div>
