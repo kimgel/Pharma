@@ -46,20 +46,20 @@
                             </thead>
                             <tbody>
                                     <tr ng-hide="!humanresources || humanresources.length">
-                                        <td>No humanresource yet.</td>
+                                        <td>No resource yet.</td>
                                     </tr>
-                                    <tr ng-repeat="humanresource in humanresources">
+                                    <tr ng-repeat="resource in humanresources">
                                         
                                         <td><div class="avatar">
                                           <img src="assets/images/avatar.jpg" alt="Avatar">
                                             </div>
                                         </td>
                                        
-                                        <td>{{humanresource.name}}</td>
-                                        <td>{{humanresource.skill}}</td>
+                                        <td>{{resource.name}}</td>
+                                        <td>{{resource.skill}}</td>
                                         <td>Available</td>
                                         <td>
-                                            <a class="btn btn-primary btn-sm"> <i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-success btn-sm" ui-sref="reserve_hr_view({humanResourceId: resource._id})"> <i class="fa fa-eye"></i></a>
                                         </td>
                                         <td>
                                             <div class="checkbox">

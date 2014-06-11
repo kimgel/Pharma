@@ -249,7 +249,27 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/prepare_event/reserve/reserve'
+                    'modules/prepare_event/reserve/reserve',
+                    'modules/prepare_event/reserve/hr/add'
+                ]),
+                authenticate: true
+            },
+            reserve_hr_view: {
+                name: 'reserve_hr_view',
+                url: '/:humanResourceId',
+                parent: 'reserve_hr',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/prepare_event/reserve/hr/view.html'
+                    }
+                },
+                data: {
+                    displayName: 'View'
+                },
+
+                resolve: new Dependency([
+                    'modules/prepare_event/reserve/reserve',
+                    'modules/prepare_event/reserve/hr/view'
                 ]),
                 authenticate: true
             },
