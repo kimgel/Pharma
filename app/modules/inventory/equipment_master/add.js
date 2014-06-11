@@ -6,7 +6,7 @@ define(['app', 'EquipmentResources'], function(app, EquipmentResources) {
         '$state',
         'EquipmentResourceFactory',
         function($scope, $state, EquipmentResourceFactory) {
-
+            $scope.assigned_events = [];
             $scope.equipmentresource = {};
             $scope.submit = function(form) {
                 EquipmentResourceFactory.save($scope.equipmentresource, function(err) {

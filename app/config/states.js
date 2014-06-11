@@ -231,7 +231,7 @@ define(['Dependency'], function(Dependency) {
                     'modules/prepare_event/reserve/reserve',
                     'modules/prepare_event/reserve/view',
                     'modules/prepare_event/reserve/hr/list',
-                    'modules/prepare_event/reserve/hr/add'
+                    'modules/prepare_event/reserve/equipment/list'
                 ]),
                 authenticate: true
             },
@@ -287,7 +287,27 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/prepare_event/reserve/reserve'
+                    'modules/prepare_event/reserve/reserve',
+                    'modules/prepare_event/reserve/equipment/add'
+                ]),
+                authenticate: true
+            },
+            reserve_equipment_view: {
+                name: 'reserve_equipment_view',
+                url: '/:equipmentResourceId',
+                parent: 'reserve_equipment',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/prepare_event/reserve/equipment/view.html'
+                    }
+                },
+                data: {
+                    displayName: 'View'
+                },
+
+                resolve: new Dependency([
+                    'modules/prepare_event/reserve/reserve',
+                    'modules/prepare_event/reserve/equipment/view'
                 ]),
                 authenticate: true
             },

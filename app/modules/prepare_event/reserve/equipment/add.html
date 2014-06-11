@@ -1,4 +1,4 @@
-<div id="content">
+<div id="content" ng-controller="ReserveEquipment" ng-init="all()">
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -37,36 +37,25 @@
                                 <tr role="row">
                                     <th>Serial No.</th>
                                     <th>Name</th>
-                                    <th>Select</th>
+                                    <th>Actions</th>
+                                    <th>Reserve</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>153244245</td>
-                                    <td>BP Machine
-                                    </td>                                    
-                                    <td>
-                                        <div class="checkbox">
-                                        <label>
-                                          <input type="checkbox">
-                                        </label>
-                                      </div>
-                                    </td>
-                                 </tr>
-                                <tr>
-                                    <td>5432543245</td>
-                                    <td>asgarg
-                                    </td>
-                                    
-                                    <td>
-                                        <div class="checkbox">
-                                            <label>
-                                              <input type="checkbox">
-                                            </label>
-                                          </div>
-                                    </td>
-                                 </tr>
-                            </tbody>
+                                    <tr ng-hide="!equipmentresources || equipmentresources.length">
+                                        <td>No resources yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in equipmentresources">
+                                        <td>{{resource.serial}}</td>
+                                        <td>{{resource.name}}</td>
+                                        <td>
+                                            <a class="btn btn-success btn-sm" ui-sref="reserve_equipment_view({equipmentResourceId: resource._id})"> <i class="fa fa-eye"></i></a>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="btn btn-primary" ng-click="$hide()">Reserve</button>
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
                         </table>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 define(['app'], function(app) {
     app.controller('ReserveSuppliesctrl', [
         '$scope',
@@ -19,3 +19,4 @@ define(['app'], function(app) {
         }
     ]);
 });
+*/
