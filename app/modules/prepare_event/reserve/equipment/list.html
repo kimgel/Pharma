@@ -1,5 +1,4 @@
-
-<div class="col-xs-12">
+<div class="col-xs-12" ng-controller="SelectedEquipment" ng-init="all()">
     <div class="box"> 
         <div class="box-header" data-original-title="">
             <h2><i class="fa fa-pencil"></i>Equipment Resource</h2>
@@ -17,25 +16,23 @@
                             <th>Name</th>
                             <th>Equipment Type</th>
                             <th>Location</th>
-                            <th>Remove</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>4312-0001</td>
-                            <td>BP Machine</td>
-                            <td>feaefafw</td>
-                            <td>aefaegae</td>
-                            <td><i class="fa fa-trash-o"></i>                             </td>
-                        </tr>
-                        <tr>
-                            <td>3413-0002</td>
-                            <td>Wheelchair</td>
-                            <td>feaefafw</td>
-                            <td>egfasg</td>
-                            <td><i class="fa fa-trash-o"></i> </td>
-                        </tr>
-                    </tbody>
+                                    <tr ng-hide="!equipmentresources || equipmentresources.length">
+                                        <td>No resources yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in equipmentresources">
+                                        <td>{{resource.serial}}</td>
+                                        <td>{{resource.name}}</td>
+                                        <td>{{resource.type}}</td>
+                                        <td>{{resource.location}}</td>
+                                        <td>
+                                            <a class="btn btn-danger btn-sm" > <i class="fa fa-minus"></i></a>
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
                 </table>
             </div>
         </div>
