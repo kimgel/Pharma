@@ -231,7 +231,8 @@ define(['Dependency'], function(Dependency) {
                     'modules/prepare_event/reserve/reserve',
                     'modules/prepare_event/reserve/view',
                     'modules/prepare_event/reserve/hr/list',
-                    'modules/prepare_event/reserve/equipment/list'
+                    'modules/prepare_event/reserve/equipment/list',
+                    'modules/prepare_event/reserve/supplies/list'
                 ]),
                 authenticate: true
             },

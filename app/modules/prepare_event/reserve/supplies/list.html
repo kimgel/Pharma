@@ -1,4 +1,4 @@
-<div class="col-xs-6">
+<div class="col-xs-6" ng-controller="SelectedSupplies" ng-init="all()">
     <div class="box"> 
         <div class="box-header" data-original-title="">
             <h2><i class="fa fa-pencil"></i>Supplies Reservation</h2>
@@ -18,17 +18,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Syringe</td>
-                            <td>350</td>
-                            <td><i class="fa fa-trash-o"></i> 
+                        <tr ng-hide="!initiateevents || initiateevents.length">
+                            <td>No supplies yet.</td>
+                        </tr>
+                        <tr ng-repeat="initiateevent in initiateevents">
+                            <td>{{initiateevent.supplies.name}}</td>
+                            <td>{{initiateevent.supplies.qty}}</td>
+                            <td>
+                                <a class="btn btn-danger btn-sm" > <i class="fa fa-minus"></i></a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>Cotton</td>
-                            <td>300</td>
-                            <td><i class="fa fa-trash-o"></i> </td>
-                        </tr>
+                        </tr>                                    
                     </tbody>
                 </table>
             </div>

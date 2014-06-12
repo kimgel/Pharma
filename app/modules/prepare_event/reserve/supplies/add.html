@@ -1,4 +1,4 @@
-<div id="content" >
+<div id="content" ng-controller="ReserveSupplies" ng-init="all()">
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -7,30 +7,55 @@
                     
                 </div>
                 <div class="box-content">
+                    <form role="form" name="form" novalidate>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <select class="form-control" ng-model="reserved_supplies.name" ng-options="suppliesresource._id as suppliesresource.name for suppliesresource in suppliesresources" required>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="qty" placeholder="input quantity" ng-model="reserved_supplies.qty" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" ng-click="$hide()">Submit</button>
+                                <button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+
                     <div class="dataTables_wrapper form-inline" role="grid">
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
                                     <th>Name</th>
-                                    <th>Qty</th>
+                                    <th>Description</th>
+                                    <th>Qty on hand</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Cotton</td>
-                                    <td>1000</td>  
-                                 </tr>
-                                <tr>
-                                    <td>Syringe</td>
-                                    <td>2000</td>  
-                                 </tr>
-                            </tbody>
+                                    <tr ng-hide="!suppliesresources || suppliesresources.length">
+                                        <td>No resources yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in suppliesresources">
+                                        <td>{{resource.name}}</td>
+                                        <td>{{resource.description}}</td>
+                                        <td>{{resource.qtyonhand}}</td>
+                                     </tr>                                    
+                                </tbody>
                         </table>
                     </div>
                 </div>
+                
+                
             </div>
         </div>
     </div>
 </div>
-
-                   

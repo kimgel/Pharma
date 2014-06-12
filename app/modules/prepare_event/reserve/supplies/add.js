@@ -1,22 +1,42 @@
 'use strict';
-/*
-define(['app'], function(app) {
-    app.controller('ReserveSuppliesctrl', [
-        '$scope',
-        function($scope) {
 
-            $scope.tabs = [
-                      { 
-                        "title": "Supplies for Reservation",
-                        "template": "/modules/prepare_event/reserve/supplies/tpls/reserveSupplies.html",
-                      },
-                      {
-                        "title": "Supplies for Purchase",
-                        "template": "/modules/prepare_event/reserve/supplies/tpls/purchaseSupplies.html",
-                      }
-                    ];
-                    $scope.tabs.activeTab = 0;
+define([
+    'app',
+    'SuppliesResources',
+    'Initiateevents'
+], function(app, SuppliesResources) {
+    app.controller('ReserveSupplies', [
+        '$scope',
+        '$state',
+        'SuppliesResourceFactory',
+        'InitiateEventFactory',
+        function(
+            $scope,
+            $state,
+            SuppliesResourceFactory, 
+            InitiateEventFactory
+        ) {
+            $scope.reserved_supplies = []; //for initiate event reserved supplies array
+            $scope.view = false;
+
+           
+            $scope.submit = function(form){
+                    $scope.reserved_supplies.push({
+                        name: name,
+                        qty: qty
+                    });
+            };
+
+
+            $scope.all = function() {
+                
+                SuppliesResourceFactory.query(function(suppliesresources) {
+                    $scope.suppliesresources = suppliesresources;
+                });
+            };
+
+          
         }
     ]);
+
 });
-*/
