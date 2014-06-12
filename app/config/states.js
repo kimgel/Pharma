@@ -339,7 +339,7 @@ define(['Dependency'], function(Dependency) {
                 parent: 'root',
                 views: {
                     '@': {
-                        templateUrl: '/modules/prepare_event/confirm/confirmresources.html'
+                        templateUrl: '/modules/prepare_event/confirm/list.html'
                     }
                 },
                 data: {
@@ -347,13 +347,15 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/prepare_event/confirm/confirm'
+                    'modules/prepare_event/confirm/confirm',
+                    'modules/prepare_event/confirm/list'
                 ]),
                 authenticate: true
             },
             confirm_resources: {
                 name: 'confirm_resources',
-                url: '/resources',
+                //url: '/resources',
+                url: '/:initiateEventId',
                 parent: 'confirm',
                 views: {
                     '@': {
@@ -365,7 +367,8 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/prepare_event/confirm/confirm'
+                    'modules/prepare_event/confirm/confirm',
+                    'modules/prepare_event/confirm/view'
                 ]),
                 authenticate: true
             },

@@ -4,7 +4,7 @@ define([
     'app',
     'Initiateevents',
 ], function(app, Initiateevents) {
-    app.controller('PrepareEventList', [
+    app.controller('ConfirmList', [
         '$scope',
         '$state',
         'InitiateEventFactory',
