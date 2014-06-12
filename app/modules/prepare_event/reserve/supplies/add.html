@@ -11,21 +11,21 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="form-group">
-                                <select class="form-control" ng-model="reserved_supplies.name" ng-options="suppliesresource._id as suppliesresource.name for suppliesresource in suppliesresources" required>
+                                <select class="form-control" name="name" ng-model="reserved_supplies.name" ng-options="suppliesresource._id as suppliesresource.name for suppliesresource in suppliesresources" required>
                                 </select>
                             </div>
                         </div>
                         <div class="col-xs-3">
                             <div class="form-group">
                                 <div class="controls">
-                                    <input type="text" class="form-control" name="qty" placeholder="input quantity" ng-model="reserved_supplies.qty" required>
+                                    <input type="text" class="form-control" name="qtyreserved" placeholder="input quantity" ng-model="reserved_supplies.qtyreserved" required>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-3">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary" ng-click="$hide()">Submit</button>
-                                <button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
+                                <button ng-click="submit(form)" class="btn btn-primary">Submit</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -36,8 +36,8 @@
                             <thead>
                                 <tr role="row">
                                     <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Qty on hand</th>
+                                    <th>Qty Reserve</th>
+                                    <th>Remove</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,8 +46,8 @@
                                     </tr>
                                     <tr ng-repeat="resource in suppliesresources">
                                         <td>{{resource.name}}</td>
-                                        <td>{{resource.description}}</td>
                                         <td>{{resource.qtyonhand}}</td>
+                                        <td><a class="btn btn-danger btn-sm" > <i class="fa fa-minus"></i></a></td>
                                      </tr>                                    
                                 </tbody>
                         </table>
