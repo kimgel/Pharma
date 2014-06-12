@@ -8,7 +8,7 @@ define(['app'], function(app) {
             $scope.tabs = [
                       { 
                         "title": "View",
-                        "template": "/modules/prepare_event/confirm/tpls/view.tpl.html",
+                        "template": "/modules/prepare_event/confirm/view.html",
                       },
                       {
                         "title": "Human Resource",
