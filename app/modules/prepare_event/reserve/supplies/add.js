@@ -36,7 +36,17 @@ define([
                 SuppliesResourceFactory.query(function(suppliesresources) {
                     $scope.suppliesresources = suppliesresources;
                 });
+                InitiateEventFactory.query(function(initiateevents) {
+                    $scope.initiateevents = initiateevents;
+                    $scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
+                });
             };
+
+////
+
+
+///
+
 
           
         }

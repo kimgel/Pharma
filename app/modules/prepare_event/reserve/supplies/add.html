@@ -41,12 +41,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                    <tr ng-hide="!suppliesresources || suppliesresources.length">
+                                    <tr ng-hide="!initiateevents || initiateevents.length">
                                         <td>No resources yet.</td>
                                     </tr>
-                                    <tr ng-repeat="resource in suppliesresources">
-                                        <td>{{resource.name}}</td>
-                                        <td>{{resource.qtyonhand}}</td>
+                                    <tr ng-repeat="resource in initiateevents">
+                                        <td>{{resource.reserved_supplies}}</td>
+                                        <td>{{resource.reserved_supplies}}</td>
                                         <td><a class="btn btn-danger btn-sm" > <i class="fa fa-minus"></i></a></td>
                                      </tr>                                    
                                 </tbody>
