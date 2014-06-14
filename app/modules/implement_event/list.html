@@ -1,4 +1,4 @@
-<div id="content">
+<div id="content" ng-controller="ImplementEventList" ng-init="all()" >
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -11,40 +11,44 @@
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
-                                    <th>EVENT NO.</th>
-                                    <th>PROPOSAL NO.</th>
-                                    <th>PROPOSAL DATE</th>
-                                    <th>EVENT PROPOSER</th>
-                                    <th>EVENT TYPE</th>
-                                    <th>EVENT DATE</th>
-                                    <th>EVENT LOCATION</th>
-                                    <th>IMPLEMENT</th>
+                                    <th>Event Status</th>
+                                    <th>Proposal Status</th>
+                                    <th>No.</th>
+                                    <th>Date proposed</th>
+                                    <th>Proposer</th>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Event type</th>
+                                    <th>Event date</th>
+                                    <th>Event location</th>
+                                    <th>Actions</th>                                   
                                 </tr>
                             </thead>
+
                             <tbody>
-                                <tr>
-                                    <td>EV-0001</td>
-                                    <td>PH-0001</td>
-                                    <td>5/24/2014</td>
-                                    <td>JUAN DELA CRUZ</td>
-                                    <td>Blood Sugar/ BP Screening</td>
-                                    <td>6/19/2014 to 6/27/2014</td>
-                                    <td>Manila</td>
-                                    <td>
-                                        <a ui-sref="encode" class="btn btn-success">Implement</a>
-                                    </td>
-                                 </tr>
-                                <tr>
-                                    <td>EV-0002</td>
-                                    <td>PH-0002</td>
-                                    <td>5/25/2014</td>
-                                    <td>JUANA DELA CRUZ</td>
-                                    <td>Blood Sugar/ BP Screening</td>
-                                    <td>6/23/2014 to 6 26/2014</td>
-                                    <td>Manila</td>
-                                    <td><a ui-sref="encode" class="btn btn-success">Implement</a></td>
-                                </tr>
-                            </tbody>
+                                    <tr ng-hide="!initiateevents || initiateevents.length">
+                                        <td>No proposed event yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="initiateevent in initiateevents">
+                                        <td>
+                                            <span class="label" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
+                                        </td>
+                                        <td>{{initiateevent.eventnum}}</td>
+                                        <td>{{initiateevent.created | date:'MM/dd/yyyy @ h:mma'}}</td>
+                                        <td>{{initiateevent.creator}}</td>
+                                        <td>{{initiateevent.name}}</td>
+                                        <td>{{initiateevent.eventtype.name}}</td>
+                                        <td>{{initiateevent.eventpurpose}}</td>
+                                        <td>{{initiateevent.eventdatefrom | date:'MM/dd/yyyy'}}-{{initiateevent.eventdateto | date:'MM/dd/yyyy'}} </td>
+                                        <td>{{initiateevent.eventtime | date: 'h:mma'}}</td>
+                                        <td>{{initiateevent.eventlocation}}</td>
+                                        <td>
+                                            <a class="btn btn-success"> <i class="fa fa-eye"></i></a>
+                                           
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
+
                         </table>
                     </div>
                 </div>

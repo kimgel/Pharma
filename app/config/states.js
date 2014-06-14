@@ -465,7 +465,8 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/implement_event/encode'
+                    'modules/implement_event/encode',
+                    'modules/implement_event/list'
                 ]),
                 authenticate: true
             }, 
