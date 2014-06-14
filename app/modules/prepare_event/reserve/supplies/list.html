@@ -13,7 +13,7 @@
                     <thead>
                         <tr role="row">
                             <th>Name</th>
-                            <th>Quantity to Reserve</th>
+                            <th>Qty to Reserve</th>
                             <th>Remove</th>
                         </tr>
                     </thead>
@@ -35,45 +35,41 @@
     </div>
 </div>
 
-<div class="col-xs-6">
+<div class="col-xs-6" ng-controller="SelectedSupplies" ng-init="all()">
     <div class="box"> 
         <div class="box-header" data-original-title="">
             <h2><i class="fa fa-pencil"></i>Supplies for Purchase</h2>
                 <div class="box-icon">
-                    <a ui-sref="reserve_supplies" class="btn"><i class="fa fa-plus"></i> Add</a>
+                    <a ui-sref="purchase_supplies" class="btn"><i class="fa fa-plus"></i> Add</a>
                 </div>
         </div>
         <div class="box-content">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name">
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-
-                    <div class="dataTables_wrapper form-inline" role="grid">
-                        <table class="table bootstrap-datatable datatable table-hover">
-                            <thead>
-                                <tr role="row">
-                                    <th>Name</th>
-                                    <th>Qty</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cotton</td>
-                                    <td>1000</td>  
-                                 </tr>
-                                <tr>
-                                    <td>Syringe</td>
-                                    <td>2000</td>  
-                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            
+            <div class="dataTables_wrapper form-inline" role="grid">
+                <table class="table bootstrap-datatable datatable table-hover">
+                    <thead>
+                        <tr role="row">
+                            <th>Name</th>
+                            <th>Qty</th>
+                            <th>Budget</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-hide="!initiateevents || initiateevents.length">
+                            <td>No supplies yet.</td>
+                        </tr>
+                        <tr ng-repeat="initiateevent in initiateevents">
+                            <td>{{initiateevent.supplies.name}}</td>
+                            <td>{{initiateevent.supplies.qty}}</td>
+                            <td>{{initiateevent.supplies.qty}}</td>
+                            <td>
+                                <a class="btn btn-danger btn-sm" > <i class="fa fa-minus"></i></a>
+                            </td>
+                        </tr>                                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>

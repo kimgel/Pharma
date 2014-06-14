@@ -7,6 +7,7 @@ define(['app', 'Initiateevents'], function(app, Initiateevents) {
         'InitiateEventFactory', 
         function($scope, $location, InitiateEventFactory) {
             $scope.all = function() {
+                
                 InitiateEventFactory.query(function(initiateevents) {
                     $scope.initiateevents = initiateevents;
                 });

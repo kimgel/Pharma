@@ -314,7 +314,7 @@ define(['Dependency'], function(Dependency) {
             },
             reserve_supplies: {
                 name: 'reserve_supplies',
-                url: '/supplies',
+                url: '/suppliesreservation',
                 parent: 'reserve_resources',
                 views: {
                     '@': {
@@ -322,12 +322,31 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Supplies'
+                    displayName: 'Supplies Reservation'
                 },
 
                 resolve: new Dependency([
                     'modules/prepare_event/reserve/reserve',
                     'modules/prepare_event/reserve/supplies/add'
+                ]),
+                authenticate: true
+            },
+            purchase_supplies: {
+                name: 'purchase_supplies',
+                url: '/suppliesforpurchase',
+                parent: 'reserve_resources',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/prepare_event/reserve/supplies/purchase.html'
+                    }
+                },
+                data: {
+                    displayName: 'Supplies for Purchase'
+                },
+
+                resolve: new Dependency([
+                    'modules/prepare_event/reserve/reserve',
+                    'modules/prepare_event/reserve/supplies/purchase'
                 ]),
                 authenticate: true
             },
