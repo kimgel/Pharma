@@ -1,42 +1,38 @@
-
-        <div class="col-xs-12">
+        <div class="col-xs-12" ng-controller="EquipmentList" ng-init="all()"> 
             <div class="box">
                 <div class="box-header" data-original-title="">
-                    <h2><i class="fa fa-check-square-o"></i>Equipment Resource</h2>
-                     
+                    <h2><i class="fa fa-inbox"></i>Equipment</h2>
+                    <div class="box-icon">
+                        <a ui-sref="equipment_add" class="btn"><i class="fa fa-plus"></i> Add</a>
+                    </div>   
                 </div>
                 <div class="box-content">
                     <div class="dataTables_wrapper form-inline" role="grid">
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
+                                    <!--<th>ID</th>-->
                                     <th>Serial No.</th>
                                     <th>Name</th>
                                     <th>Reserved Date</th>
-                                    <th>Issue</th>
+                                    <th>Issue</th>            
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1234-1231</td>
-                                    <td>Wheelchair</td>
-                                    <td>6/19/2014 to 6/27/2014</td>
-                                    <td>
-                                        <a ui-sref="confirm_resources" class="btn btn-success">Issue</a>
-                                    </td>
-                                 </tr>
-                                <tr>
-                                    <td>1243-4252</td>
-                                    <td>BP Machine</td>
-                                     <td>6/19/2014 to 6/27/2014</td>
-                                    <td>
-                                        <a ui-sref="confirm_resources" class="btn btn-success">Issue</a>
-                                    </td>
-                                 </tr>
-                            </tbody>
+                                <tbody>
+                                    <tr ng-hide="!equipmentresources || equipmentresources.length">
+                                        <td>No resources yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in equipmentresources">
+                                        <td>{{resource.serial}}</td>
+                                        <td>{{resource.name}}</td>
+                                        <td>{{resource.assigned_events}}</td>
+                                        <td>
+                                            <a class="btn btn-success">Issue</a>
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-   

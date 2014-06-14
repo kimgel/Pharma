@@ -387,7 +387,9 @@ define(['Dependency'], function(Dependency) {
 
                 resolve: new Dependency([
                     'modules/prepare_event/confirm/confirm',
-                    'modules/prepare_event/confirm/view'
+                    'modules/prepare_event/confirm/view',
+                    'modules/prepare_event/confirm/tpls/hr.tpl.js',
+                    'modules/prepare_event/confirm/tpls/equipment.tpl.js'
                 ]),
                 authenticate: true
             },
