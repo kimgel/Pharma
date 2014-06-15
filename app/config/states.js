@@ -442,20 +442,45 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Reimbursements'
                 },
+                resolve: new Dependency([
+                    'modules/close_event/reimbursements/list'
+                ]),
                 authenticate: true
             },
             reimbursements: {
                 name: 'reimbursements',
-                url: '/view',
+                //url: '/view',
+                url: '/:initiateEventId',
                 parent: 'close_event_reimbursements',
                 views: {
                     '@': {
-                        templateUrl: '/modules/close_event/reimbursements/enter.html'
+                        templateUrl: '/modules/close_event/reimbursements/reimbursements.html'
                     }
                 },
                 data: {
                     displayName: 'View'
                 },
+                resolve: new Dependency([
+                    'modules/close_event/reimbursements/reimbursements',
+                    'modules/close_event/reimbursements/tpls/view.tpl'
+                ]),
+                authenticate: true
+            }, 
+            add_billing: {
+                name: 'add_billing',
+                url: '/add',
+                parent: 'reimbursements',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/close_event/reimbursements/add.html'
+                    }
+                },
+                data: {
+                    displayName: 'Add'
+                },
+                resolve: new Dependency([
+                    'modules/close_event/reimbursements/reimbursements'
+                ]),
                 authenticate: true
             }, 
             /* ======= Implement Event ======= */

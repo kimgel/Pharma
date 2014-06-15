@@ -1,9 +1,9 @@
-<div id="content">
-    <div class="row"> 
+<div id="content" ng-controller="EventReimbursementsList" ng-init="all()" >
+    <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header" data-original-title="">
-                    <h2><i class="fa fa-exchange"></i>Reimbursements</h2>
+                    <h2><i class="fa fa-arrow-down"></i>Reimbursements</h2>
                     
                 </div>
                 <div class="box-content">
@@ -11,42 +11,42 @@
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
-                                    <th>EVENT NO.</th>
-                                    <th>PROPOSAL NO.</th>
-                                    <th>PROPOSAL DATE</th>
-                                    <th>EVENT PROPOSER</th>
-                                    <th>EVENT TYPE</th>
-                                    <th>EVENT DATE</th>
-                                    <th>EVENT LOCATION</th>
-                                    <th>Actions</th>
+                                    <th>Event Status</th>
+                                    <th>Proposal Status</th>
+                                    <th>Date proposed</th>
+                                    <th>Proposer</th>
+                                    <th>Name</th>
+                                    <th>Event type</th>
+                                    <th>Event date</th>
+                                    <!--<th>Event time</th>-->
+                                    <th>Event location</th>
+                                    <th>Actions</th>                                   
                                 </tr>
                             </thead>
+
                             <tbody>
-                                <tr>    
-                                    <td>EV-0001</td>
-                                    <td>PH-0001</td>
-                                    <td>5/23/2014</td>
-                                    <td>Nigel Short</td>
-                                    <td>Blood Sugar/BP Screening</td>
-                                    <td>6/19/2014 to 6/27/2014</td>
-                                    <td>Manila</td>
-                                    <td>
-                                        <a ui-sref="reimbursements" class= "btn btn-success">View</a>
-                                    </td>
-                                 </tr>
-                                <tr>
-                                    <td>EV-0002</td>
-                                    <td>PH-0002</td>
-                                    <td>5/25/2014</td>
-                                    <td>Alexandra Kosteniuk</td>
-                                    <td>Blood Sugar/BP Screening</td>
-                                    <td>7/23/2014</td>
-                                    <td>7/28/2014</td>
-                                    <td>
-                                        <a ui-sref="reimbursements" class= "btn btn-success">View</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                                    <tr ng-hide="!initiateevents || initiateevents.length">
+                                        <td>No proposed event yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="initiateevent in initiateevents">
+                                        <td>
+                                            <span class="label" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
+                                        </td>
+                                        <td>{{initiateevent.eventnum}}</td>
+                                        <td>{{initiateevent.created | date:'MM/dd/yyyy @ h:mma'}}</td>
+                                        <td>{{initiateevent.creator.name}}</td>
+                                        <td>{{initiateevent.name}}</td>
+                                        <td>{{initiateevent.eventtype.name}}</td>
+                                        <td>{{initiateevent.eventdatefrom | date:'MM/dd/yyyy'}}-{{initiateevent.eventdateto | date:'MM/dd/yyyy'}} </td>
+                                        <!--<td>{{initiateevent.eventtime | date: 'h:mma'}}</td>-->
+                                        <td>{{initiateevent.eventlocation}}</td>
+                                        <td>
+                                            <a class="btn btn-success btn-sm" ui-sref="reimbursements({initiateEventId: initiateevent._id})"> <i class="fa fa-search-plus"></i></a>
+                                           
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
+
                         </table>
                     </div>
                 </div>
