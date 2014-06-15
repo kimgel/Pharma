@@ -406,20 +406,28 @@ define(['Dependency'], function(Dependency) {
                 data: {
                     displayName: 'Receive Equipment & Supplies'
                 },
+                resolve: new Dependency([
+                    'modules/close_event/receive/list'
+                ]),
                 authenticate: true
             },  
             receive: {
                 name: 'receive',
-                url: '/view',
+                //url: '/view',
+                url: '/:initiateEventId',
                 parent: 'close_event_receive',
                 views: {
                     '@': {
-                        templateUrl: '/modules/close_event/receive/close.html'
+                        templateUrl: '/modules/close_event/receive/receive.html'
                     }
                 },
                 data: {
                     displayName: 'View'
                 },
+                resolve: new Dependency([
+                    'modules/close_event/receive/receive',
+                    'modules/close_event/receive/tpls/view.tpl'
+                ]),
                 authenticate: true
             },
             close_event_reimbursements: {
