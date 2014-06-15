@@ -115,7 +115,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'View'
+                    displayName: 'Summary'
                 },
                 resolve: new Dependency([
                     'modules/initiateevent/propose_event/view'
@@ -167,7 +167,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'View'
+                    displayName: 'Summary'
                 },
                 resolve: new Dependency([
                     'modules/initiateevent/approve_event/view'
@@ -472,7 +472,8 @@ define(['Dependency'], function(Dependency) {
             }, 
             encode: {
                 name: 'encode',
-                url: '/records',
+                //url: '/records',
+                url: '/:initiateEventId',
                 parent: 'implement_event',
                 views: {
                     '@': {
@@ -484,7 +485,9 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/implement_event/encode'
+                    'modules/implement_event/encode',
+                    'modules/implement_event/list',
+                    'modules/implement_event/tpls/view.tpl'
                 ]),
                 authenticate: true
             },  

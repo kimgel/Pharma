@@ -13,13 +13,12 @@
                                 <tr role="row">
                                     <th>Event Status</th>
                                     <th>Proposal Status</th>
-                                    <th>No.</th>
                                     <th>Date proposed</th>
                                     <th>Proposer</th>
                                     <th>Name</th>
-                                    <th>Type</th>
                                     <th>Event type</th>
                                     <th>Event date</th>
+                                    <!--<th>Event time</th>-->
                                     <th>Event location</th>
                                     <th>Actions</th>                                   
                                 </tr>
@@ -35,15 +34,14 @@
                                         </td>
                                         <td>{{initiateevent.eventnum}}</td>
                                         <td>{{initiateevent.created | date:'MM/dd/yyyy @ h:mma'}}</td>
-                                        <td>{{initiateevent.creator}}</td>
+                                        <td>{{initiateevent.creator.name}}</td>
                                         <td>{{initiateevent.name}}</td>
                                         <td>{{initiateevent.eventtype.name}}</td>
-                                        <td>{{initiateevent.eventpurpose}}</td>
                                         <td>{{initiateevent.eventdatefrom | date:'MM/dd/yyyy'}}-{{initiateevent.eventdateto | date:'MM/dd/yyyy'}} </td>
-                                        <td>{{initiateevent.eventtime | date: 'h:mma'}}</td>
+                                        <!--<td>{{initiateevent.eventtime | date: 'h:mma'}}</td>-->
                                         <td>{{initiateevent.eventlocation}}</td>
                                         <td>
-                                            <a class="btn btn-success"> <i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-success btn-sm" ui-sref="encode({initiateEventId: initiateevent._id})"> <i class="fa fa-search-plus"></i></a>
                                            
                                         </td>
                                      </tr>                                    
