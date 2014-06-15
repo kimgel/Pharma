@@ -12,7 +12,7 @@
                             <thead>
                                 <tr role="row">
                                     <th>Event Status</th>
-                                    <th>Proposal Status</th>
+                                    <th>Event No.</th>
                                     <th>Date proposed</th>
                                     <th>Proposer</th>
                                     <th>Name</th>
@@ -41,7 +41,7 @@
                                         <!--<td>{{initiateevent.eventtime | date: 'h:mma'}}</td>-->
                                         <td>{{initiateevent.eventlocation}}</td>
                                         <td>
-                                            <a class="btn btn-success btn-sm" ui-sref="reimbursements({initiateEventId: initiateevent._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-success btn-sm" ui-sref="reimbursements({initiateEventId: initiateevent._id})" data-toggle="tooltip" title="open"> <i class="fa fa-search-plus"></i></a>
                                            
                                         </td>
                                      </tr>                                    

@@ -11,9 +11,9 @@
                         <table class="table bootstrap-datatable datatable table-hover">
                             <thead>
                                 <tr role="row">
-                                    <th>Event Status</th>
-                                    <th>Proposal Status</th>
-                                    <th>No.</th>
+                                    <th>Status</th>
+                                    <!--<th>Proposal Status</th>-->
+                                    <th>Event No.</th>
                                     <th>Date proposed</th>
                                     <th>Name</th>
                                     <th>Type</th>
@@ -32,10 +32,10 @@
                                     <tr ng-repeat="initiateevent in initiateevents">
                                         <td>
                                             <span class="label" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
-                                        </td>
+                                        </td><!--
                                         <td>
                                             <span class="label" ng-class="{'label-info': initiateevent.approvalStatus == 'Waiting', 'label-warning': initiateevent.approvalStatus == 'Pending', 'label-success': initiateevent.approvalStatus == 'Approve', 'label-danger': initiateevent.approvalStatus == 'Disapprove'}">{{initiateevent.approvalStatus}}</span>
-                                        </td>
+                                        </td>-->
                                         <td>{{initiateevent.eventnum}}</td>
                                         <td>{{initiateevent.created | date:'MM/dd/yyyy @ h:mma'}}</td>
                                         <td>{{initiateevent.name}}</td>
@@ -45,7 +45,7 @@
                                         <td>{{initiateevent.eventtime | date: 'h:mma'}}</td>
                                         <td>{{initiateevent.eventlocation}}</td>
                                         <td>
-                                            <a class="btn btn-success btn-sm" ui-sref="approve_event_view({initiateEventId: initiateevent._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-success btn-sm" ui-sref="approve_event_view({initiateEventId: initiateevent._id})" data-toggle="tooltip" title="approve"> <i class="fa fa-thumbs-o-up"></i></a>
                                             
                                         </td>
                                      </tr>                                    

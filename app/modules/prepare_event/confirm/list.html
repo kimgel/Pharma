@@ -12,7 +12,7 @@
                             <thead>
                                 <tr role="row">
                                     <th>Event Status</th>
-                                    <th>No.</th>
+                                    <th>Event No.</th>
                                     <th>Date proposed</th>
                                     <!--<th>Proposer</th>-->
                                     <th>Name</th>
@@ -39,7 +39,7 @@
                                         <td>{{initiateevent.eventdatefrom | date:'MM/dd/yyyy'}}-{{initiateevent.eventdateto | date:'MM/dd/yyyy'}} </td>
                                         <td>{{initiateevent.eventlocation}}</td>
                                         <td>
-                                            <a class="btn btn-success btn-sm" ui-sref="confirm_resources({initiateEventId: initiateevent._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-success btn-sm" ui-sref="confirm_resources({initiateEventId: initiateevent._id})" data-toggle="tooltip" title="open"> <i class="fa fa-search-plus"></i></a>
                                             
                                         </td>
                                      </tr>                                    

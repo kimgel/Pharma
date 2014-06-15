@@ -12,15 +12,15 @@ define(['app'], function(app) {
                       },
                       {
                         "title": "Human Resource",
-                        "template": "/modules/prepare_event/confirm/tpls/hr.tpl.html",
+                        "template": "/modules/prepare_event/confirm/hr/hr.tpl.html",
                       },
                       {
                         "title": "Equipment Resource",
-                        "template": "/modules/prepare_event/confirm/tpls/equipment.tpl.html",
+                        "template": "/modules/prepare_event/confirm/equipment/equipment.tpl.html",
                       },
                       {
                         "title": "Supplies Resource",
-                        "template": "/modules/prepare_event/confirm/tpls/supplies.tpl.html",
+                        "template": "/modules/prepare_event/confirm/supplies/supplies.tpl.html",
                       }
                     ];
                     $scope.tabs.activeTab = 0;
