@@ -9,45 +9,47 @@
                             <table class="table bootstrap-datatable datatable table-hover">
                                 <thead>
                                     <tr role="row">
+                                        <th>Status</th>
                                         <th>Code</th> 
                                         <th>Name</th>
                                         <th>Skill Type</th>
                                         <th>Assign Date</th>
                                         <th>Total Fee</th>
                                         <th>Balance</th>
-                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>
+                                            <span class="label label-warning">Incomplete</span>
+                                        </td>
                                         <td>HR-0001</td>
                                         <td>JUAN DELA CRUZ</td>
                                         <td>Doctor</td>
                                         <td>6/19/2014 to 6/27/2014</td>
                                         <td>10000</td>
                                         <td>5000</td>
-                                        <td>
-                                            <span class="label label-warning">Incomplete</span>
-                                        </td>
+                                        
                                         <td>
                                             <a ui-sref="add_hr" class="btn">Pay</a>
-
+                                            <a ui-sref="view_hr" class="btn"></i> View</a>
                                         </td>
                                      </tr>
                                     <tr>
+                                        <td>
+                                            <span class="label label-success">Payed</span>
+                                        </td>
                                         <td>HR-0002</td>
                                         <td>JUANA DELA CRUZ</td>
                                         <td>Nurse</td>
                                         <td>6/22/2014 to 6/26/2014</td>
                                         <td>12000</td>
                                         <td>0</td>
+                                        
                                         <td>
-                                            <span class="label label-success">Payed</span>
-                                        </td>
-                                        <td>
+                                            <a ui-sref="add_hr" class="btn">Pay</a>
                                             <a ui-sref="view_hr" class="btn"></i> View</a>
-
                                         </td>
                                      </tr>
                                 </tbody>

@@ -1,22 +1,24 @@
 <div id="content">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-7">
             <div class="box">
                 <div class="box-header">
-                    <h2><i class="fa fa-pencil"></i>Prepare Billing-Add</h2>
+                    <h2><i class="fa fa-pencil"></i>Add</h2>
+                    <div class="box-icon">
+                        <div class="fileUpload btn btn-default"><i class="fa fa-plus"></i> 
+                            <input type="file" ng-file-select="onFileSelect($files)" />
+                        Attach Receipt</div>
+                    </div>  
                 </div>
                 <div class="box-content"> 
                 <label class="control-label">Amount</label>
                     <input type="text" class="form-control" placeholder="Type Amount">
                     <label class="control-label">Remarks</label>
-                    <input type="text" class="form-control" placeholder="Type Remarks">
-                        <div class="fileUpload btn btn-default"><i class="fa fa-plus"></i> 
-                            <input type="file" ng-file-select="onFileSelect($files)" />
-                        Attach Receipt</div>
+                    <textarea type="text" class="form-control" placeholder="Type Remarks"></textarea>
                 <div class="form-actions highlight">
                     <button type="button" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn">Clear</button>
-                            </div>
+                </div>
                 </div>
             </div>
         </div>

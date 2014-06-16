@@ -7,20 +7,20 @@ define(['app'], function(app) {
 
             $scope.tabs = [
                       { 
-                        "title": "View",
-                        "template": "/modules/event_financials/tpls/view.tpl.html",
+                        "title": "Summary",
+                        "template": "/modules/event_financials/view.html",
                       },
                       {
                         "title": "Prepare Billing",
-                        "template": "/modules/event_financials/tpls/preparebilling.tpl.html",
+                        "template": "/modules/event_financials/billing/list.html",
                       },
                       {
                         "title": "Billing Payment",
-                        "template": "/modules/event_financials/tpls/payevent.tpl.html",
+                        "template": "/modules/event_financials/event/list.html",
                       },
                       {
                         "title": "HR Payment",
-                        "template": "/modules/event_financials/tpls/payhr.tpl.html",
+                        "template": "/modules/event_financials/hr/list.html",
                       }
                     ];
                     $scope.tabs.activeTab = 0;

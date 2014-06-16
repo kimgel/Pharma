@@ -554,13 +554,15 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/event_financials/pay'
+                    'modules/event_financials/pay',
+                    'modules/event_financials/list'
+
                 ]),
                 authenticate: true
             },
             pay: {
                 name: 'pay',
-                url: '/processbilling',
+                url: '/billing',
                 parent: 'event_financials',
                 views: {
                     '@': {
@@ -568,7 +570,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Process Billing'
+                    displayName: 'Billing'
                 },
 
                 resolve: new Dependency([
@@ -582,7 +584,7 @@ define(['Dependency'], function(Dependency) {
                 parent: 'pay',
                 views: {
                     '@': {
-                        templateUrl: '/modules/event_financials/add_preparebilling.html'
+                        templateUrl: '/modules/event_financials/billing/add.html'
                     }
                 },
                 data: {
@@ -594,13 +596,13 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             },
-            add: {
-                name: 'add',
+            add_eventpayment: {
+                name: 'add_eventpayment',
                 url: '/add',
                 parent: 'pay',
                 views: {
                     '@': {
-                        templateUrl: '/modules/event_financials/add.html'
+                        templateUrl: '/modules/event_financials/event/add.html'
                     }
                 },
                 data: {
@@ -618,11 +620,11 @@ define(['Dependency'], function(Dependency) {
                 parent: 'pay',
                 views: {
                     '@': {
-                        templateUrl: '/modules/event_financials/add_hr.html'
+                        templateUrl: '/modules/event_financials/hr/add.html'
                     }
                 },
                 data: {
-                    displayName: 'Add HR Payment'
+                    displayName: 'Add'
                 },
 
                 resolve: new Dependency([
@@ -636,11 +638,11 @@ define(['Dependency'], function(Dependency) {
                 parent: 'event_financials',
                 views: {
                     '@': {
-                        templateUrl: '/modules/event_financials/view_hr.html'
+                        templateUrl: '/modules/event_financials/hr/view.html'
                     }
                 },
                 data: {
-                    displayName: 'View HR Payment Summary'
+                    displayName: 'View'
                 },
 
                 resolve: new Dependency([
