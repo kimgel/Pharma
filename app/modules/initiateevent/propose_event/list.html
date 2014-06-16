@@ -49,8 +49,12 @@
                                         <td>{{initiateevent.eventtime | date: 'h:mma'}}</td>
                                         <td>{{initiateevent.eventlocation}}</td>
                                         <td>
-                                            <a class="btn btn-success btn-sm" ui-sref="propose_event_view({initiateEventId: initiateevent._id})" data-toggle="tooltip" title="view"> <i class="fa fa-eye"></i></a>
-                                            <a class="btn btn-primary btn-sm" ui-sref="propose_event_edit({initiateEventId: initiateevent._id})" data-toggle="tooltip" title="edit"> <i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-success btn-sm"
+                                               data-title="View" data-trigger="hover" data-placement="top" bs-tooltip
+                                               ui-sref="propose_event_view({initiateEventId: initiateevent._id})">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="propose_event_edit({initiateEventId: initiateevent._id})" data-title="Edit" data-trigger="hover" data-placement="top" bs-tooltip> <i class="fa fa-edit"></i></a>
                                         </td>
                                      </tr>                                    
                                 </tbody>

@@ -42,7 +42,6 @@
                                     <th>Skill Type</th>
                                     <th>Status</th>
                                     <th>Actions</th>
-                                    <th>Select</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,10 +59,10 @@
                                         <td>{{resource.skill}}</td>
                                         <td>Available</td>
                                         <td>
-                                            <a class="btn btn-success btn-sm" ui-sref="reserve_hr_view({humanResourceId: resource._id})"> <i class="fa fa-eye"></i></a>
-                                        </td>
-                                        <td>
-                                            <button type="submit" class="btn btn-primary" ng-click="$hide()">Reserve</button>
+                                            <a class="btn btn-success btn-sm" ui-sref="reserve_hr_view({humanResourceId: resource._id})" data-title="View" data-trigger="hover" data-placement="top" bs-tooltip> <i class="fa fa-eye"></i></a>
+
+                                            <a class="btn btn-warning btn-sm" data-title="Reserve" data-trigger="hover" data-placement="top" bs-tooltip> <i class="fa fa-plus"></i></a>
+                                            <!--<button type="submit" class="btn btn-primary" ng-click="$hide()">Reserve</button>-->
                                         </td>
                                     </tr>
                                 </tbody>
