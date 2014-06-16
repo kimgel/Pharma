@@ -2,43 +2,38 @@
 
 define([
     'app',
-    'SuppliesResources',
-    'Initiateevents'
+    'Initiateevents',
 ], function(app, Initiateevents) {
     app.controller('SelectedSupplies', [
         '$scope',
-        '$state',
-        'SuppliesResourceFactory',
+        '$location', 
+        '$stateParams',
         'InitiateEventFactory',
         function(
             $scope,
-            $state,
-            SuppliesResourceFactory, 
+            $location, $stateParams,
             InitiateEventFactory
         ) {
-            $scope.initiateevent = {};
-            $scope.reserved_supplies = []; 
-            $scope.purchased_supplies = [];//for initiate event reserved supplies array
-            $scope.view = false;
-
-            $scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
-            
-            
-            $scope.all = function() {
-                
-                SuppliesResourceFactory.query(function(suppliesresources) {
-                    $scope.suppliesresources = suppliesresources;
+            $scope.findOne = function() {
+                InitiateEventFactory.get({
+                    initiateEventId: $stateParams.initiateEventId      
+                               
+                }, function(initiateevent) {
+                    $scope.initiateevent = initiateevent;            
                 });
-
+            };
+           
+            $scope.all = function() {
                 InitiateEventFactory.query(function(initiateevents) {
                     //$scope.initiateevents = initiateevents;
-                    $scope.reservedSupplies = initiateevents[0].reserved_supplies;
+                    
                     $scope.purchasedSupplies = initiateevents[0].purchased_supplies;
+                    $scope.reservedSupplies = initiateevents[0].reserved_supplies;
                     //console.log($scope.initiateevents);
                     //$scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
                 });
             };
-         
+          
         }
     ]);
 
