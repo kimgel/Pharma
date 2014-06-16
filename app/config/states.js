@@ -562,7 +562,7 @@ define(['Dependency'], function(Dependency) {
             },
             pay: {
                 name: 'pay',
-                url: '/billing',
+                url: '/:initiateEventId',
                 parent: 'event_financials',
                 views: {
                     '@': {
@@ -574,13 +574,14 @@ define(['Dependency'], function(Dependency) {
                 },
 
                 resolve: new Dependency([
-                    'modules/event_financials/pay'
+                    'modules/event_financials/pay',
+                    'modules/event_financials/view'
                 ]),
                 authenticate: true
             }, 
             preparebilling_add: {
                 name: 'preparebilling_add',
-                url: '/add',
+                url: '/preparebilling/add',
                 parent: 'pay',
                 views: {
                     '@': {
@@ -588,7 +589,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Add'
+                    displayName: 'Prepare Billing - Add'
                 },
 
                 resolve: new Dependency([
@@ -606,7 +607,7 @@ define(['Dependency'], function(Dependency) {
                     }
                 },
                 data: {
-                    displayName: 'Add'
+                    displayName: 'Billing Payment - Add'
                 },
 
                 resolve: new Dependency([
@@ -632,10 +633,10 @@ define(['Dependency'], function(Dependency) {
                 ]),
                 authenticate: true
             }, 
-            view_hr: {
-                name: 'view_hr',
-                url: '/view_hr',
-                parent: 'event_financials',
+            financials_view_hr: {
+                name: 'financials_view_hr',
+                url: '/view',
+                parent: 'pay',
                 views: {
                     '@': {
                         templateUrl: '/modules/event_financials/hr/view.html'

@@ -1,196 +1,128 @@
-<div class="col-xs-12">
-            <div class="box">  
-                <div class="box-header" data-original-title="">
-                    <h2><i class="fa fa-book"></i>Summary</h2>
-                        
-                </div> 
+<div ng-controller="FinancialEventView" ng-init="findOne()">
+<div class="col-xs-7"> 
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        <i class="fa fa-book"></i>Summary</h2>
+                </div>
                 <div class="box-content">
-                    <div class="row">
-                    <div class="col-xs-7">
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event No.</label>
-                                </div>
-                                <div class="col-md-3">
-                                    EV-0001
-                                </div>
+                            <div>                                
+                                <span class="label pull-right" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.name}}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="control-label">Location</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.eventlocation}}</div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Proposal Number</label>
-                                </div>
-                                <div class="col-md-3">
-                                    PH-0001
-                                </div>
+                            <label class="control-label">Description</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.eventdescription}}</div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Proposal Date</label>
-                                </div>
-                                <div class="col-md-3">
-                                    5/24/2014
-                                </div>
+                            <label class="control-label">Purpose</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.eventpurpose}}</div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event Proposer</label>
+                            <label class="control-label">Event Date</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.eventdatefrom | date: 'medium'}} to {{initiateevent.eventdateto | date: 'medium'}}</div>
                                 </div>
-                                <div class="col-md-3">
-                                    Juan Dela Cruz
-                                </div>
-                            </div>
                         </div>
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event Type</label>
-                                </div>
-                                <div class="col-md-4">
-                                     Blood Sugar/ BP Screening
+                                <label class="control-label">Event Time</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.eventtime}}</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event Description</label>
-                                </div>
-                                <div class="col-md-4">
-                                     Event Description
-                                </div>
+                        
+                            
+                            <div class="form-group">
+                                <label class="control-label">Remarks</label>
+                                <div class="label-value">{{initiateevent.eventremarks}}</div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event Purpose</label>
-                                </div>
-                                <div class="col-md-4">
-                                     In order to prevent expensive hospitalizations, all adults should have a blood pressure check and blood sugar screen every 2 to 3 years.
-                                </div>
+
+                            <div class="form-group">
+                                <span>
+                                    <small>Added: {{initiateevent.creator.name}}, {{initiateevent.created | date: 'medium'}}</small>
+                                </span>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event Date</label>
-                                </div>
-                                <div class="col-md-3">
-                                     6/19/2014 to 6/27/2014
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event Location</label>
-                                </div>
-                                <div class="col-md-3">
-                                     Manila
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Human Resource</label>
-                                </div>
-                                <div class="col-md-3">
-                                     5 Doctors, 10 Nurses 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Equipment Resource</label>
-                                </div>
-                                <div class="col-md-3">
-                                     15 BP Machines
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Supplies Resource</label>
-                                </div>
-                                <div class="col-md-3">
-                                     Cotton, Syringe 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Event Remarks</label>
-                                </div>
-                                <div class="col-md-5">
-                                     sample remarks
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-xs-5">
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Approval Status</label>
-                                </div>
-                                <div class="col-md-3">
-                                     A
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Approval Remarks</label>
-                                </div>
-                                <div class="col-md-5">
-                                     approval remarks
+                </div>
+                    
+       
+        <div class="col-xs-5">
+            <div class="box">  
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-book"></i>Resource Requirement</h2>
+                        
+                </div>
+                <div class="box-content">
+                            <div class="form-group">
+                                <label class="control-label">Human Resource</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.hresource}}</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Approval Date</label>
-                                </div>
-                                <div class="col-md-3">
-                                     99/99/99
+                            <div class="form-group">
+                                <label class="control-label">Equipment Resource</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.eresource}}</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Approval Time</label>
-                                </div>
-                                <div class="col-md-3">
-                                     5/23/2014
+                            <div class="form-group">
+                                <label class="control-label">Supplies Resource</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.sresource}}</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label class="control-label">Approver Name</label>
-                                </div>
-                                <div class="col-md-3">
-                                     Nigel Short
-                                </div>
-                            </div>
-                        </div>
-                    </div>   
-               </div>
+                </div>
             </div>
-        </div>
-</div>
+            <div class="box">  
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-book"></i>Approval Status</h2>
+                        
+                </div>
+                <div class="box-content">
+                    <div class="form-group">
+                                
+                                
+                                <span class="label pull-right" ng-class="{'label-info': initiateevent.approvalStatus == 'Waiting', 'label-warning': initiateevent.approvalStatus == 'Pending', 'label-success': initiateevent.approvalStatus == 'Approve', 'label-danger': initiateevent.approvalStatus == 'Disapprove'}">{{initiateevent.approvalStatus}}</span>
+                            </div>
+                    <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label">Approval Date</label>
+                                <div class="label-value">{{initiateevent.approvalDate | date: 'medium'}}</div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label">Approval Remarks</label>
+                                <div class="label-value">{{initiateevent.approvalRemarks}}</div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label">Approved by</label>
+                                <div class="label-value">{{initiateevent.approver.name}}</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
