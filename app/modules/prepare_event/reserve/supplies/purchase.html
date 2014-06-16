@@ -11,8 +11,9 @@
                     <div class="row">
                         <div class="col-xs-3">
                             <div class="form-group">
-                                <select class="form-control" name="name" ng-model="reserved_supplies.name" ng-options="suppliesresource._id as suppliesresource.name for suppliesresource in suppliesresources" required>
-                                </select>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="name" placeholder="Type name" ng-model="purchased_supplies.name" required>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xs-3">
@@ -52,10 +53,10 @@
                                     <tr ng-hide="!initiateevents || initiateevents.length">
                                         <td>No resources yet.</td>
                                     </tr>
-                                    <tr ng-repeat="resource in initiateevents">
-                                        <td>{{resource.purchased_supplies}}</td>
-                                        <td>{{resource.purchased_supplies}}</td>
-                                        <td>asd</td>
+                                    <tr ng-repeat="resource in purchasedSupplies">
+                                        <td>{{resource.name}}</td>
+                                        <td>{{resource.qty}}</td>
+                                        <td>{{resource.budget}}</td>
                                         <td><a class="btn btn-danger btn-sm" data-title="Remove" data-trigger="hover" data-placement="top" bs-tooltip> <i class="fa fa-trash-o"></i></a></td>
                                      </tr>                                    
                                 </tbody>
