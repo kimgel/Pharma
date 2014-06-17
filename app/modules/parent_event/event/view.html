@@ -1,0 +1,130 @@
+<div id="content" ng-controller="ParentViewEvent" ng-init="findOne()">
+<div class="row">
+    <div class="col-xs-7">
+            <div class="box">
+                <div class="box-header">
+                    <h2>
+                        <i class="fa fa-book"></i>Summary</h2>
+                </div>
+                <div class="box-content">
+                        <div class="form-group">
+                            <div>                                
+                                <span class="label pull-right" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.name}}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="control-label">Location</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.eventlocation}}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Description</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.eventdescription}}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Purpose</label>
+                            <div class="controls">
+                                <div class="label-value">{{initiateevent.eventpurpose}}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Event Date</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.eventdatefrom | date: 'medium'}} to {{initiateevent.eventdateto | date: 'medium'}}</div>
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="control-label">Event Time</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.eventtime}}</div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="form-group">
+                                <label class="control-label">Remarks</label>
+                                <div class="label-value">{{initiateevent.eventremarks}}</div>
+                            </div>
+
+                            <div class="form-group">
+                                <span>
+                                    <small>Added: {{initiateevent.creator.name}}, {{initiateevent.created | date: 'medium'}}</small>
+                                </span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                    
+       
+        <div class="col-xs-5">
+            <div class="box">  
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-book"></i>Resource Requirement</h2>
+                        
+                </div>
+                <div class="box-content">
+                            <div class="form-group">
+                                <label class="control-label">Human Resource</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.hresource}}</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Equipment Resource</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.eresource}}</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Supplies Resource</label>
+                                <div class="controls">
+                                    <div class="label-value">{{initiateevent.sresource}}</div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            <div class="box">  
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-book"></i>Approval Status</h2>
+                        
+                </div>
+                <div class="box-content">
+                    <div class="form-group">
+                                
+                                
+                                <span class="label pull-right" ng-class="{'label-info': initiateevent.approvalStatus == 'Waiting', 'label-warning': initiateevent.approvalStatus == 'Pending', 'label-success': initiateevent.approvalStatus == 'Approve', 'label-danger': initiateevent.approvalStatus == 'Disapprove'}">{{initiateevent.approvalStatus}}</span>
+                            </div>
+                    <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label">Approval Date</label>
+                                <div class="label-value">{{initiateevent.approvalDate | date: 'medium'}}</div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label">Approval Remarks</label>
+                                <div class="label-value">{{initiateevent.approvalRemarks}}</div>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            <div class="form-group">
+                                <label class="control-label">Approved by</label>
+                                <div class="label-value">{{initiateevent.approver.name}}</div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>

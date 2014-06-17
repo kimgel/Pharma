@@ -976,6 +976,94 @@ define(['Dependency'], function(Dependency) {
                     'modules/eventtype_master/edit'
                 ]),
                 authenticate: true
+            },
+
+            /* ======= Parent Event Master ======= */
+            parent_event: {
+                name: 'parent_event',
+                url: '/parent',
+                parent: 'settings',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/parent_event/list.html'
+                    }
+                },
+                data: {
+                    displayName: 'Parent Events'
+                },
+                resolve: new Dependency([
+                    'modules/parent_event/list'
+                ]),
+                authenticate: true
+            }, 
+            
+            parentevent_add: {
+                name: 'parentevent_add',
+                url: '/add',
+                parent: 'parent_event',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/parent_event/add.html'
+                    }
+                },
+                data: {
+                    displayName: 'Add'
+                },
+                resolve: new Dependency([
+                    'modules/parent_event/add'
+                ]),
+                authenticate: true
+            },
+            parent_event_summary: {
+                name: 'parent_event_summary',
+                url: '/:initiateEventId',
+                parent: 'parentevent_add',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/parent_event/event/view.html'
+                    }
+                },
+                data: {
+                    displayName: 'Summary'
+                },
+                resolve: new Dependency([
+                    'modules/parent_event/event/view'
+                ]),
+                authenticate: true
+            }, 
+            parentevent_view: {
+                name: 'parentevent_view',
+                url: '/:parenteventId',
+                parent: 'parent_event',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/parent_event/view.html'
+                    }
+                },
+                data: {
+                    displayName: 'View'
+                },
+                resolve: new Dependency([
+                    'modules/parent_event/view'
+                ]),
+                authenticate: true
+            },
+            parentevent_edit: {
+                name: 'parentevent_edit',
+                url: '/:parenteventId/edit',
+                parent: 'parent_event',
+                views: {
+                    '@': {
+                        templateUrl: '/modules/parent_event/edit.html'
+                    }
+                },
+                data: {
+                    displayName: 'Edit'
+                },
+                resolve: new Dependency([
+                    'modules/parent_event/edit'
+                ]),
+                authenticate: true
             }
 
         }

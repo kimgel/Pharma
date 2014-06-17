@@ -1,0 +1,89 @@
+<div id="content" ng-controller="ParenteventAdd" ng-init="all()" > 
+    <form role="form" name="form" novalidate>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Name</h2>
+                </div>
+                <div class="box-content">
+                            <div class="form-group">
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="name" ng-model="parentevent.name" required>
+                                    <span class="label label-danger pull-right" ng-show="form.name.$error.required">{{form.name.message}}</span>
+                                </div>
+                            </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Events</h2>
+                </div>
+                <div class="box-content">
+                    <div class="dataTables_wrapper form-inline" role="grid">
+                        <table class="table bootstrap-datatable datatable table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>Status</th>
+                                    <th>Event No.</th>
+                                    <th>Name</th>
+                                    <th>Event date</th>
+                                    <th>Actions</th>                                   
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                    <tr ng-hide="!initiateevents || initiateevents.length">
+                                        <td>No proposed event yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="initiateevent in initiateevents">
+                                        <td>
+                                            <span class="label" ng-class="{'label-important': initiateevent.expired == true, 'label-success': initiateevent.expired == false}">{{initiateevent.status}}</span>
+                                        </td>
+                                        <td>{{initiateevent.eventnum}}</td>
+                                        <td>{{initiateevent.name}}</td>
+                                        <td>{{initiateevent.eventdatefrom | date:'MM/dd/yyyy'}}-{{initiateevent.eventdateto | date:'MM/dd/yyyy'}} </td>
+                                        <td>
+                                            <a class="btn btn-success btn-sm"
+                                               data-title="View" data-trigger="hover" data-placement="top" bs-tooltip
+                                               ui-sref="parent_event_summary({initiateEventId: initiateevent._id})">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                            <a class="btn btn-info btn-sm" data-title="Add" data-trigger="hover" data-placement="top" bs-tooltip> <i class="fa fa-plus"></i></a>
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="fa fa-pencil"></i>Add</h2>
+                </div>
+                <div class="box-content">
+                            <div class="form-group">
+
+                            
+
+
+                            </div>
+                            <div class="form-actions highlight">
+                                <button type="button" class="btn btn-primary" ng-click="submit(form)">Submit</button>
+                                <button type="reset" class="btn">Clear</button>
+                            </div>
+                        
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</form>
+</div>
+

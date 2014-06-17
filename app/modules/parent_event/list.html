@@ -1,0 +1,41 @@
+<div id="content" ng-controller="ParenteventList" ng-init="all()" >
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header" data-original-title="">
+                    <h2><i class="fa fa-pencil"></i>Parent Events</h2>
+                    <div class="box-icon">
+                        <a ui-sref="parentevent_add" class="btn"><i class="fa fa-plus"></i> Add</a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <div class="dataTables_wrapper form-inline" role="grid">
+                        <table class="table bootstrap-datatable datatable table-hover">
+                            <thead>
+                                <tr role="row">
+                                    <th>Name</th>
+                                    <th>Actions</th>                                   
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                    <tr ng-hide="!parentevents || parentevents.length">
+                                        <td>No parentevents yet.</td>
+                                    </tr>
+                                    <tr ng-repeat="resource in parentevents">
+                                        <td>{{resource.name}}</td>
+                                        
+                                        <td>
+                                            <a class="btn btn-success btn-sm" ui-sref="parentevent_view({parenteventId: resource._id})"> <i class="fa fa-search-plus"></i></a>
+                                            <a class="btn btn-primary btn-sm" ui-sref="parentevent_edit({parenteventId: resource._id})"> <i class="fa fa-edit"></i></a>
+                                        </td>
+                                     </tr>                                    
+                                </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

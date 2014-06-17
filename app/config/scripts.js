@@ -30,7 +30,8 @@ require.config({
         'EquipmentResources': '/modules/inventory/equipment_master/service',
         'SuppliesResources': '/modules/inventory/supplies_master/service',
         'Initiateevents': '/modules/initiateevent/propose_event/service',
-        'Eventtypes': '/modules/eventtype_master/service'
+        'Eventtypes': '/modules/eventtype_master/service',
+        'Parentevents': '/modules/parent_event/service'
         
         /* Directives
         =================================================================== 
