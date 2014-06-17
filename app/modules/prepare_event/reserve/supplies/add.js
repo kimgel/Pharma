@@ -8,11 +8,13 @@ define([
     app.controller('ReserveSupplies', [
         '$scope',
         '$state',
+        '$stateParams',
         'SuppliesResourceFactory',
         'InitiateEventFactory',
         function(
             $scope,
             $state,
+            $stateParams,
             SuppliesResourceFactory, 
             InitiateEventFactory
         ) {
@@ -22,28 +24,22 @@ define([
 
             $scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
             
-            $scope.submit = function(form){
-                //if (name) {
-                    $scope.reserved_supplies.push({
-                        name:name,
-                       //qtyreserved:qtyreserved
-                    });
-                //} 
-            };
-            
-            $scope.all = function() {
-                
+            $scope.findOne = function() {
+                //getone
+                InitiateEventFactory.get({
+                    initiateEventId: $stateParams.initiateEventId      
+                               
+                }, function(initiateevent) {
+                    $scope.initiateevent = initiateevent;  
+                    console.log(initiateevent);            
+                });
+                //get supplies
                 SuppliesResourceFactory.query(function(suppliesresources) {
                     $scope.suppliesresources = suppliesresources;
                 });
 
-                InitiateEventFactory.query(function(initiateevents) {
-                    //$scope.initiateevents = initiateevents;
-                    $scope.reservedSupplies = initiateevents[0].reserved_supplies;
-                    //console.log($scope.initiateevents);
-                    //$scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
-                });
             };
+            
          
         }
     ]);
