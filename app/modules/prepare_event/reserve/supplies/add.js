@@ -23,7 +23,7 @@ define([
             $scope.view = false;
 
             $scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
-            
+            /*
             $scope.findOne = function() {
                 //getone
                 InitiateEventFactory.get({
@@ -38,6 +38,15 @@ define([
                     $scope.suppliesresources = suppliesresources;
                 });
 
+            };*/
+            $scope.all = function() {
+                
+                InitiateEventFactory.query(function(initiateevents) {
+                    $scope.reservedSupplies = initiateevents[0].reserved_supplies;
+                });
+                SuppliesResourceFactory.query(function(suppliesresources) {
+                    $scope.suppliesresources = suppliesresources;
+                });
             };
             
          
