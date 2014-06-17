@@ -14,25 +14,27 @@ define([
             $location, $stateParams,
             InitiateEventFactory
         ) {
+            $scope.initiateevent = {};
+
+            $scope.reservedSupplies = [];
+            $scope.initiateevent.reserved_supplies = $scope.reservedSupplies;
+
+            $scope.purchasedSupplies = [];
+            $scope.initiateevent.purchased_supplies = $scope.purchasedSupplies;
+
+            $scope.view = false;
+
             $scope.findOne = function() {
                 InitiateEventFactory.get({
                     initiateEventId: $stateParams.initiateEventId      
                                
                 }, function(initiateevent) {
-                    $scope.initiateevent = initiateevent;            
+                    $scope.initiateevent = initiateevent;     
+                    $scope.reservedSupplies = initiateevent.reserved_supplies;
+                    $scope.purchasedSupplies = initiateevent.purchased_supplies;       
                 });
             };
            
-            $scope.all = function() {
-                InitiateEventFactory.query(function(initiateevents) {
-                    //$scope.initiateevents = initiateevents;
-                    
-                    $scope.purchasedSupplies = initiateevents[0].purchased_supplies;
-                    $scope.reservedSupplies = initiateevents[0].reserved_supplies;
-                    //console.log($scope.initiateevents);
-                    //$scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
-                });
-            };
           
         }
     ]);

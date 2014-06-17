@@ -15,6 +15,13 @@ define(['app', 'Eventtypes'], function(app, Eventtypes) {
                     $scope.eventtype = eventtype;              
                 });
             };
+
+            $scope.eventformA = [{
+                    //title: 'Event Form A',
+                    template: '/modules/eventtype_master/tpls/eventformA.tpl.html'
+                }
+            ];
+
         }
     ]);
 });

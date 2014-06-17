@@ -19,11 +19,10 @@ define([
             InitiateEventFactory
         ) {
             $scope.initiateevent = {};
-            $scope.reserved_supplies = []; //for initiate event reserved supplies array
+            $scope.reservedSupplies = []; //for initiate event reserved supplies array
             $scope.view = false;
 
-            $scope.initiateevent.reserved_supplies = $scope.reserved_supplies;
-            /*
+            $scope.initiateevent.reserved_supplies = $scope.reservedSupplies;
             $scope.findOne = function() {
                 //getone
                 InitiateEventFactory.get({
@@ -31,23 +30,15 @@ define([
                                
                 }, function(initiateevent) {
                     $scope.initiateevent = initiateevent;  
-                    console.log(initiateevent);            
+                    $scope.reservedSupplies = initiateevent.reserved_supplies;       
                 });
                 //get supplies
                 SuppliesResourceFactory.query(function(suppliesresources) {
                     $scope.suppliesresources = suppliesresources;
+
                 });
 
-            };*/
-            $scope.all = function() {
-                
-                InitiateEventFactory.query(function(initiateevents) {
-                    $scope.reservedSupplies = initiateevents[0].reserved_supplies;
-                });
-                SuppliesResourceFactory.query(function(suppliesresources) {
-                    $scope.suppliesresources = suppliesresources;
-                });
-            };
+            }; 
             
          
         }

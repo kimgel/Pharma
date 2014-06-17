@@ -8,20 +8,29 @@ define([
     app.controller('PurchaseSupplies', [
         '$scope',
         '$state',
+        '$stateParams',
         'SuppliesResourceFactory',
         'InitiateEventFactory',
         function(
             $scope,
             $state,
+            $stateParams,
             SuppliesResourceFactory, 
             InitiateEventFactory
         ) {
             $scope.initiateevent = {};
+            $scope.purchasedSupplies = [];
+            $scope.initiateevent.purchased_supplies = $scope.purchasedSupplies;
                                    
-            $scope.all = function() {
-                
-                InitiateEventFactory.query(function(initiateevents) {
-                    $scope.purchasedSupplies = initiateevents[0].purchased_supplies;
+            $scope.view = false;
+
+            $scope.findOne = function() {
+                InitiateEventFactory.get({
+                    initiateEventId: $stateParams.initiateEventId      
+                               
+                }, function(initiateevent) {
+                    $scope.initiateevent = initiateevent;     
+                    $scope.purchasedSupplies = initiateevent.purchased_supplies;       
                 });
             };
 
