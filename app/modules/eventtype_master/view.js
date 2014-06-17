@@ -17,8 +17,16 @@ define(['app', 'Eventtypes'], function(app, Eventtypes) {
             };
 
             $scope.eventformA = [{
-                    //title: 'Event Form A',
+                    title: 'BP Screening',
                     template: '/modules/eventtype_master/tpls/eventformA.tpl.html'
+                },
+                {
+                    title: 'Sugar Screening',
+                    template: '/modules/eventtype_master/tpls/eventformB.tpl.html'
+                },
+                {
+                    title: 'Cholesterol Screening',
+                    template: '/modules/eventtype_master/tpls/eventformC.tpl.html'
                 }
             ];
 

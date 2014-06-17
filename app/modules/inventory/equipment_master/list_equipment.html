@@ -29,7 +29,7 @@
                                     </tr>
                                     <tr ng-repeat="resource in equipmentresources">
                                         <td>
-                                            <span class="label" ng-class="{'label-warning': resource.status == 'Available', 'label-important': resource.status != 'Not Available'}">{{resource.status}}</span>
+                                            <span class="label" ng-class="{'label-success': resource.status == 'Available', 'label-danger': resource.status != 'Not Available'}">{{resource.status}}</span>
                                         </td>
                                         <td>
                                             <a ui-sref="view_equipment({equipmentResourceId: resource._id})">{{resource.name}}
